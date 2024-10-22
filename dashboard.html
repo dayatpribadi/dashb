@@ -64,7 +64,7 @@
           <div class="dropdown-menu dropdown-menu-right">
             <nav class="nav">
               <a href="#" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
-              <a href="noc_login2.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+              <a href="index.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
             </nav>
           </div><!-- dropdown-menu -->
         </div><!-- dropdown-menu -->
@@ -86,19 +86,19 @@
         <li class="nav-item">
           <a class="nav-link" href="noc_kependudukan.html">
             <i class="icon ion-ios-book-outline"></i>
-            <span>Pemerintahan & Kesejahteraan</span>
+            <span>Pemerintahan & Kesra</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
             <i class="icon ion-ios-book-outline"></i>
-            <span>Ekonomi</span>
+            <span>Perekonomian & Pembangunan</span>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
             <i class="icon ion-ios-book-outline"></i>
-            <span>Bagian Umum</span>
+            <span>Administrasi Umum</span>
           </a>
         </li>
       </ul>
@@ -116,8 +116,12 @@
                   <img class="img-bupati" src="assets/img/lanjutkerja.png" alt="">
                 </div>
               </div>
-              <div class="col-6">
-                <p><span id="tanggalwaktu"></span></p>
+              <div class="col-6 pd-0">
+                <p><span id="tanggalwaktu"
+                    style="font-size: 12px; font-weight: 600; margin-bottom: 0; padding: 0; color: rgb(66, 66, 66) !important;"></span><br>
+                  <span id="waktuAja"
+                    style="font-size: 16px; font-weight: 800; margin-bottom: 0; padding: 0; color: rgb(113, 113, 113) !important;"></span>
+                </p>
               </div>
             </div>
           </div><!-- card -->
@@ -126,14 +130,12 @@
             <div class="card-body">
               <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Agenda Kegiatan(semesta)
               </h6>
-
-              <div id="datepicker" class="timeline-datepicker"></div>
               <div class="agenda">
                 <div class="card bd-0">
                   <div class="card-header tx-medium bd-0 tx-white bg-mantle">
                     Agenda Hari Ini
                   </div><!-- card-header -->
-                  <div class="item-agenda" style="max-height: 360px; overflow-y: scroll;">
+                  <div class="container-agenda" style="max-height: 560px; overflow-y: scroll;">
                     <div class="card-body item-agenda bd bd-t-0 bg-custom">
                       <div class="d-flex justify-content-between mg-b-2">
                         <div class="tx-14">
@@ -368,8 +370,8 @@
     </div><!-- container -->
   </div><!-- slim-footer -->
 
-  <script src="assets/lib/jquery/js/jquery.js"></script>
-  <script src="assets/lib/jquery-ui/js/jquery-ui.js"></script>
+  <script src="assets/lib/jquery/js/jquery-2.1.4.js"></script>
+  <script src="assets/lib/jquery-ui/js/jquery-ui-1.12.1.js"></script>
   <script src="assets/lib/popper.js/js/popper.js"></script>
   <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
   <script src="assets/lib/jquery.cookie/js/jquery.cookie.js"></script>
@@ -418,10 +420,30 @@
     var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
     var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
       "Oktober", "Nopember", "Desember");
-    document.getElementById("tanggalwaktu").innerHTML = hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] +
-      " " + tahun + " Jam " + ((tw.getHours() < 10) ? "0" : "") + tw.getHours() + ":" + ((tw.getMinutes() < 10) ? "0" :
-        "") + tw.getMinutes() + (" W.I.B ");
+    document.getElementById("waktuAja").innerHTML = " Pukul : " + ((tw.getHours() < 10) ? "0" : "") + tw.getHours() +
+      ":" +
+      ((tw.getMinutes() <
+          10) ? "0" :
+        "") + tw.getMinutes() + (" WIB");
   </script>
+
+
+  <script>
+    var tw = new Date();
+    if (tw.getTimezoneOffset() == 0)(a = tw.getTime() + (7 * 60 * 60 * 1000))
+    else(a = tw.getTime());
+    tw.setTime(a);
+    var tahun = tw.getFullYear();
+    var hari = tw.getDay();
+    var bulan = tw.getMonth();
+    var tanggal = tw.getDate();
+    var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+    var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
+      "Oktober", "Nopember", "Desember");
+    document.getElementById("tanggalwaktu").innerHTML = hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] +
+      " " + tahun;
+  </script>
+
 </body>
 
 </html>

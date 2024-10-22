@@ -67993,3 +67993,11 @@ a.hover-white-8:focus {
 .melayang .img-bupati {
   height: 200px;
 }
+
+.bg-body-custom-ungu {
+  background-image: linear-gradient(120deg, #FDFBEF 0%, #EEF7FF 100%);
+}
+
+.bg-body-custom-light {
+  background-image: linear-gradient(120deg, #FFF 0%, #F3F3F3 100%);
+}

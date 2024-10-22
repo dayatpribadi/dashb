@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Datepicker</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <div id="datepicker"></div>
+    <div class="agenda-container">
+        <h3>Agenda:</h3>
+        <div id="agenda-list"></div>
+    </div>
+
+    <script>
+        // Simulasi data agenda
+        const agendaData = {
+            '10/22/2024': [{
+                    time: '09:00',
+                    title: 'Meeting with Team',
+                    location: 'Room 101'
+                },
+                {
+                    time: '14:00',
+                    title: 'Project Discussion',
+                    location: 'Room 202'
+                }
+            ],
+            '10/23/2024': [{
+                time: '11:00',
+                title: 'Client Presentation',
+                location: 'Main Hall'
+            }]
+        };
+
+        // Fungsi untuk menampilkan agenda berdasarkan tanggal yang dipilih
+        function showAgenda(date) {
+            const agendaList = $('#agenda-list');
+            agendaList.empty(); // Bersihkan konten sebelumnya
+
+            const dateStr = $.datepicker.formatDate('mm/dd/yy', date);
+            const agendas = agendaData[dateStr];
+
+            if (agendas && agendas.length > 0) {
+                agendas.forEach(agenda => {
+                    agendaList.append(`
+                    <div class="agenda-item">
+                        <p><strong>Time:</strong> ${agenda.time}</p>
+                        <p><strong>Title:</strong> ${agenda.title}</p>
+                        <p><strong>Location:</strong> ${agenda.location}</p>
+                    </div>
+                    <hr>
+                `);
+                });
+            } else {
+                agendaList.append('<p>No Data</p>');
+            }
+        }
+
+        // Inisialisasi datepicker
+        $(function () {
+            $("#datepicker").datepicker({
+                onSelect: function (dateText, inst) {
+                    const date = $(this).datepicker('getDate');
+                    showAgenda(date);
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
