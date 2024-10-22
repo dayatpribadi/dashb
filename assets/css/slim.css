@@ -16199,13 +16199,16 @@ table.dataTable.no-footer {
 }
 
 .ui-datepicker .ui-datepicker-calendar td a:hover {
-  background-color: #f0f2f7;
+  /* background-color: #f0f2f7; */
+  background-color: #DCEEFF;
   color: #868ba1;
 }
 
 .ui-datepicker .ui-datepicker-calendar .ui-datepicker-today a {
-  background-color: #f0f2f7;
-  color: #868ba1;
+  /* background-color: #f0f2f7; */
+  background-color: #1b84e7;
+  color: #FFF;
+  /* color: #868ba1; */
 }
 
 .ui-datepicker-multi .ui-datepicker-group {
