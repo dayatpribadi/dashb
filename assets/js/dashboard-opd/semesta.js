@@ -276,6 +276,7 @@ var options = {
       enabled: false
     }
   },
+  colors: ['#0F98E7', '#FF6036'],
   dataLabels: {
     enabled: false
   },
