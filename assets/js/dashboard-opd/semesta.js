@@ -258,3 +258,46 @@ var options = {
   chart.render();
 
 
+  var options = {
+    series: [
+        {
+            name: "Surat Masuk",
+            data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        },
+        {
+            name: "Surat Keluar",
+            data: [102, 95, 19, 159, 69, 82, 99, 191, 228]
+        },
+    ],
+    chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'straight'
+  },
+  title: {
+    text: 'Kondisi Tata Naskah Surat Semesta',
+    align: 'left'
+  },
+  grid: {
+    row: {
+      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+      opacity: 0.5
+    },
+  },
+  xaxis: {
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#kondisiSuratSemesta"), options);
+  chart.render();
+
+
