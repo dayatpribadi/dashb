@@ -122,6 +122,9 @@
                 <p class="tx-12">Jumlah Penduduk (jiwa)</p>
               </div>
             </div><!-- card-body -->
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div><!-- card -->
         </div><!-- col-3 -->
 
@@ -129,6 +132,9 @@
           <div class="card card-activities pd-20">
             <h6 class="slim-card-title">Perbandingan Jenis Kelamin</h6>
             <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="chartDonuts" height="115"></canvas></div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div><!-- card -->
         </div>
 
@@ -136,6 +142,9 @@
           <div class="card card-activities pd-20">
             <h6 class="slim-card-title">Kepadatan Penduduk (Jiwa/km2)</h6>
             <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="kepadatanPenduduk" height="150"></canvas></div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div><!-- card -->
         </div>
       </div>
@@ -176,6 +185,9 @@
                 </div><!-- card -->
               </div><!-- col-4 -->
             </div><!-- row -->
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div>
         </div>
       </div>
@@ -185,12 +197,18 @@
           <div class="card card-activities pd-20">
             <h6 class="slim-card-title">Laju Pertumbuhan Penduduk <i class="fa fa-info-circle ms-2"></i></h6>
             <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="lajuPenduduk" height="150"></canvas></div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div><!-- card -->
         </div>
         <div class="col-12 col-md-6 mg-t-10">
           <div class="card card-activities pd-20">
             <h6 class="slim-card-title">Penduduk Per Kecamatan <i class="fa fa-info-circle ms-2"></i></h6>
             <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="chartBar40" height="150"></canvas></div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div><!-- card -->
         </div><!-- col-3 -->
       </div>
@@ -200,7 +218,11 @@
           <div class="card card-quick-post mg-t-10">
             <h6 class="slim-card-title">Penduduk Menurut Jenis Pekerjaan</h6>
 
-            <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="kelompokPekerjaan" height="50"></canvas></div>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="kelompokPekerjaan" height="50"></canvas>
+            </div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div><!-- card -->
         </div>
       </div>
@@ -208,9 +230,48 @@
         <div class="col-lg-12">
           <div class="card card-quick-post mg-t-10">
             <h6 class="slim-card-title">Penduduk Menurut Umur</h6>
-            <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="kelompokUmur" height="50"></canvas></div>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <canvas id="kelompokUmur" height="50"></canvas>
+            </div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
           </div><!-- card -->
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col mg-t-20 mg-sm-t-30">
+          <div class="alert alert-solid alert-info tx-center">
+            <h4><strong>Statistik</strong> Data Bantuan</h4>
+          </div><!-- alert -->
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="card card-quick-post mg-t-10">
+            <h6 class="slim-card-title">Total Penerima Bantuan Per Kecamatan</h6>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="penerimaBantuanPerKecamatan"></div>
+            </div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
+          </div><!-- card -->
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card card-quick-post mg-t-10">
+            <h6 class="slim-card-title">Total Penerima Bantuan Berdasarkan Jenis Bantuan</h6>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="penerimaJenisBantuan"></div>
+            </div>
+            <div class="card-footer">
+              <code>Sumber Data : Aplikasi Sidesi</code>
+            </div>
+          </div><!-- card -->
+        </div>
+
       </div>
     </div><!-- col-6 -->
   </div><!-- slim-mainpanel -->
@@ -227,6 +288,7 @@
   <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
   <script src="assets/lib/jquery.cookie/js/jquery.cookie.js"></script>
   <script src="assets/lib/chart.js/js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/dashboard-opd/kependudukan.js"></script>

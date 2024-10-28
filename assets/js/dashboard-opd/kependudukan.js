@@ -231,3 +231,78 @@ var myPieChart101 = new Chart(ctx101, {
     }
   },
 });
+
+var options = {
+  series: [44, 55, 41, 17, 15],
+  chart: {
+  type: 'donut',
+  height: 250,
+},
+labels: ['Bantuan Langsung Tunai', 'Keluarga Harapan', 'Kartu Keluarga Sejahtera', 'Jenis Bantuan 1', 'Jenis Bantuan 2', 'Jenis Bantuan 3', 'Jenis Bantuan 4'],
+responsive: [{
+  breakpoint: 480,
+  options: {
+    chart: {
+      width: 200
+    },
+    legend: {
+      position: 'bottom'
+    },
+  }
+},],
+title: {
+  text: 'Jumlah Penerima Bantuan Berdasarkan Jenis Bantuan',
+  align: 'left'
+},
+};
+
+var chart = new ApexCharts(document.querySelector("#penerimaJenisBantuan"), options);
+chart.render();
+
+
+var options = {
+  series: [{
+  name: 'Total Penerima Bantuan',
+  data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+}],
+  chart: {
+  type: 'bar',
+  height: 350
+},
+plotOptions: {
+  bar: {
+    horizontal: false,
+    columnWidth: '55%',
+    endingShape: 'rounded'
+  },
+},
+dataLabels: {
+  enabled: false
+},
+stroke: {
+  show: true,
+  width: 2,
+  colors: ['transparent']
+},
+xaxis: {
+  categories: ['Kec. Indralaya', 'Kec. Indralaya Selatan', 'Kec. Indralaya Utara', 'Kec. Pemulutan', 'Kec. Pemulutan Barat', 'Kec. Pemulutan Selatan', 'Kec. Rantau Alai', 'Kec. Tanjung Raja', 'Kec. Tanjung Batu'],
+},
+yaxis: {
+  title: {
+    text: 'Total Penerima Bantuan'
+  }
+},
+fill: {
+  opacity: 1
+},
+tooltip: {
+  y: {
+    formatter: function (val) {
+      return " " + val + " Orang"
+    }
+  }
+}
+};
+
+var chart = new ApexCharts(document.querySelector("#penerimaBantuanPerKecamatan"), options);
+chart.render();

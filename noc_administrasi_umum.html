@@ -35,6 +35,7 @@
   <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
   <link href="assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
   <link href="assets/lib/rickshaw/css/rickshaw.min.css" rel="stylesheet">
+  <link href="assets/lib/jqvmap/css/jqvmap.min.css" rel="stylesheet">
 
   <!-- Slim CSS -->
   <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
@@ -150,7 +151,7 @@
                     </div><!-- d-flex -->
                   </div>
                   <div class="row row-xs mg-t-30">
-                    <div class="col-sm-6 col-md-3 mg-t-10">
+                    <div class="col-sm-6 col-lg-3 mg-t-10">
                       <div class="card card-status bg-body-custom-ungu">
                         <div class="media">
                           <i class="icon ion-ios-person-outline tx-purple"></i>
@@ -205,6 +206,13 @@
                       <div class="card card-activities pd-20">
                         <div id="chartLinePresensi"></div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col mg-t-20 mg-sm-t-30">
+                      <div class="alert alert-info tx-center">
+                        <h4><strong>Statistik</strong> Data Laporan Kinerja Harian</h4>
+                      </div><!-- alert -->
                     </div>
                   </div>
                   <div class="row row-xs mg-t-30">
@@ -288,6 +296,13 @@
                       </div>
                     </div><!-- card -->
                   </div><!-- col-3 -->
+                  <div class="row">
+                    <div class="col mg-t-20 mg-sm-t-30">
+                      <div class="alert alert-warning tx-center">
+                        <h4><strong>Statistik</strong> Data TPP</h4>
+                      </div><!-- alert -->
+                    </div>
+                  </div>
                   <div class="row row-xs mg-t-30">
                     <div class="col-12 col-md-4">
                       <div class="row">
@@ -331,6 +346,13 @@
                       <div class="card card-activities pd-20">
                         <div id="realisasiPaguTpp"></div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col mg-t-20 mg-sm-t-30">
+                      <div class="alert alert-success tx-center">
+                        <h4><strong>Statistik</strong> Data Tata Naskah Surat Semesta</h4>
+                      </div><!-- alert -->
                     </div>
                   </div>
                   <div class="row row-xs mg-t-30">
@@ -409,13 +431,659 @@
                 </div><!-- row -->
 
                 <div class="tab-pane" id="sidesi">
-                  Recent content goes here...
-                </div><!-- tab-pane -->
+                  <div class="container-fluid pd-t-30">
+                    <div class="dash-headline-two">
+                      <div>
+                        <h4 class="tx-inverse mg-b-5">Dashboard, Sidesi Kab. Ogan Ilir</h4>
+                        <p class="mg-b-0">Aplikasi Sidesi merupakan Sistem Informasi Desa Terintegrasi.</p>
+                      </div>
+                      <div class="d-h-t-right">
+                        <div class="summary-item">
+                          <h1>$1,433</h1>
+                          <span>Earnings<br>for today</span>
+                        </div>
+                        <div class="summary-item">
+                          <h1>$296</h1>
+                          <span>Expenses<br>for today</span>
+                        </div>
+                      </div>
+                    </div><!-- dash-headline-two -->
+
+                    <div class="nav-statistics-wrapper">
+                      <nav class="nav">
+                        <a href="#pegawai" data-toggle="tab" class="nav-link active">Kondisi Pegawai</a>
+                        <a href="#presensis" data-toggle="tab" class="nav-link">Presensi</a>
+                        <a href="#lkhsidesi" data-toggle="tab" class="nav-link">LKH</a>
+                        <a href="#tataSurat" data-toggle="tab" class="nav-link">Surat</a>
+                      </nav>
+                    </div><!-- nav-statistics-wrapper -->
+
+                    <div class="card-body pd-0 mg-b-30">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="pegawai">
+                          <div class="container-fluid">
+                            <div class="row justify-content-between">
+                              <div class="col-12 col-lg-5">
+                                <h1 class="tx-inverse tx-56 tx-lato tx-bold">965</h1>
+                                <h6 class="tx-15 tx-inverse tx-bold mg-b-20">Total Seluruh ASN</h6>
+                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                                  adipiscing
+                                  sem</p>
+                                <p class="tx-12">
+                                  <a href="">View Details</a>
+                                  <a href="">Edit Settings</a>
+                                </p>
+                              </div><!-- col-5 -->
+                              <div class="col-12 col-lg-7 mg-t-20 mg-md-t-0">
+                                <div id="chartPegawaiSidesi"></div>
+                              </div><!-- col-7 -->
+                            </div>
+                          </div>
+                        </div><!-- row -->
+                        <div class="tab-pane" id="presensis">
+                          <div class="container-fluid">
+                            <div class="row row-xs mg-t-30">
+                              <div class="col-12 col-md-3 mg-t-10">
+                                <div class="card card-status bg-body-custom-ungu">
+                                  <div class="media">
+                                    <i class="icon ion-ios-person-outline tx-purple"></i>
+                                    <div class="media-body">
+                                      <h1>32,604</h1>
+                                      <p>Total Hadir Dinas Dalam</p>
+                                    </div><!-- media-body -->
+                                  </div><!-- media -->
+                                </div><!-- card -->
+                              </div><!-- col-3 -->
+                              <div class="col-12 col-md-3 mg-t-10 ">
+                                <div class="card card-status bg-body-custom-ungu">
+                                  <div class="media">
+                                    <i class="icon ion-android-walk tx-teal"></i>
+                                    <div class="media-body">
+                                      <h1>17,583</h1>
+                                      <p>Total Hadir Dinas Luar</p>
+                                    </div><!-- media-body -->
+                                  </div><!-- media -->
+                                </div><!-- card -->
+                              </div><!-- col-3 -->
+                              <div class="col-12 col-md-3 mg-t-10">
+                                <div class="card card-status bg-body-custom-ungu">
+                                  <div class="media">
+                                    <i class="icon ion-ios-body-outline tx-danger"></i>
+                                    <div class="media-body">
+                                      <h1>61,119</h1>
+                                      <p>Total Tanpa Keterangan</p>
+                                    </div><!-- media-body -->
+                                  </div><!-- media -->
+                                </div><!-- card -->
+                              </div><!-- col-3 -->
+                              <div class="col-12 col-md-3 mg-t-10 ">
+                                <div class="card card-status bg-body-custom-ungu">
+                                  <div class="media">
+                                    <i class="icon ion-ios-people-outline tx-pink"></i>
+                                    <div class="media-body">
+                                      <h1>2,942</h1>
+                                      <p>Total Tidak Hadir</p>
+                                    </div><!-- media-body -->
+                                  </div><!-- media -->
+                                </div><!-- card -->
+                              </div><!-- col-3 -->
+                            </div>
+
+                            <div class="row row-xs mg-t-30">
+                              <div class="col-12 col-md-6">
+                                <div class="card card-activities pd-20">
+                                  <div id="chartPresensiSidesi"></div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                <div class="card card-activities pd-20">
+                                  <div id="chartLinePresensiSidesi"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tab-pane" id="lkhsidesi">
+                          <div class="container-fluid">
+                            <div class="row row-xs mg-t-10">
+                              <div class="col-12 align-items-center justify-content-center bg-gray-100">
+                                <div class="d-md-flex">
+                                  <div class="col-lg-4 mg-t-10">
+                                    <select class="form-control select2-show-search"
+                                      data-placeholder="Choose one (with searchbox)">
+                                      <option label="Choose one"></option>
+                                      <option value="Dinas Komunikasi dan Digital">Dinas Komunikasi dan Digital</option>
+                                      <option value="Dinas Sosial">Dinas Sosial</option>
+                                      <option value="Dinas Perikanan">Dinas Perikanan</option>
+                                      <option value="Bapenda">Bapenda</option>
+                                      <option value="Bappeda">Bappeda</option>
+                                    </select>
+                                  </div><!-- col-4 -->
+                                  <input type="text" class="form-control mg-md-l-10 mg-t-10"
+                                    placeholder="Masukkan Nama">
+                                  <input type="text" class="form-control mg-md-l-10 mg-t-10" placeholder="Masukkan NIP">
+                                  <button
+                                    class="btn btn-primary pd-y-13 pd-x-20 bd-0 mg-md-l-10 mg-t-10">Filter</button>
+                                </div>
+                              </div><!-- d-flex -->
+                            </div>
+                            <div class="row row-xs mg-t-30">
+                              <div class="col-12 col-md-7">
+                                <div class="card card-activities pd-20">
+                                  <div class="d-flex justify-content-between">
+                                    <div class="col-12-col-md-6">
+                                      <h6 class="slim-card-title">Laporan Kinerja Harian</h6>
+                                      <p>Status Verifikasi LKH</p>
+                                    </div>
+                                    <div class="col 12 col-6">
+                                      <span class="badge bg-primary tx-white pd-5">Total LKH 17</span>
+                                      <span class="badge bg-success tx-white pd-5">Sudah Diverifikasi 10</span>
+                                      <span class="badge bg-pink tx-white pd-5">Belum Diverifikasi 7</span>
+                                    </div>
+                                  </div>
+
+                                  <div class="table-responsive" style="max-height: 300px; overflow-y: scroll;">
+                                    <table class="table mg-b-0 tx-13">
+                                      <thead>
+                                        <tr class="tx-10">
+                                          <th class="pd-y-5">Data LKH</th>
+                                          <th class="pd-y-5">Status</th>
+                                          <th class="pd-y-5">Tanggal</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>
+                                            <a href="" class="tx-inverse tx-14 tx-medium d-block">Aris Catur Pratomo,
+                                              S.Kom</a>
+                                            <span class="tx-11 d-block">Urusan: UMUM/ADMINISTRASI, <br> Uraian Kegiatan
+                                              :
+                                              Melaksanakan
+                                              perjalanan Dinas Luar Daerah</span>
+                                            <span class="tx-11 d-block">Keterangan : Mengikuti studi tiru pelaksanaan
+                                              P2K2 di
+                                              dinas sosial
+                                              kabupaten lampung selatan</span>
+                                          </td>
+                                          <td class="tx-12">
+                                            <span class="badge bg-warning tx-white">Menunggu verifikasi</span>
+                                          </td>
+                                          <td>23 October 2024</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <a href="" class="tx-inverse tx-14 tx-medium d-block">Mahesa Rani, A.Md</a>
+                                            <span class="tx-11 d-block">Urusan: UMUM/ADMINISTRASI, <br> Uraian Kegiatan
+                                              :
+                                              Melaksanakan
+                                              perjalanan Dinas Luar Daerah</span>
+                                            <span class="tx-11 d-block">Keterangan : Mengikuti studi tiru pelaksanaan
+                                              P2K2 di
+                                              dinas sosial
+                                              kabupaten lampung selatan</span>
+                                          </td>
+                                          <td class="tx-12">
+                                            <span class="badge bg-warning tx-white">Menunggu verifikasi</span>
+                                          </td>
+                                          <td>23 October 2024</td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <a href="" class="tx-inverse tx-14 tx-medium d-block">Muhammad Syarkowi,
+                                              S.Sos.</a>
+                                            <span class="tx-11 d-block">Urusan: UMUM/ADMINISTRASI, <br> Uraian Kegiatan
+                                              :
+                                              Melaksanakan
+                                              perjalanan Dinas Luar Daerah</span>
+                                            <span class="tx-11 d-block">Keterangan : Mengikuti studi tiru pelaksanaan
+                                              P2K2 di
+                                              dinas sosial
+                                              kabupaten lampung selatan</span>
+                                          </td>
+                                          <td class="tx-12">
+                                            <span class="badge bg-warning tx-white">Menunggu verifikasi</span>
+                                          </td>
+                                          <td>23 October 2024</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div><!-- table-responsive -->
+                                </div><!-- card -->
+                              </div><!-- col-5 -->
+                              <div class="col-12 col-md-5">
+                                <div class="card card-people-list pd-10">
+                                  <div id="chartLkhSidesi"></div>
+                                </div>
+                              </div><!-- card -->
+                            </div><!-- col-3 -->
+                          </div>
+                        </div>
+
+                        <div class="class tab-pane" id="tataSurat">
+                          <div class="container-fluid">
+                            <div class="row row-xs mg-t-30">
+                              <div class="col-12 col-md-6 mg-t-10">
+                                <div class="card card-activities pd-20">
+                                  <h6 class="slim-card-title mg-b-20">Berdasarkan Jenis Surat Masuk <i
+                                      class="fa fa-info-circle"></i>
+                                  </h6>
+                                  <div class="row row-sm">
+                                    <div class="col-12">
+                                      <div class="card card-sales bg-mantle">
+                                        <div class="row">
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8">Total Surat Masuk</label>
+                                            <p>1,898</p>
+                                          </div><!-- col -->
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8 ">Belum Didisposisikan</label>
+                                            <p>32,112</p>
+                                          </div><!-- col -->
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8">Sudah Didisposisikan</label>
+                                            <p>72,067</p>
+                                          </div><!-- col -->
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8">Selesai</label>
+                                            <p>72,067</p>
+                                          </div><!-- col -->
+                                        </div><!-- row -->
+                                      </div><!-- card -->
+                                    </div><!-- col-4 -->
+                                  </div><!-- row -->
+                                </div>
+                              </div>
+                              <div class="col-12 col-md-6 mg-t-10">
+                                <div class="card card-activities pd-20">
+                                  <h6 class="slim-card-title mg-b-20">Berdasarkan Jenis Surat Keluar <i
+                                      class="fa fa-info-circle"></i>
+                                  </h6>
+                                  <div class="row row-sm">
+                                    <div class="col-12">
+                                      <div class="card card-sales bg-danger">
+                                        <div class="row">
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8">Total Surat Keluar</label>
+                                            <p>1,898</p>
+                                          </div><!-- col -->
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8 ">Proses Verifikasi</label>
+                                            <p>32,112</p>
+                                          </div><!-- col -->
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8">Menunggu Tandatangan</label>
+                                            <p>72,067</p>
+                                          </div><!-- col -->
+                                          <div class="col">
+                                            <label class="tx-12 tx-white-8">Sudah Ditandatangani</label>
+                                            <p>72,067</p>
+                                          </div><!-- col -->
+                                        </div><!-- row -->
+                                      </div><!-- card -->
+                                    </div><!-- col-4 -->
+                                  </div><!-- row -->
+                                </div>
+                              </div>
+                              <div class="col-12 mg-t-10">
+                                <div class="card card-activities pd-20">
+                                  <h6 class="slim-card-title mg-b-20">Tata Naskah Surat Sidesi <i
+                                      class="fa fa-info-circle"></i>
+                                  </h6>
+                                  <div class="card card-activities pd-20">
+                                    <div id="kondisiSuratSidesi"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- container -->
+                    </div><!-- tab-pane -->
+                  </div>
+                </div>
 
                 <div class="tab-pane" id="guruku">
-                  Top rated content goes here...
-                </div><!-- tab-pane -->
+                  <div class="row">
 
+                    <div class="col-lg-6">
+                      <h3 class="tx-inverse mg-b-15">Dashboard, Guruku!</h3>
+                      <p class="mg-b-40">Guruku adalah Sistem Informasi Tata Kelola Kinerja Guru di lingkungan
+                        Pemerintah Kabupaten Ogan Ilir dengan fitur Presensi, Laporan Kinerja Harian dan CCTV
+                        Capture.
+                      </p>
+
+                      <h6 class="slim-card-title mg-b-15">Statistik Jumlah ASN</h6>
+                      <div class="row no-gutters">
+                        <div class="col-sm-6">
+                          <div class="card bg-body-custom-ungu card-earning-summary">
+                            <h6>Guru PNS</h6>
+                            <h1>2950</h1>
+                            <span>Total Seluruh PNS</span>
+                          </div><!-- card -->
+                        </div><!-- col-6 -->
+
+                        <div class="col-sm-6">
+                          <div class="card bg-body-custom-ungu card-earning-summary mg-sm-l--1 bd-t-0 bd-sm-t">
+                            <h6>Guru PPPK</h6>
+                            <h1>1420</h1>
+                            <span>Total Seluruh PPPK</span>
+                          </div><!-- card -->
+                        </div><!-- col-6 -->
+
+                      </div><!-- row -->
+                    </div><!-- col-6 -->
+
+                    <div class="col-lg-6 mg-t-20 mg-sm-t-30 mg-lg-t-0">
+                      <div class="card">
+                        <div class="row pd-60">
+                          <div class="col">
+                            <div id="persentaseGuruPNS"></div>
+                          </div>
+                          <div class="col">
+                            <div id="persentaseGuruPppk"></div>
+                          </div>
+                        </div>
+                      </div><!-- card -->
+                    </div><!-- col-6 -->
+                  </div><!-- row -->
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="card card-dash-chart-one mg-t-20 mg-sm-t-30">
+                        <div class="row row-xs">
+                          <div class="col-lg-4">
+                            <div class="left-panel">
+                              <div class="active-visitor-wrapper">
+                                <h1>46</h1>
+                                <p>Jumlah Seluruh Guru ASN yang Sudah Sertifikasi</p>
+                                <div class="tx-24 mg-b-10 top-5">
+                                  <i class="icon ion-man tx-primary"></i>
+                                  <i class="icon ion-man tx-primary"></i>
+                                  <i class="icon ion-man tx-primary"></i>
+                                  <i class="icon ion-man tx-gray-600"></i>
+                                  <i class="icon ion-man tx-gray-600"></i>
+                                  <i class="icon ion-man tx-gray-600"></i>
+                                  <i class="icon ion-man tx-gray-400"></i>
+                                  <i class="icon ion-man tx-gray-400"></i>
+                                  <i class="icon ion-man tx-gray-400"></i>
+                                  <i class="icon ion-man tx-gray-400"></i>
+                                </div>
+                              </div><!-- active-visitor-wrapper -->
+
+                              <hr class="mg-t-30 mg-b-40">
+
+                              <h6 class="visitor-operating-label">Kondisi Guru ASN Sudah Sertifikasi</h6>
+
+                              <div class="col">
+                                <div class="alert alert-warning">
+                                  <div class="d-flex justify-content-between">
+                                    <span>Guru SMP Laki-Laki</span>
+                                    <strong>17</strong>
+                                  </div>
+                                </div><!-- alert -->
+                              </div>
+                              <div class="col">
+                                <div class="alert alert-success">
+                                  <div class="d-flex justify-content-between">
+                                    <span>Guru SMP Perempuan</span>
+                                    <strong>20</strong>
+                                  </div>
+                                </div><!-- alert -->
+                              </div>
+                              <div class="col">
+                                <div class="alert alert-info">
+                                  <div class="d-flex justify-content-between">
+                                    <span>Guru SD Laki-Laki</span>
+                                    <strong>7</strong>
+                                  </div>
+                                </div><!-- alert -->
+                              </div>
+                              <div class="col">
+                                <div class="alert alert-danger">
+                                  <div class="d-flex justify-content-between">
+                                    <span>Guru SD Perempuan</span>
+                                    <strong>8</strong>
+                                  </div>
+                                </div><!-- alert -->
+                              </div>
+
+                            </div><!-- left-panel -->
+                          </div><!-- col-4 -->
+                          <div class="col-lg-8">
+                            <div class="right-panel">
+                              <h6 class="slim-card-title">Jumlah Guru ASN Per Kecamatan</h6>
+                              <div id="guruSertifikasi"></div>
+                            </div><!-- right-panel -->
+                          </div><!-- col-8 -->
+                        </div><!-- row -->
+                      </div><!-- card -->
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12 col-md-4">
+                      <div class="card card-dash-chart-one mg-t-20 mg-sm-t-30">
+                        <div id="rentangUsia" class="pd-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <div class="card card-dash-chart-one mg-t-20 mg-sm-t-30">
+                        <div id="pnsPangGol" class="pd-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <div class="card card-dash-chart-one mg-t-20 mg-sm-t-30">
+                        <div id="pppkPangGol" class="pd-20"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col mg-t-20 mg-sm-t-30">
+                      <div class="alert alert-solid alert-info tx-center">
+                        <h4><strong>Statistik</strong> Data Presensi Guruku</h4>
+                      </div><!-- alert -->
+                    </div>
+                  </div>
+                  <div class="row row-xs mg-t-30">
+                    <div class="col-sm-6 col-lg-3 mg-t-10">
+                      <div class="card card-status bg-body-custom-ungu">
+                        <div class="media">
+                          <i class="icon ion-ios-person-outline tx-purple"></i>
+                          <div class="media-body">
+                            <h1>32,604</h1>
+                            <p>Total Hadir Dinas Dalam</p>
+                          </div><!-- media-body -->
+                        </div><!-- media -->
+                      </div><!-- card -->
+                    </div><!-- col-3 -->
+                    <div class="col-sm-6 col-lg-3 mg-t-10 ">
+                      <div class="card card-status bg-body-custom-ungu">
+                        <div class="media">
+                          <i class="icon ion-android-walk tx-teal"></i>
+                          <div class="media-body">
+                            <h1>17,583</h1>
+                            <p>Total Hadir Dinas Luar</p>
+                          </div><!-- media-body -->
+                        </div><!-- media -->
+                      </div><!-- card -->
+                    </div><!-- col-3 -->
+                    <div class="col-sm-6 col-lg-3 mg-t-10">
+                      <div class="card card-status bg-body-custom-ungu">
+                        <div class="media">
+                          <i class="icon ion-ios-body-outline tx-danger"></i>
+                          <div class="media-body">
+                            <h1>61,119</h1>
+                            <p>Total Tanpa Keterangan</p>
+                          </div><!-- media-body -->
+                        </div><!-- media -->
+                      </div><!-- card -->
+                    </div><!-- col-3 -->
+                    <div class="col-sm-6 col-lg-3 mg-t-10 ">
+                      <div class="card card-status bg-body-custom-ungu">
+                        <div class="media">
+                          <i class="icon ion-ios-people-outline tx-pink"></i>
+                          <div class="media-body">
+                            <h1>2,942</h1>
+                            <p>Total Tidak Hadir</p>
+                          </div><!-- media-body -->
+                        </div><!-- media -->
+                      </div><!-- card -->
+                    </div><!-- col-3 -->
+                  </div>
+                  <div class="row row-xs mg-t-30">
+                    <div class="col-12 col-md-6">
+                      <div class="card card-activities pd-20">
+                        <div class="d-flex justify-content-between">
+                          <span>Pilih Berdasarkan Satuan Pendidikan</span>
+                          <div class="select">
+                            <select class="form-control select2-show-search"
+                              data-placeholder="Choose one (with searchbox)">
+                              <option label="Choose one"></option>
+                              <option value="SD1">SD Negeri 1</option>
+                              <option value="SD2">SD Negeri 2</option>
+                              <option value="SMP1">SMP Negeri 1</option>
+                              <option value="SMP3">SMP Negeri 3</option>
+                              <option value="SMP9">SD Negeri 9</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div id="chartPresensiGuru" class="mg-t-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="card card-activities pd-20">
+                        <div class="d-flex justify-content-between">
+                          <span>Pilih Berdasarkan Satuan Pendidikan</span>
+                          <div class="select">
+                            <select class="form-control select2-show-search"
+                              data-placeholder="Choose one (with searchbox)">
+                              <option label="Choose one"></option>
+                              <option value="SD1">SD Negeri 1</option>
+                              <option value="SD2">SD Negeri 2</option>
+                              <option value="SMP1">SMP Negeri 1</option>
+                              <option value="SMP3">SMP Negeri 3</option>
+                              <option value="SMP9">SD Negeri 9</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div id="chartLinePresensiGuruku" class="mg-t-20"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row row-xs mg-t-30">
+                    <div class="col-12 col-md-6">
+                      <div class="card card-activities pd-20">
+                        <div class="d-flex justify-content-between">
+                          <span>Pilih Berdasarkan Satuan Pendidikan</span>
+                          <div class="select">
+                            <select class="form-control select2-show-search"
+                              data-placeholder="Choose one (with searchbox)">
+                              <option label="Choose one"></option>
+                              <option value="SD1">SD Negeri 1</option>
+                              <option value="SD2">SD Negeri 2</option>
+                              <option value="SMP1">SMP Negeri 1</option>
+                              <option value="SMP3">SMP Negeri 3</option>
+                              <option value="SMP9">SD Negeri 9</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between mg-t-20">
+                          <div class="col-12-col-md-6">
+                            <h6 class="slim-card-title">Laporan Kinerja Harian</h6>
+                            <p>Status Verifikasi LKH</p>
+                          </div>
+                          <div class="col 12 col-6">
+                            <span class="badge bg-primary tx-white pd-5">Total LKH 17</span>
+                            <span class="badge bg-success tx-white pd-5">Sudah Diverifikasi 10</span>
+                            <span class="badge bg-pink tx-white pd-5">Belum Diverifikasi 7</span>
+                          </div>
+                        </div>
+
+                        <div class="table-responsive" style="max-height: 300px; overflow-y: scroll;">
+                          <table class="table mg-b-0 tx-13">
+                            <thead>
+                              <tr class="tx-10">
+                                <th class="pd-y-5">Data LKH</th>
+                                <th class="pd-y-5">Status</th>
+                                <th class="pd-y-5">Tanggal</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Aris Catur Pratomo,
+                                    S.Kom</a>
+                                  <span class="tx-11 d-block">Urusan: UMUM/ADMINISTRASI, <br> Uraian Kegiatan :
+                                    Melaksanakan
+                                    perjalanan Dinas Luar Daerah</span>
+                                  <span class="tx-11 d-block">Keterangan : Mengikuti studi tiru pelaksanaan P2K2 di
+                                    dinas sosial
+                                    kabupaten lampung selatan</span>
+                                </td>
+                                <td class="tx-12">
+                                  <span class="badge bg-warning tx-white">Menunggu verifikasi</span>
+                                </td>
+                                <td>23 October 2024</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Mahesa Rani, A.Md</a>
+                                  <span class="tx-11 d-block">Urusan: UMUM/ADMINISTRASI, <br> Uraian Kegiatan :
+                                    Melaksanakan
+                                    perjalanan Dinas Luar Daerah</span>
+                                  <span class="tx-11 d-block">Keterangan : Mengikuti studi tiru pelaksanaan P2K2 di
+                                    dinas sosial
+                                    kabupaten lampung selatan</span>
+                                </td>
+                                <td class="tx-12">
+                                  <span class="badge bg-warning tx-white">Menunggu verifikasi</span>
+                                </td>
+                                <td>23 October 2024</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Muhammad Syarkowi,
+                                    S.Sos.</a>
+                                  <span class="tx-11 d-block">Urusan: UMUM/ADMINISTRASI, <br> Uraian Kegiatan :
+                                    Melaksanakan
+                                    perjalanan Dinas Luar Daerah</span>
+                                  <span class="tx-11 d-block">Keterangan : Mengikuti studi tiru pelaksanaan P2K2 di
+                                    dinas sosial
+                                    kabupaten lampung selatan</span>
+                                </td>
+                                <td class="tx-12">
+                                  <span class="badge bg-warning tx-white">Menunggu verifikasi</span>
+                                </td>
+                                <td>23 October 2024</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div><!-- table-responsive -->
+                      </div><!-- card -->
+                    </div><!-- col-5 -->
+                    <div class="col-12 col-md-6">
+                      <div class="card card-people-list pd-20">
+                        <div class="d-flex justify-content-between">
+                          <span>Pilih Berdasarkan Satuan Pendidikan</span>
+                          <div class="select">
+                            <select class="form-control select2-show-search"
+                              data-placeholder="Choose one (with searchbox)">
+                              <option label="Choose one"></option>
+                              <option value="SD1">SD Negeri 1</option>
+                              <option value="SD2">SD Negeri 2</option>
+                              <option value="SMP1">SMP Negeri 1</option>
+                              <option value="SMP3">SMP Negeri 3</option>
+                              <option value="SMP9">SD Negeri 9</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div id="chartLkhGuruku"></div>
+                      </div>
+                    </div><!-- card -->
+                  </div><!-- col-3 -->
+                </div><!-- tab-pane -->
               </div><!-- tab-content -->
             </div><!-- card-body -->
           </div><!-- card -->
@@ -445,7 +1113,32 @@
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/ResizeSensor.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="assets/lib/jqvmap/js/jquery.vmap.min.js"></script>
+  <script src="assets/lib/jqvmap/js/jquery.vmap.world.js"></script>
   <script src="assets/js/dashboard-opd/semesta.js"></script>
+  <script src="assets/js/dashboard-opd/guruku.js"></script>
+  <script src="assets/js/dashboard-opd/sidesi.js"></script>
+
+  <script src="assets/js/jquery.vmap.sampledata.js"></script>
+  <script>
+    $(function () {
+      'use strict'
+
+      $('#vmap').vectorMap({
+        map: 'world_en',
+        backgroundColor: '#fff',
+        color: '#ffffff',
+        hoverOpacity: 0.7,
+        selectedColor: '#666666',
+        enableZoom: true,
+        showTooltip: true,
+        scaleColors: ['#17A2B8', '#006491'],
+        values: sample_data,
+        normalizeFunction: 'polynomial'
+      });
+
+    });
+  </script>
 
 </body>
 
