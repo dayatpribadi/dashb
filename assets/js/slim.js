@@ -252,3 +252,22 @@ $(function(){
 
 
 });
+
+
+$('#xb-loadding').delay().fadeOut();
+
+// back to top - start
+// --------------------------------------------------
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 500) {
+    $('.xb-backtotop').addClass('active');
+  } else {
+    $('.xb-backtotop').removeClass('active');
+  }
+});
+$(function () {
+  $(".scroll").on('click', function () {
+    $("html,body").animate({ scrollTop: 0 }, "slow");
+    return false
+  });
+});

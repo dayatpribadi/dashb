@@ -444,16 +444,17 @@ var options = {
 
 
   var options = {
-    series: [
+    series: 
+    [
       {
-    name: 'Sudah Sertifikasi',
-    data: [44, 55,],
-  },
-      {
-    name: 'Belum Sertifikasi',
-    data: [12, 25,],
-  },
-],
+      name: 'Sudah Sertifikasi',
+      data: [44, 55, 66, 77, 88, 99, 10],
+      },
+        {
+      name: 'Belum Sertifikasi',
+      data: [12, 25, 21, 10, 34, 35, 88],
+    },
+    ],
     chart: {
     type: 'bar',
     height: 350
@@ -474,7 +475,7 @@ var options = {
     colors: ['transparent']
   },
   xaxis: {
-    categories: ['SMP', 'SD'],
+    categories: ['Indralaya', 'Indralaya Utara', 'Indralaya Selatan', 'Pemulutan', 'Pemulutan Selatan', 'Pemulutan Barat', 'Payaraman'],
   },
   yaxis: {
     title: {
