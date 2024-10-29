@@ -208,6 +208,37 @@
                         <div id="chartLinePresensi"></div>
                       </div>
                     </div>
+                    <div class="col-12">
+                      <div class="card card-activities pd-20 mg-t-30">
+                        <div class="text-center mb-3">
+                          <h5>Grafik Presensi Masuk dan Pulang</h5>
+                          <span>Periode : Tanggal, Bulan & Tahun</span>
+                        </div>
+                        <div class="d-flex row-sm justify-content-center">
+                          <div class="wd-200 mg-b-30">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                                </div>
+                              </div>
+                              <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+                            </div>
+                          </div><!-- wd-200 -->
+                          <div class="wd-200 mg-b-30">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                  <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                                </div>
+                              </div>
+                              <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+                            </div>
+                          </div><!-- wd-200 -->
+                        </div>
+                        <div id="chartPresensiPeriodik"></div>
+                      </div>
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col mg-t-20 mg-sm-t-30">
@@ -878,6 +909,7 @@
                       </div><!-- alert -->
                     </div>
                   </div>
+
                   <div class="row row-xs mg-t-30">
                     <div class="col-sm-6 col-lg-4 mg-t-10">
                       <div class="card card-status bg-body-custom-ungu">
@@ -1126,6 +1158,7 @@
   <script src="assets/lib/Flot/js/jquery.flot.js"></script>
   <script src="assets/lib/Flot/js/jquery.flot.resize.js"></script>
   <script src="assets/lib/peity/js/jquery.peity.js"></script>
+  <script src="assets/lib/moment/js/moment.js"></script>
 
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/ResizeSensor.js"></script>
@@ -1154,6 +1187,25 @@
         scaleColors: ['#17A2B8', '#006491'],
         values: sample_data,
         normalizeFunction: 'polynomial'
+      });
+
+    });
+  </script>
+
+  <script>
+    $(function () {
+      'use strict'
+
+      // Datepicker
+      $('.fc-datepicker').datepicker({
+        showOtherMonths: true,
+        selectOtherMonths: true
+      });
+
+      $('#datepickerNoOfMonths').datepicker({
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        numberOfMonths: 2
       });
 
     });
