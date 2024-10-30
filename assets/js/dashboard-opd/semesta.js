@@ -23,6 +23,12 @@ var options = {
   legend: {
     position: 'bottom'
   },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#chartPresensi"), options);

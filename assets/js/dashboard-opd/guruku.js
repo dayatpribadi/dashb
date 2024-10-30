@@ -20,6 +20,15 @@ var options = {
     text: 'Kondisi Guru PNS',
     align: 'left'
   },
+  legend: {
+    position: 'bottom'
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#persentaseGuruPNS"), options);
@@ -48,6 +57,15 @@ var options = {
     text: 'Kondisi Guru PPPK',
     align: 'left'
   },
+  legend: {
+    position: 'bottom'
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#persentaseGuruPppk"), options);
@@ -187,6 +205,12 @@ var options = {
     text: 'Kondisi Guru PPPK',
     align: 'left'
   },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#pppkPangGol"), options);
@@ -219,6 +243,12 @@ var options = {
   legend: {
     position: 'bottom'
   },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#pnsPangGol"), options);
