@@ -306,3 +306,148 @@ tooltip: {
 
 var chart = new ApexCharts(document.querySelector("#penerimaBantuanPerKecamatan"), options);
 chart.render();
+
+
+
+var options = {
+  series: [44, 55, 41, 17, 15],
+  chart: {
+  type: 'donut',
+  height: 250,
+},
+labels: ['Bantuan Langsung Tunai', 'Keluarga Harapan', 'Kartu Keluarga Sejahtera', 'Jenis Bantuan 1', 'Jenis Bantuan 2', 'Jenis Bantuan 3', 'Jenis Bantuan 4'],
+responsive: [{
+  breakpoint: 480,
+  options: {
+    chart: {
+      width: 200
+    },
+    legend: {
+      position: 'bottom'
+    },
+  }
+},],
+title: {
+  text: 'Hasil Evaluasi Akuntabilitas Kinerja Pemerintah Daerah Kabupaten Ogan Ilir',
+  align: 'left'
+},
+legend: {
+  position: 'bottom'
+},
+};
+
+var chart = new ApexCharts(document.querySelector("#evalakip"), options);
+chart.render();
+
+
+
+var options = {
+  series: [{
+  name: 'Nilai Akhir',
+  data: [
+    87.59, 
+    84.05, 
+    86.57, 
+    80.05, 
+    78.88,
+    71.64,
+    75.63,
+    77.01,
+    79.63,
+    81.94,
+    68.42,
+    81.73,
+    80.29,
+    76.06,
+    83.15, 75.13, 81.18, 75.72, 81.85, 79.55, 77.19, 70.07, 84.37, 72.84, 84.46, 60.83, 81.81, 87.96, 83.50, 83.12, 83.18, 0, 98.61, 0, 76.41, 98.58, 86.25, 0, 0, 96.82, 97.87, 0, 91.64, 98.95, 78.96, 71.00, 65.17
+   ]
+}],
+  chart: {
+  type: 'bar',
+  height: 750,
+},
+plotOptions: {
+  bar: {
+    horizontal: true,
+    columnWidth: '100%',
+    endingShape: 'rounded'
+  },
+},
+dataLabels: {
+  enabled: true
+},
+stroke: {
+  show: false,
+  width: 1,
+  colors: ['transparent']
+},
+xaxis: {
+  categories: [
+'INSPEKTORAT DAERAH',
+'DINAS PENDIDIKAN DAN KEBUDAYAAN',
+'DINAS KESEHATAN',
+'DINAS PUPR',
+'DINAS PERKIMTAN',
+'SATPOL PP',
+'DINAS SOSIAL',
+'DINAS KETAHANAN PANGAN DAN PERTANIAN',
+'DINAS PERIKANAN',
+'DISPERINDAGKOP UKM',
+'DISPORPAR',
+'BAPPEDA',
+'DINAS PPPA PPKB',
+'DINAS PERPUSTAKAAN',
+'DINAS PM PTSP',
+'DINAS PERHUBUNGAN',
+'DINAS PMD',
+'DINAS DUK CAPIL',
+'DINAS LINGKUNGAN HIDUP',
+'DINAS TRANSNAKER',
+'BPKAD',
+'DINAS DAMKAR',
+'RSUD',
+'BPBD',
+'BADAN LITBANGDA',
+'BADAN KESBANGPOL',
+'BAPENDA',
+'BKPSDM',
+'SEKRETARIAT DAERAH',
+'DINAS KOMINFO',
+'SEKRETARIAT DPRD',
+'PEMERINTAH KECAMATAN KANDIS',
+'PEMERINTAH KECAMATAN SUNGAI PINANG',
+'PEMERINTAH KECAMATAN RANTAU PANJANG',
+'PEMERINTAH KECAMATAN RAMBANG KUANG',
+'PEMERINTAH KECAMATAN LUBUK KELIAT',
+'PEMERINTAH KECAMATAN MUARA KUANG',
+'PEMERINTAH KECAMATAN RANTAU ALAI',
+'PEMERINTAH KECAMATAN PAYARAMAN',
+'PEMERINTAH KECAMATAN TANJUNG RAJA',
+'PEMERINTAH KECAMATAN TANJUNG BATU',
+'PEMERINTAH KECAMATAN PEMULUTAN SELATAN',
+'PEMERINTAH KECAMATAN PEMULUTAN BARAT',
+'PEMERINTAH KECAMATAN PEMULUTAN',
+'PEMERINTAH KECAMATAN INDRALAYA SELATAN',
+'PEMERINTAH KECAMATAN INDRALAYA UTARA',
+'PEMERINTAH KECAMATAN INDRALAYA',
+  ],
+},
+yaxis: {
+  title: {
+    text: 'Jumlah (ASN)'
+  }
+},
+fill: {
+  opacity: 1
+},
+tooltip: {
+  y: {
+    formatter: function (val) {
+      return " " + val + " "
+    }
+  }
+}
+};
+
+var chart = new ApexCharts(document.querySelector("#evalakipDua"), options);
+chart.render();

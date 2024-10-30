@@ -2,7 +2,7 @@ var options = {
     series: [44, 55, 41, 17, 15],
     chart: {
     type: 'donut',
-    height: 250,
+    height: 393,
   },
   labels: ['Presensi Hadir', 'Presensi DL', 'Presensi KL', 'Presensi TAP', 'Presensi Sakit', 'Presensi Izin', 'Presensi TK'],
   responsive: [{
@@ -19,6 +19,9 @@ var options = {
   title: {
     text: 'Rekap Presensi Per OPD',
     align: 'left'
+  },
+  legend: {
+    position: 'bottom'
   },
   };
 
@@ -39,7 +42,7 @@ var options = {
     }
   },
   dataLabels: {
-    enabled: false
+    enabled: true
   },
   stroke: {
     curve: 'straight'
@@ -343,6 +346,114 @@ xaxis: {
 };
 
 var chart = new ApexCharts(document.querySelector("#chartPresensiPeriodik"), options);
+chart.render();
+
+
+
+var options = {
+  series: [{
+  name: 'Rata-rata LKH Pegawai/Perangkat Daerah',
+  data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57, 56, 61, 58, 63, 60, 66, 55, 57, 56, 61, 58, 63, 60, 66]
+}],
+  chart: {
+  type: 'bar',
+  height: 350
+},
+plotOptions: {
+  bar: {
+    horizontal: false,
+    columnWidth: '55%',
+    endingShape: 'rounded'
+  },
+},
+dataLabels: {
+  enabled: true,
+  style: {
+    colors: ['#333']
+  },
+  offsetY: 100,             // Mengatur posisi vertikal data labels di atas bar
+  position: 'top',  
+},
+stroke: {
+  show: true,
+  width: 2,
+  colors: ['transparent']
+},
+xaxis: {
+  categories: [
+    'INSPEKTORAT DAERAH',
+    'DINAS PENDIDIKAN DAN KEBUDAYAAN',
+    'DINAS KESEHATAN',
+    'DINAS PUPR',
+    'DINAS PERKIMTAN',
+    'SATPOL PP',
+    'DINAS SOSIAL',
+    'DINAS KETAHANAN PANGAN DAN PERTANIAN',
+    'DINAS PERIKANAN',
+    'DISPERINDAGKOP UKM',
+    'DISPORPAR',
+    'BAPPEDA',
+    'DINAS PPPA PPKB',
+    'DINAS PERPUSTAKAAN',
+    'DINAS PM PTSP',
+    'DINAS PERHUBUNGAN',
+    'DINAS PMD',
+    'DINAS DUK CAPIL',
+    'DINAS LINGKUNGAN HIDUP',
+    'DINAS TRANSNAKER',
+    'BPKAD',
+    'DINAS DAMKAR',
+    'RSUD',
+    'BPBD',
+    'BADAN LITBANGDA',
+    'BADAN KESBANGPOL',
+    'BAPENDA',
+    'BKPSDM',
+    'SEKRETARIAT DAERAH',
+    'DINAS KOMINFO',
+    'SEKRETARIAT DPRD',
+    'PEMERINTAH KECAMATAN KANDIS',
+    'PEMERINTAH KECAMATAN SUNGAI PINANG',
+    'PEMERINTAH KECAMATAN RANTAU PANJANG',
+    'PEMERINTAH KECAMATAN RAMBANG KUANG',
+    'PEMERINTAH KECAMATAN LUBUK KELIAT',
+    'PEMERINTAH KECAMATAN MUARA KUANG',
+    'PEMERINTAH KECAMATAN RANTAU ALAI',
+    'PEMERINTAH KECAMATAN PAYARAMAN',
+    'PEMERINTAH KECAMATAN TANJUNG RAJA',
+    'PEMERINTAH KECAMATAN TANJUNG BATU',
+    'PEMERINTAH KECAMATAN PEMULUTAN SELATAN',
+    'PEMERINTAH KECAMATAN PEMULUTAN BARAT',
+    'PEMERINTAH KECAMATAN PEMULUTAN',
+    'PEMERINTAH KECAMATAN INDRALAYA SELATAN',
+    'PEMERINTAH KECAMATAN INDRALAYA UTARA',
+    'PEMERINTAH KECAMATAN INDRALAYA',
+      ],
+      labels: {
+        rotate: -90,           // Mengatur rotasi label menjadi vertikal
+        style: {
+          fontSize: '10px',    // Ukuran font label (opsional)
+        }
+      }
+},
+yaxis: {
+  title: {
+    text: 'Capaian LKH'
+  }
+},
+fill: {
+  opacity: 1
+},
+tooltip: {
+  y: {
+    formatter: function (val) {
+      return " " + val + " "
+    }
+  }
+}
+};
+
+var chart = new ApexCharts(document.querySelector("#capaianlkhPd"), options);
 chart.render();
 
 
