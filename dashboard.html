@@ -224,80 +224,18 @@
         <div class="col-12 col-md-6">
           <div class="card card-sales">
             <div class="d-flex spacer">
-              <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Surat Masuk/Keluar
-              </h6>
-              <div class="dropdown spacer-x mg-b-10">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Filter
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Surat Masuk</a>
-                  <a class="dropdown-item" href="#">Surat Keluar</a>
-                </div><!-- dropdown-menu -->
-              </div><!-- dropdown -->
+              <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Surat Masuk/Keluar</h6>
+              <select id="suratSelect" class="col-12 col-md-4 form-control select2-show-search mg-b-30"
+                data-placeholder="Choose one (with searchbox)">
+                <option label="Choose one"></option>
+                <option value="SM">Surat Masuk</option>
+                <option value="SK">Surat Keluar</option>
+              </select>
             </div>
-            <div class="table-responsive table-hover">
-              <table class="table mg-b-0 tx-13">
-                <thead>
-                  <tr class="tx-10">
-                    <th class="pd-y-5">Surat</th>
-                    <th class="pd-y-5">Status</th>
-                    <th class="pd-y-5">Posisi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <a href="" class="tx-inverse tx-14 tx-medium d-block">Judul Surat Lorem ipsum dolor sit.</a>
-                      <span class="tx-11 d-block">ID Surat: 1234567890</span>
-                    </td>
-                    <td class="tx-12">
-                      <span class="square-8 bg-danger mg-r-5 rounded-circle"></span> Ditolak
-                    </td>
-                    <td>Kepala Dinas</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href="" class="tx-inverse tx-14 tx-medium d-block">Judul Surat Lorem ipsum dolor sit.</a>
-                      <span class="tx-11 d-block">ID Surat: 1234567890</span>
-                    </td>
-                    <td class="tx-12">
-                      <span class="square-8 bg-warning mg-r-5 rounded-circle"></span> Menunggu Verifikasi
-                    </td>
-                    <td>Kepala Dinas</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href="" class="tx-inverse tx-14 tx-medium d-block">Judul Surat Lorem ipsum dolor sit.</a>
-                      <span class="tx-11 d-block">ID Surat: 1234567890</span>
-                    </td>
-                    <td class="tx-12">
-                      <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Sudah Ditandatangani
-                    </td>
-                    <td>Kepala Dinas</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="tx-center mg-t-10">
-                <nav aria-label="Page navigation">
-                  <ul class="pagination mg-b-0">
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#" aria-label="Next">
-                        <i class="fa fa-angle-right"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div><!-- pagination-wrapper -->
-            </div><!-- table-responsive -->
+            <div id="suratMasuk"></div>
+            <div id="suratKeluar"></div>
+          </div>
 
-          </div><!-- card -->
 
           <div class="card mg-t-10">
             <div class="card-body">
@@ -321,6 +259,14 @@
               <div class="bd pd-t-30 pd-b-20 pd-x-20">
                 <canvas id="kondisiPegawai" height="150"></canvas>
               </div>
+            </div>
+          </div>
+
+          <div class="card mg-t-10">
+            <div class="card-body">
+              <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Video Conference
+                <video autoplay width="100%"
+                  style="border: 5px solid #d9d9d9; border-radius: 12px; margin-top: 10px;"></video>
             </div>
           </div>
         </div><!-- col-4 -->
@@ -386,6 +332,7 @@
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/ResizeSensor.js"></script>
   <script src="assets/lib/chart.js/js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="assets/js/dashboard-opd/sicaram.js"></script>
   <script>
     $(function () {
@@ -393,6 +340,21 @@
 
       $('#datepicker').datepicker();
     });
+  </script>
+
+  <script>
+    navigator.mediaDevices
+      .getUserMedia({
+        video: true,
+        audio: true
+      })
+      .then((localMediaStream) => {
+        const video = document.querySelector("video");
+        video.srcObject = localMediaStream;
+      })
+      .catch((error) => {
+        console.log("Rejected!", error);
+      });
   </script>
 
   <script>
@@ -596,6 +558,137 @@
       if ((t /= d / 2) < 1) return (c / 2) * t * t + b;
       return (c / 2) * ((t -= 2) * t * t + 2) + b;
     }
+  </script>
+
+
+  <script>
+    var optionsSuratMasuk = {
+      series: [{
+        name: 'Jumlah Surat Masuk',
+        data: [44, 55, 57, 56]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      colors: ['#1E90FF', '#00CED1', '#FFD700', '#DC143C'],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '55%',
+          endingShape: 'rounded'
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ['#333']
+        },
+        offsetY: 100,
+        position: 'top'
+      },
+      xaxis: {
+        categories: ['Total Surat Masuk', 'Belum Didisposisikan', 'Sudah Didisposisikan', 'Selesai'],
+        labels: {
+          rotate: -90,
+          style: {
+            fontSize: '10px'
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: 'Jumlah Surat Masuk'
+        }
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return " " + val + " ";
+          }
+        }
+      }
+    };
+
+    var optionsSuratKeluar = {
+      series: [{
+        name: 'Jumlah Surat Keluar',
+        data: [44, 55, 57, 56]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      colors: ['#FF4500', '#32CD32', '#8A2BE2', '#FFA07A'],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '55%',
+          endingShape: 'rounded'
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ['#333']
+        },
+        offsetY: 100,
+        position: 'top'
+      },
+      xaxis: {
+        categories: ['Total Surat Keluar', 'Proses Verifikasi', 'Menunggu Tanda Tangan', 'Sudah Ditandatangani'],
+        labels: {
+          rotate: -90,
+          style: {
+            fontSize: '10px'
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: 'Jumlah Surat Keluar'
+        }
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return " " + val + " ";
+          }
+        }
+      }
+    };
+
+    // Inisialisasi chart untuk Surat Masuk dan Surat Keluar
+    var chartSuratMasuk = new ApexCharts(document.querySelector("#suratMasuk"), optionsSuratMasuk);
+    var chartSuratKeluar = new ApexCharts(document.querySelector("#suratKeluar"), optionsSuratKeluar);
+
+    chartSuratMasuk.render();
+    chartSuratKeluar.render();
+
+    // Sembunyikan chart Surat Keluar pada awal pemuatan
+    document.getElementById("suratKeluar").style.display = "none";
+
+    // Event listener untuk dropdown
+    document.getElementById("suratSelect").addEventListener("change", function (event) {
+      var selectedValue = event.target.value;
+      if (selectedValue === "SM") {
+        document.getElementById("suratMasuk").style.display = "block";
+        document.getElementById("suratKeluar").style.display = "none";
+      } else if (selectedValue === "SK") {
+        document.getElementById("suratMasuk").style.display = "none";
+        document.getElementById("suratKeluar").style.display = "block";
+      } else {
+        // Pilihan default, misalnya jika tidak ada opsi yang dipilih
+        document.getElementById("suratMasuk").style.display = "block";
+        document.getElementById("suratKeluar").style.display = "none";
+      }
+    });
   </script>
 
 </body>
