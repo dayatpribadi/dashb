@@ -23,6 +23,12 @@ var options = {
   legend: {
     position: 'bottom'
   },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#kondisiNonAsn"), options);
@@ -62,6 +68,12 @@ var options = {
   legend: {
     position: 'bottom'
   },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#kondisiNonAsnPerPd"), options);
@@ -100,6 +112,12 @@ var options = {
   },],
   legend: {
     position: 'bottom'
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
   },
   title: {
     text: 'Kondisi Non ASN Berdasarkan Tingkat Pendidikan',

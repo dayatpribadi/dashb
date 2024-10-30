@@ -363,7 +363,7 @@ var options = {
 }],
   chart: {
   type: 'bar',
-  height: 350
+  height: 450
 },
 plotOptions: {
   bar: {
@@ -372,6 +372,17 @@ plotOptions: {
     endingShape: 'rounded'
   },
 },
+responsive: [{
+  breakpoint: 480,
+  options: {
+    chart: {
+      height: 450,
+    },
+    legend: {
+      position: 'bottom'
+    }
+  }
+}],
 dataLabels: {
   enabled: true,
   style: {

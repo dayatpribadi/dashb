@@ -187,6 +187,12 @@ var options = {
     text: 'Rekap Presensi Per Desa/Kelurahan',
     align: 'left'
   },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex];  // Menggunakan nilai asli data
+    }
+  }
   };
 
   var chart = new ApexCharts(document.querySelector("#chartPresensiSidesi"), options);
@@ -271,4 +277,81 @@ xaxis: {
 };
 
 var chart = new ApexCharts(document.querySelector("#chartPresensiPeriodikSidesi"), options);
+chart.render();
+
+
+
+var options = {
+  series: [{
+  name: 'Rata-rata LKH',
+  data: [61, 58, 63, 60, 66, 55, 57, 56, 61, 58, 63, 60, 66, 76, 77, 78]
+}],
+  chart: {
+  type: 'bar',
+  height: 450
+},
+plotOptions: {
+  bar: {
+    horizontal: false,
+    columnWidth: '55%',
+    endingShape: 'rounded'
+  },
+},
+dataLabels: {
+  enabled: true,
+  style: {
+    colors: ['#333']
+  },
+  offsetY: 100,             // Mengatur posisi vertikal data labels di atas bar
+  position: 'top',  
+},
+stroke: {
+  show: true,
+  width: 2,
+  colors: ['transparent']
+},
+xaxis: {
+  categories: [
+    'PEMERINTAH KECAMATAN KANDIS',
+    'PEMERINTAH KECAMATAN SUNGAI PINANG',
+    'PEMERINTAH KECAMATAN RANTAU PANJANG',
+    'PEMERINTAH KECAMATAN RAMBANG KUANG',
+    'PEMERINTAH KECAMATAN LUBUK KELIAT',
+    'PEMERINTAH KECAMATAN MUARA KUANG',
+    'PEMERINTAH KECAMATAN RANTAU ALAI',
+    'PEMERINTAH KECAMATAN PAYARAMAN',
+    'PEMERINTAH KECAMATAN TANJUNG RAJA',
+    'PEMERINTAH KECAMATAN TANJUNG BATU',
+    'PEMERINTAH KECAMATAN PEMULUTAN SELATAN',
+    'PEMERINTAH KECAMATAN PEMULUTAN BARAT',
+    'PEMERINTAH KECAMATAN PEMULUTAN',
+    'PEMERINTAH KECAMATAN INDRALAYA SELATAN',
+    'PEMERINTAH KECAMATAN INDRALAYA UTARA',
+    'PEMERINTAH KECAMATAN INDRALAYA',
+      ],
+      labels: {
+        rotate: -90,           // Mengatur rotasi label menjadi vertikal
+        style: {
+          fontSize: '10px',    // Ukuran font label (opsional)
+        }
+      }
+},
+yaxis: {
+  title: {
+    text: 'Capaian LKH'
+  }
+},
+fill: {
+  opacity: 1
+},
+tooltip: {
+  y: {
+    formatter: function (val) {
+      return " " + val + " "
+    }
+  }
+}
+};
+
+var chart = new ApexCharts(document.querySelector("#capaianLkhSidesi"), options);
 chart.render();

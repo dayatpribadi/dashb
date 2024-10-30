@@ -68113,3 +68113,10 @@ a.hover-white-8:focus {
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 420px) {
+  #capaianlkhPd {
+    max-width: 300px;
+    overflow: scroll;
+  }
+}

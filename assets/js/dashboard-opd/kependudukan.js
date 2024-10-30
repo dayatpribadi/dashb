@@ -451,3 +451,86 @@ tooltip: {
 
 var chart = new ApexCharts(document.querySelector("#evalakipDua"), options);
 chart.render();
+
+
+
+
+// Apexchart
+var options = {
+  series: [{
+  name: 'Nilai Akhir',
+  data: [
+    87.59, 
+    84.05, 
+    86.57, 
+    80.05, 
+    78.88,
+    71.64,
+    75.63,
+    77.01,
+    79.63,
+    81.94,
+    68.42,
+    81.73,
+    80.29,
+    76.06,
+   ]
+}],
+  chart: {
+  type: 'bar',
+  height: 750,
+},
+plotOptions: {
+  bar: {
+    horizontal: true,
+    columnWidth: '100%',
+    endingShape: 'rounded'
+  },
+},
+dataLabels: {
+  enabled: true
+},
+stroke: {
+  show: false,
+  width: 1,
+  colors: ['transparent']
+},
+xaxis: {
+  categories: [
+'PEMERINTAH KECAMATAN KANDIS',
+'PEMERINTAH KECAMATAN SUNGAI PINANG',
+'PEMERINTAH KECAMATAN RANTAU PANJANG',
+'PEMERINTAH KECAMATAN RAMBANG KUANG',
+'PEMERINTAH KECAMATAN LUBUK KELIAT',
+'PEMERINTAH KECAMATAN MUARA KUANG',
+'PEMERINTAH KECAMATAN RANTAU ALAI',
+'PEMERINTAH KECAMATAN PAYARAMAN',
+'PEMERINTAH KECAMATAN TANJUNG RAJA',
+'PEMERINTAH KECAMATAN TANJUNG BATU',
+'PEMERINTAH KECAMATAN PEMULUTAN SELATAN',
+'PEMERINTAH KECAMATAN PEMULUTAN BARAT',
+'PEMERINTAH KECAMATAN PEMULUTAN',
+'PEMERINTAH KECAMATAN INDRALAYA SELATAN',
+'PEMERINTAH KECAMATAN INDRALAYA UTARA',
+'PEMERINTAH KECAMATAN INDRALAYA',
+  ],
+},
+yaxis: {
+  title: {
+    text: 'Jumlah (ASN)'
+  }
+},
+fill: {
+  opacity: 1
+},
+tooltip: {
+  y: {
+    formatter: function (val) {
+      return " " + val + "jiwa"
+    }
+  }
+}
+};
+
+var chart = new ApexCharts(document.querySelector("#pendudukPerKecamatan"), options);
+chart.render();
