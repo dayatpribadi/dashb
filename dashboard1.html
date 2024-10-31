@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@themepixels">
+  <meta name="twitter:creator" content="@themepixels">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Slim">
+  <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="http://themepixels.me/slim">
+  <meta property="og:title" content="Slim">
+  <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
+
+  <meta property="og:image" content="http://themepixels.me/slim/img/slim-social.png">
+  <meta property="og:image:secure_url" content="http://themepixels.me/slim/img/slim-social.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+
+  <!-- Meta -->
+  <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="author" content="ThemePixels">
+
+  <title>Slim Responsive Bootstrap 4 Admin Template</title>
+
+  <!-- vendor css -->
+  <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+  <link href="assets/lib/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+  <link href="assets/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+
+  <!-- Slim CSS -->
+  <link rel="stylesheet" href="assets/css/slim.css">
+
+</head>
+
+<body>
+  <div id="xb-loadding">
+    <div class="loader">
+      <div class="plane">
+        <img class="plane-img" src="assets/img/icon/plane.gif" alt="">
+      </div>
+      <div class="earth-wrapper">
+        <div class="earth"></div>
+      </div>
+    </div>
+  </div>
+  <div class="slim-header">
+    <div class="container-fluid">
+      <div class="slim-header-left">
+        <h2 class="slim-logo"><a href="dashboard.html">NOC<span>.</span></a></h2>
+
+        <div class="search-box">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+        </div><!-- search-box -->
+      </div><!-- slim-header-left -->
+      <div class="slim-header-right">
+        <div class="dropdown dropdown-c">
+          <a href="#" class="logged-user" data-toggle="dropdown">
+            <!-- <img src="http://via.placeholder.com/500x500" alt=""> -->
+            <i class="fa fa-user-circle" style="font-size: 18px;"></i>
+            <span>User</span>
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <nav class="nav">
+              <a href="#" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
+              <a href="index.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+            </nav>
+          </div><!-- dropdown-menu -->
+        </div><!-- dropdown-menu -->
+      </div><!-- dropdown -->
+
+    </div><!-- header-right -->
+  </div><!-- container -->
+  </div><!-- slim-header -->
+
+  <div class="slim-navbar">
+    <div class="container-fluid">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="dashboard.html">
+            <i class="icon ion-ios-home-outline"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noc_kependudukan.html">
+            <i class="icon ion-ios-book-outline"></i>
+            <span>Pemerintahan & Kesra</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noc_perekonomian.html">
+            <i class="icon ion-ios-book-outline"></i>
+            <span>Perekonomian & Pembangunan</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noc_administrasi_umum.html">
+            <i class="icon ion-ios-book-outline"></i>
+            <span>Administrasi Umum</span>
+          </a>
+        </li>
+      </ul>
+    </div><!-- container -->
+  </div><!-- slim-navbar -->
+
+  <div class="slim-mainpanel">
+    <div class="container-fluid pd-t-20">
+      <div class="row row-xs">
+        <div class="col-12 col-lg-3">
+          <div class="card card-sales">
+            <div class="row">
+              <div class="col-6">
+                <div class="melayang">
+                  <img class="img-bupati" src="assets/img/lanjutkerja.png" alt="">
+                </div>
+              </div>
+              <div class="col-6 pd-0">
+                <p><span id="tanggalwaktu"
+                    style="font-size: 14px; font-weight: 600; margin-bottom: 0; padding: 0; color: rgb(66, 66, 66) !important;"></span><br>
+                  <span id="waktuAja"
+                    style="font-size: 20px; font-weight: 800; margin-bottom: 0; padding: 0; color: rgb(113, 113, 113) !important;"></span>
+                </p>
+              </div>
+            </div>
+          </div><!-- card -->
+        </div>
+
+        <div class="col-12 col-lg-9">
+          <div class="row row-xs">
+            <div class="col-sm-6 col-lg-3">
+              <div class="card card-status bg-reef">
+                <div class="media">
+                  <i class="icon ion-ios-cloud-download-outline tx-white"></i>
+                  <div class="media-body">
+                    <h1 class="tx-white">32,604</h1>
+                    <p>Total downloads</p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- card -->
+            </div><!-- col-3 -->
+            <div class="col-sm-6 col-lg-3 mg-t-10 mg-sm-t-0">
+              <div class="card card-status bg-mantle">
+                <div class="media">
+                  <i class="icon ion-ios-bookmarks-outline tx-white"></i>
+                  <div class="media-body">
+                    <h1>17,583</h1>
+                    <p>Total bookmarks</p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- card -->
+            </div><!-- col-3 -->
+            <div class="col-sm-6 col-lg-3 mg-t-10 mg-lg-t-0">
+              <div class="card card-status bg-neon">
+                <div class="media">
+                  <i class="icon ion-ios-cloud-upload-outline tx-white"></i>
+                  <div class="media-body">
+                    <h1>61,119</h1>
+                    <p>Total uploads</p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- card -->
+            </div><!-- col-3 -->
+            <div class="col-sm-6 col-lg-3 mg-t-10 mg-lg-t-0">
+              <div class="card card-status bg-dance">
+                <div class="media">
+                  <i class="icon ion-ios-analytics-outline tx-white"></i>
+                  <div class="media-body">
+                    <h1>2,942</h1>
+                    <p>Total analytics</p>
+                  </div><!-- media-body -->
+                </div><!-- media -->
+              </div><!-- card -->
+            </div><!-- col-3 -->
+          </div><!-- row -->
+          <div class="card mg-t-10">
+            <div class="card-body">
+              <div class="d-flex spacer">
+                <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Kondisi Pegawai (Jumlah
+                  Masuk/Izin/Tk)
+                </h6>
+                <div class="dropdown spacer-x mg-b-10">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Hari Ini</a>
+                    <a class="dropdown-item" href="#">Minggu Ini</a>
+                    <a class="dropdown-item" href="#">Bulan Ini</a>
+                  </div><!-- dropdown-menu -->
+                </div><!-- dropdown -->
+              </div>
+
+              <div class="bd pd-t-30 pd-b-20 pd-x-20">
+                <canvas id="kondisiPegawai" height="150"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mg-t-10">
+            <div class="card-body">
+              <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Video Conference
+                <video autoplay width="100%"
+                  style="border: 5px solid #d9d9d9; border-radius: 12px; margin-top: 10px;"></video>
+            </div>
+          </div>
+        </div><!-- col-4 -->
+      </div>
+
+      <div class="card mg-t-10">
+        <div class="card-body">
+          <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Agenda Kegiatan(semesta)
+          </h6>
+          <div class="agenda">
+            <div class="card bd-0">
+              <div class="card-header tx-medium bd-0 tx-white bg-mantle">
+                Agenda Hari Ini
+              </div><!-- card-header -->
+              <div class="container-agenda" style="max-height: 560px; overflow-y: scroll;">
+                <div class="card-body item-agenda bd bd-t-0 bg-custom">
+                  <div class="d-flex justify-content-between mg-b-2">
+                    <div class="tx-14">
+                      <a href="" class="tx-gray-500"><i class="icon ion-star"></i></a>
+                      <a href="" class="tx-gray-500 mg-l-5"><i class="icon ion-android-attach"></i></a>
+                    </div>
+                    <span class="tx-12">Rabu, 26 Nov 2024 | 09:30:00 WB</span>
+                  </div><!-- d-flex -->
+                  <h6 class="tx-14 mg-t-10"><a href="" class="tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
+                      Agenda Kegiatan</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      Diskominfo</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      Rapat
+                      Utama
+                      Bupati</a></h6>
+                </div><!-- card-body -->
+                <div class="card-body item-agenda bd bd-t-0 bg-custom">
+                  <div class="d-flex justify-content-between mg-b-2">
+                    <div class="tx-14">
+                      <a href="" class="tx-gray-500"><i class="icon ion-star"></i></a>
+                      <a href="" class="tx-gray-500 mg-l-5"><i class="icon ion-android-attach"></i></a>
+                    </div>
+                    <span class="tx-12">Rabu, 26 Nov 2024 | 09:30:00 WB</span>
+                  </div><!-- d-flex -->
+                  <h6 class="tx-14 mg-t-10"><a href="" class="tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
+                      Agenda Kegiatan</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      Diskominfo</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      Rapat
+                      Utama
+                      Bupati</a></h6>
+                </div><!-- card-body -->
+                <div class="card-body item-agenda bd bd-t-0 bg-custom">
+                  <div class="d-flex justify-content-between mg-b-2">
+                    <div class="tx-14">
+                      <a href="" class="tx-gray-500"><i class="icon ion-star"></i></a>
+                      <a href="" class="tx-gray-500 mg-l-5"><i class="icon ion-android-attach"></i></a>
+                    </div>
+                    <span class="tx-12">Rabu, 26 Nov 2024 | 09:30:00 WB</span>
+                  </div><!-- d-flex -->
+                  <h6 class="tx-14 mg-t-10"><a href="" class="tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
+                      Agenda Kegiatan</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      Diskominfo</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      Rapat
+                      Utama
+                      Bupati</a></h6>
+                </div><!-- card-body -->
+                <div class="card-body item-agenda bd bd-t-0 bg-custom">
+                  <div class="d-flex justify-content-between mg-b-2">
+                    <div class="tx-14">
+                      <a href="" class="tx-gray-500"><i class="icon ion-star"></i></a>
+                      <a href="" class="tx-gray-500 mg-l-5"><i class="icon ion-android-attach"></i></a>
+                    </div>
+                    <span class="tx-12">Rabu, 26 Nov 2024 | 09:30:00 WB</span>
+                  </div><!-- d-flex -->
+                  <h6 class="tx-14 mg-t-10"><a href="" class="tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
+                      Agenda Kegiatan</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      Diskominfo</a></h6>
+                  <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      Rapat
+                      Utama
+                      Bupati</a></h6>
+                </div><!-- card-body -->
+              </div>
+            </div><!-- card -->
+          </div>
+        </div>
+      </div>
+    </div><!-- col-4 -->
+  </div>
+  <div class="row row-sm">
+    <div class="col-12 col-md-3">
+      <div class="card card-sales">
+        <h6 class="slim-card-title tx-primary mb-3">Pencarian Internet</h6>
+        <form action="https://google.com" data-parsley-validate>
+          <div class="d-sm-flex wd-sm-300">
+            <div class="form-group mg-b-0">
+              <input type="text" name="google" class="form-control wd-150 wd-xs-250" placeholder="Cari di google"
+                required>
+            </div><!-- form-group -->
+          </div>
+        </form>
+      </div><!-- card -->
+
+      <div class="card card-sales mg-t-10">
+        <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Program
+        </h6>
+        <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiProgram" height="150"></canvas></div>
+      </div>
+
+      <div class="card card-sales mg-t-10">
+        <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Kegiatan</h6>
+        <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiKegiatan" height="150"></canvas></div>
+      </div>
+
+      <div class="card card-sales mg-t-10">
+        <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Pendapatan</h6>
+        <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiPendapatan" height="150"></canvas></div>
+      </div>
+
+      <div class="card card-sales mg-t-10">
+        <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Belanja</h6>
+        <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiBelanja" height="150"></canvas></div>
+      </div>
+    </div><!-- col-4 -->
+  </div><!-- row -->
+  </div><!-- container -->
+  </div><!-- slim-mainpanel -->
+
+
+
+  <div class="slim-footer">
+    <div class="container-fluid">
+      <p>Copyright 2024 &copy; All Rights Reserved.</p>
+      <p>Developed by: <a href="">Diskominfo Kab. Ogan Ilir</a></p>
+    </div><!-- container -->
+  </div><!-- slim-footer -->
+
+  <script src="assets/lib/jquery/js/jquery-2.1.4.js"></script>
+  <script src="assets/lib/jquery-ui/js/jquery-ui-1.12.1.js"></script>
+  <script src="assets/lib/popper.js/js/popper.js"></script>
+  <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
+  <script src="assets/lib/jquery.cookie/js/jquery.cookie.js"></script>
+  <script src="assets/lib/d3/js/d3.js"></script>
+  <script src="assets/lib/rickshaw/js/rickshaw.min.js"></script>
+  <script src="assets/lib/Flot/js/jquery.flot.js"></script>
+  <script src="assets/lib/Flot/js/jquery.flot.resize.js"></script>
+  <script src="assets/lib/peity/js/jquery.peity.js"></script>
+
+  <script src="assets/js/slim.js"></script>
+  <script src="assets/js/ResizeSensor.js"></script>
+  <script src="assets/lib/chart.js/js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="assets/js/dashboard-opd/sicaram.js"></script>
+  <script>
+    $(function () {
+      'use strict'
+
+      $('#datepicker').datepicker();
+    });
+  </script>
+
+  <script>
+    navigator.mediaDevices
+      .getUserMedia({
+        video: true,
+        audio: true
+      })
+      .then((localMediaStream) => {
+        const video = document.querySelector("video");
+        video.srcObject = localMediaStream;
+      })
+      .catch((error) => {
+        console.log("Rejected!", error);
+      });
+  </script>
+
+  <script>
+    var tw = new Date();
+    if (tw.getTimezoneOffset() == 0)(a = tw.getTime() + (7 * 60 * 60 * 1000))
+    else(a = tw.getTime());
+    tw.setTime(a);
+    var tahun = tw.getFullYear();
+    var hari = tw.getDay();
+    var bulan = tw.getMonth();
+    var tanggal = tw.getDate();
+    var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+    var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
+      "Oktober", "Nopember", "Desember");
+    document.getElementById("waktuAja").innerHTML = " Pukul : " + ((tw.getHours() < 10) ? "0" : "") + tw.getHours() +
+      ":" +
+      ((tw.getMinutes() <
+          10) ? "0" :
+        "") + tw.getMinutes() + (" WIB");
+  </script>
+
+
+  <script>
+    var tw = new Date();
+    if (tw.getTimezoneOffset() == 0)(a = tw.getTime() + (7 * 60 * 60 * 1000))
+    else(a = tw.getTime());
+    tw.setTime(a);
+    var tahun = tw.getFullYear();
+    var hari = tw.getDay();
+    var bulan = tw.getMonth();
+    var tanggal = tw.getDate();
+    var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
+    var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
+      "Oktober", "Nopember", "Desember");
+    document.getElementById("tanggalwaktu").innerHTML = hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] +
+      " " + tahun;
+  </script>
+
+
+  <script>
+    var $body = document.body,
+      $wrap = document.getElementById("wrap"),
+      areawidth = window.innerWidth,
+      areaheight = window.innerHeight,
+      canvassize = 500,
+      length = 30,
+      radius = 5.6,
+      rotatevalue = 0.035,
+      acceleration = 0,
+      animatestep = 0,
+      toend = false,
+      pi2 = Math.PI * 2,
+      group = new THREE.Group(),
+      mesh,
+      ringcover,
+      ring,
+      camera,
+      scene,
+      renderer;
+
+    camera = new THREE.PerspectiveCamera(65, 1, 1, 10000);
+    camera.position.z = 150;
+
+    scene = new THREE.Scene();
+    // scene.add(new THREE.AxisHelper(30));
+    scene.add(group);
+
+    mesh = new THREE.Mesh(
+      new THREE.TubeGeometry(
+        new(THREE.Curve.create(
+          function () {},
+          function (percent) {
+            var x = length * Math.sin(pi2 * percent),
+              y = radius * Math.cos(pi2 * 3 * percent),
+              z,
+              t;
+
+            t = (percent % 0.25) / 0.25;
+            t = (percent % 0.25) - (2 * (1 - t) * t * -0.0185 + t * t * 0.25);
+            if (
+              Math.floor(percent / 0.25) == 0 ||
+              Math.floor(percent / 0.25) == 2
+            ) {
+              t *= -1;
+            }
+            z = radius * Math.sin(pi2 * 2 * (percent - t));
+
+            return new THREE.Vector3(x, y, z);
+          }
+        ))(),
+        200,
+        1.1,
+        2,
+        true
+      ),
+      new THREE.MeshBasicMaterial({
+        color: 0xffffff
+        // , wireframe: true
+      })
+    );
+    group.add(mesh);
+
+    ringcover = new THREE.Mesh(
+      new THREE.PlaneGeometry(50, 15, 1),
+      new THREE.MeshBasicMaterial({
+        color: 0xd1684e,
+        opacity: 0,
+        transparent: true
+      })
+    );
+    ringcover.position.x = length + 1;
+    ringcover.rotation.y = Math.PI / 2;
+    group.add(ringcover);
+
+    ring = new THREE.Mesh(
+      new THREE.RingGeometry(4.3, 5.55, 32),
+      new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+        opacity: 0,
+        transparent: true
+      })
+    );
+    ring.position.x = length + 1.1;
+    ring.rotation.y = Math.PI / 2;
+    group.add(ring);
+
+    // fake shadow
+    (function () {
+      var plain, i;
+      for (i = 0; i < 10; i++) {
+        plain = new THREE.Mesh(
+          new THREE.PlaneGeometry(length * 2 + 1, radius * 3, 1),
+          new THREE.MeshBasicMaterial({
+            color: 0xd1684e,
+            transparent: true,
+            opacity: 0.13
+          })
+        );
+        plain.position.z = -2.5 + i * 0.5;
+        group.add(plain);
+      }
+    })();
+
+    renderer = new THREE.WebGLRenderer({
+      antialias: true
+    });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(canvassize, canvassize);
+    renderer.setClearColor("#d1684e");
+
+    $wrap.appendChild(renderer.domElement);
+
+    $body.addEventListener("mousedown", start, false);
+    $body.addEventListener("touchstart", start, false);
+    $body.addEventListener("mouseup", back, false);
+    $body.addEventListener("touchend", back, false);
+
+    animate();
+
+    function start() {
+      toend = true;
+    }
+
+    function back() {
+      toend = false;
+    }
+
+    function tilt(percent) {
+      group.rotation.y = percent * 0.5;
+    }
+
+    function render() {
+      var progress;
+
+      animatestep = Math.max(
+        0,
+        Math.min(240, toend ? animatestep + 1 : animatestep - 4)
+      );
+      acceleration = easing(animatestep, 0, 1, 240);
+
+      if (acceleration > 0.35) {
+        progress = (acceleration - 0.35) / 0.65;
+        group.rotation.y = (-Math.PI / 2) * progress;
+        group.position.z = 50 * progress;
+        progress = Math.max(0, (acceleration - 0.97) / 0.03);
+        mesh.material.opacity = 1 - progress;
+        ringcover.material.opacity = ring.material.opacity = progress;
+        ring.scale.x = ring.scale.y = 0.9 + 0.1 * progress;
+      }
+
+      renderer.render(scene, camera);
+    }
+
+    function animate() {
+      mesh.rotation.x += rotatevalue + acceleration;
+      render();
+      requestAnimationFrame(animate);
+    }
+
+    function easing(t, b, c, d) {
+      if ((t /= d / 2) < 1) return (c / 2) * t * t + b;
+      return (c / 2) * ((t -= 2) * t * t + 2) + b;
+    }
+  </script>
+
+
+  <script>
+    var optionsSuratMasuk = {
+      series: [{
+        name: 'Jumlah Surat Masuk',
+        data: [44, 55, 57, 56]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      colors: ['#1E90FF', '#00CED1', '#FFD700', '#DC143C'],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '55%',
+          endingShape: 'rounded'
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ['#333']
+        },
+        offsetY: 100,
+        position: 'top'
+      },
+      xaxis: {
+        categories: ['Total Surat Masuk', 'Belum Didisposisikan', 'Sudah Didisposisikan', 'Selesai'],
+        labels: {
+          rotate: -90,
+          style: {
+            fontSize: '10px'
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: 'Jumlah Surat Masuk'
+        }
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return " " + val + " ";
+          }
+        }
+      }
+    };
+
+    var optionsSuratKeluar = {
+      series: [{
+        name: 'Jumlah Surat Keluar',
+        data: [44, 55, 57, 56]
+      }],
+      chart: {
+        type: 'bar',
+        height: 350
+      },
+      colors: ['#FF4500', '#32CD32', '#8A2BE2', '#FFA07A'],
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: '55%',
+          endingShape: 'rounded'
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          colors: ['#333']
+        },
+        offsetY: 100,
+        position: 'top'
+      },
+      xaxis: {
+        categories: ['Total Surat Keluar', 'Proses Verifikasi', 'Menunggu Tanda Tangan', 'Sudah Ditandatangani'],
+        labels: {
+          rotate: -90,
+          style: {
+            fontSize: '10px'
+          }
+        }
+      },
+      yaxis: {
+        title: {
+          text: 'Jumlah Surat Keluar'
+        }
+      },
+      fill: {
+        opacity: 1
+      },
+      tooltip: {
+        y: {
+          formatter: function (val) {
+            return " " + val + " ";
+          }
+        }
+      }
+    };
+
+    // Inisialisasi chart untuk Surat Masuk dan Surat Keluar
+    var chartSuratMasuk = new ApexCharts(document.querySelector("#suratMasuk"), optionsSuratMasuk);
+    var chartSuratKeluar = new ApexCharts(document.querySelector("#suratKeluar"), optionsSuratKeluar);
+
+    chartSuratMasuk.render();
+    chartSuratKeluar.render();
+
+    // Sembunyikan chart Surat Keluar pada awal pemuatan
+    document.getElementById("suratKeluar").style.display = "none";
+
+    // Event listener untuk dropdown
+    document.getElementById("suratSelect").addEventListener("change", function (event) {
+      var selectedValue = event.target.value;
+      if (selectedValue === "SM") {
+        document.getElementById("suratMasuk").style.display = "block";
+        document.getElementById("suratKeluar").style.display = "none";
+      } else if (selectedValue === "SK") {
+        document.getElementById("suratMasuk").style.display = "none";
+        document.getElementById("suratKeluar").style.display = "block";
+      } else {
+        // Pilihan default, misalnya jika tidak ada opsi yang dipilih
+        document.getElementById("suratMasuk").style.display = "block";
+        document.getElementById("suratKeluar").style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+
+</html>

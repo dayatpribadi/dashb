@@ -34,6 +34,7 @@
   <!-- vendor css -->
   <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
   <link href="assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+  <link href="assets/css/leaflelt.css" rel="stylesheet">
 
   <!-- Slim CSS -->
   <link rel="stylesheet" href="assets/css/slim.css">
@@ -256,18 +257,26 @@
       </div>
 
       <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="card card-quick-post mg-t-10">
-            <h6 class="slim-card-title">Total Penerima Bantuan Per Kecamatan</h6>
-            <div class="bd pd-t-30 pd-b-20 pd-x-20">
-              <div id="penerimaBantuanPerKecamatan"></div>
-            </div>
-            <div class="card-footer">
-              <code>Sumber Data : Aplikasi Sidesi</code>
-            </div>
-          </div><!-- card -->
+        <div class="col-12 col-lg-4">
+          <div id="petaIdl"></div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-lg-8">
+          <div id="card" class="card mb-4 tsigourof_ben6oqe">
+            <a class="card-switch" href="#">
+              <h2 class="card-title">Data Penerima Bantuan Per Kecamatan</h2>
+              <div class="card-body">
+                <span style="font-size: 1.2em;">Data Bantuan</span>
+                <div class="card-text mg-t-20" style="height: 380px; overflow: scroll;">
+                  <div id="penerimaBantuanPerKecamatan"></div>
+                </div>
+              </div><!-- /.card-body -->
+            </a><!-- /.card-switch -->
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
           <div class="card card-quick-post mg-t-10">
             <h6 class="slim-card-title">Total Penerima Bantuan Berdasarkan Jenis Bantuan</h6>
             <div class="bd pd-t-30 pd-b-20 pd-x-20">
@@ -278,7 +287,6 @@
             </div>
           </div><!-- card -->
         </div>
-
       </div>
     </div><!-- col-6 -->
   </div><!-- slim-mainpanel -->
@@ -295,6 +303,9 @@
   <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
   <script src="assets/lib/jquery.cookie/js/jquery.cookie.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="assets/js/map.leaftlet.js"></script>
+  <script src="assets/js/dashboard-opd/map.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/dashboard-opd/penduduk.js"></script>

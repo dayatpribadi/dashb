@@ -322,7 +322,13 @@ var options = {
     },
   },
   dataLabels: {
-    enabled: false
+    enabled: true,
+    style: {
+      colors: ['#333']
+    },
+    rotate: -90,
+    offsetY: 100, // Mengatur posisi vertikal data labels di atas bar
+    position: 'top',
   },
   stroke: {
     show: true,
@@ -330,7 +336,14 @@ var options = {
     colors: ['transparent']
   },
   xaxis: {
-    categories: ['Kec. Indralaya', 'Kec. Indralaya Selatan', 'Kec. Indralaya Utara', 'Kec. Pemulutan', 'Kec. Pemulutan Barat', 'Kec. Pemulutan Selatan', 'Kec. Rantau Alai', 'Kec. Tanjung Raja', 'Kec. Tanjung Batu'],
+    categories: 
+    ['Kec. Indralaya', 'Kec. Indralaya Selatan', 'Kec. Indralaya Utara', 'Kec. Pemulutan', 'Kec. Pemulutan Barat', 'Kec. Pemulutan Selatan', 'Kec. Rantau Alai', 'Kec. Tanjung Raja', 'Kec. Tanjung Batu'],
+    labels: {
+      rotate: -90, // Mengatur rotasi label menjadi vertikal
+      style: {
+        fontSize: '10px', // Ukuran font label (opsional)
+      }
+    },
   },
   yaxis: {
     title: {
@@ -340,6 +353,7 @@ var options = {
   fill: {
     opacity: 1
   },
+  
   tooltip: {
     y: {
       formatter: function (val) {

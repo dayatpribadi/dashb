@@ -33,14 +33,12 @@
 
   <!-- vendor css -->
   <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
   <link href="assets/lib/jqvmap/css/jqvmap.min.css" rel="stylesheet">
   <link href="assets/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
 
   <!-- Slim CSS -->
   <link rel="stylesheet" href="assets/css/slim.css">
-
 
 </head>
 
@@ -234,357 +232,8 @@
                 <option value="SK">Surat Keluar</option>
               </select>
             </div>
-
-            <!-- List Surat Masuk -->
-            <div class="row row-sm" id="ListSuratMasuk">
-              <div class="col-12 mb-3">
-                <h5>Surat Masuk <strong class="tx-dark">Semesta</strong></h3>
-              </div>
-
-              <!-- MODAL EFFECTS -->
-              <div id="modalSuratMasuk" class="modal fade">
-                <div class="modal-dialog modal-xl">
-                  <div class="modal-content bd-0 tx-14">
-                    <div class="modal-header pd-y-20 pd-x-25">
-                      <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Daftar Surat Masuk Semesta</h6>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body pd-25">
-                      <div class="row row-sm justify-content-between">
-                        <div class="col-12 col-md-4">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
-                            <option label="Pilih Bulan"></option>
-                            <option>Januari</option>
-                            <option>Februari</option>
-                            <option>Maret</option>
-                            <option>...</option>
-                            <option>Desember</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
-                            <option label="Pilih Tahun"></option>
-                            <option>2024</option>
-                            <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-lg-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
-                            <option label="Pilih Status"></option>
-                            <option>Belum Diproses</option>
-                            <option>Disposisi</option>
-                            <option>Selesai</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-lg-2">
-                          <button type="button" class="btn btn-primary active"><i class="fa fa-filter"
-                              style="margin-right: 5px;"></i>Filter</button>
-                        </div>
-                      </div>
-                      <div class="table-responsive">
-                        <table class="table table-bordered table-colored table-primary">
-                          <thead>
-                            <tr>
-                              <th class="wd-10p">#</th>
-                              <th class="wd-20p">Tanggal Surat</th>
-                              <th class="wd-20p">Nomor Surat </th>
-                              <th class="wd-35p">Hal</th>
-                              <th class="wd-35p">Asal Surat</th>
-                              <th class="wd-20p">Status Tindak Lanjut</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>
-                                <span>31 Oktober 2024</span><br>
-                                <span class="badge badge-info">Semesta</span>
-                              </td>
-                              <td>000.7.2/465/BAPPEDA-PPE/2024</td>
-                              <td>Permintaan Penyampaian Laporan Realisasi Capaian Kinerja dan Keuangan Triwulan III
-                                Tahun Anggaran 2024</td>
-                              <td>AGUNG ABDI SAPUTRA - Analis Perencanaan (Kelas 7)</td>
-                              <td><span class="badge badge-primary">disposisi</span></td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>
-                                <span>31 Oktober 2024</span><br>
-                                <span class="badge badge-info">Semesta</span>
-                              </td>
-                              <td>000.7.2/465/BAPPEDA-PPE/2024</td>
-                              <td>Permintaan Penyampaian Laporan Realisasi Capaian Kinerja dan Keuangan Triwulan III
-                                Tahun Anggaran 2024</td>
-                              <td>AGUNG ABDI SAPUTRA - Analis Perencanaan (Kelas 7)</td>
-                              <td><span class="badge badge-warning tx-white">belum diproses</span></td>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <td>
-                                <span>31 Oktober 2024</span><br>
-                                <span class="badge badge-info">Semesta</span>
-                              </td>
-                              <td>000.7.2/465/BAPPEDA-PPE/2024</td>
-                              <td>Permintaan Penyampaian Laporan Realisasi Capaian Kinerja dan Keuangan Triwulan III
-                                Tahun Anggaran 2024</td>
-                              <td>AGUNG ABDI SAPUTRA - Analis Perencanaan (Kelas 7)</td>
-                              <td><span class="badge badge-success">selesai</span></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div><!-- table-responsive -->
-                    </div>
-                    <div class="modal-footer">
-                      <nav aria-label="Page navigation">
-                        <ul class="pagination mg-b-0">
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item"><a class="page-link" href="#">4</a></li>
-                          <li class="page-item"><a class="page-link" href="#">5</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <i class="fa fa-angle-right"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div><!-- modal-dialog -->
-              </div><!-- modal -->
-
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratMasuk" class="card card-status bg-body-custom-ungu modal-effect"
-                  data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>32,604</h1>
-                      <p>Total Surat Masuk</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratMasuk" class="card card-status bg-body-custom-ungu modal-effect"
-                  data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>17,583</h1>
-                      <p>Belum Didisposisikan</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratMasuk" class="card card-status bg-body-custom-ungu modal-effect"
-                  data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>61,119</h1>
-                      <p>Sudah Didisposisikan</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratMasuk" class="card card-status bg-body-custom-ungu modal-effect"
-                  data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>2,942</h1>
-                      <p>Selesai</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-              <!-- Tambahkan surat masuk lainnya di sini -->
-            </div>
-
-            <!-- List Surat Keluar -->
-            <div class="row row-sm" id="ListSuratKeluar" style="display: none;">
-              <!-- Hide initially -->
-              <div class="col-12 mb-3">
-                <h5>Surat Keluar <strong class="tx-dark">Semesta</strong></h3>
-              </div>
-
-              <!-- MODAL EFFECTS -->
-              <div id="modalSuratKeluar" class="modal fade">
-                <div class="modal-dialog modal-xl">
-                  <div class="modal-content bd-0 tx-14">
-                    <div class="modal-header pd-y-20 pd-x-25">
-                      <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Daftar Surat Keluar Semesta</h6>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body pd-25">
-                      <div class="row row-sm justify-content-between">
-                        <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
-                            <option label="Pilih Bulan"></option>
-                            <option>Januari</option>
-                            <option>Februari</option>
-                            <option>Maret</option>
-                            <option>...</option>
-                            <option>Desember</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
-                            <option label="Pilih Tahun"></option>
-                            <option>2024</option>
-                            <option>2023</option>
-                            <option>2022</option>
-                            <option>2021</option>
-                            <option>2020</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
-                            <option label="Pilih Perangkat Daerah"></option>
-                            <option>Dinas Sosial</option>
-                            <option>Dinas Kesehatan</option>
-                            <option>Dinas Pendidikan</option>
-                            <option>Bappeda</option>
-                            <option>Bapenda</option>
-                          </select>
-                        </div>
-                        <div class="col-12 col-lg-2">
-                          <button type="button" class="btn btn-indigo active"><i class="fa fa-filter"
-                              style="margin-right: 5px;"></i>Filter</button>
-                        </div>
-                      </div>
-                      <div class="table-responsive">
-                        <table class="table table-bordered table-colored table-indigo">
-                          <thead>
-                            <tr>
-                              <th class="wd-10p">#</th>
-                              <th class="wd-20p">Tanggal Surat</th>
-                              <th class="wd-20p">Nomor Surat </th>
-                              <th class="wd-35p">Hal</th>
-                              <th class="wd-35p">Asal Surat</th>
-                              <th class="wd-20p">Status Verifikator</th>
-                              <th class="wd-20p">Status Penandatangan</th>
-                              <th class="wd-20p">Status Kirim</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>
-                                <span>31 Oktober 2024</span><br>
-                              </td>
-                              <td>000.1.2.1/143/BKBP/2024</td>
-                              <td>Koordinasi Terkait Persiapan Pelaksanaan Pilkada Serentak tahun 2024 , pada Hari
-                                Jum’at tanggal 25 Oktober 2024 di Badan Kesatuan Bangsa dan Politik Provinsi Sumatera
-                                Selatan.</td>
-                              <td>LENI MARLINA - Kepala Bidang Politik</td>
-                              <td><span class="badge badge-warning tx-white">1 belum</span></td>
-                              <td><span class="badge badge-warning tx-white">1 belum</span></td>
-                              <td><span class="badge badge-danger tx-white">belum</span></td>
-                            </tr>
-                            <tr>
-                              <th scope="row">1</th>
-                              <td>
-                                <span>31 Oktober 2024</span><br>
-                              </td>
-                              <td>900.1.13.1/854/V/Bapenda/2024</td>
-                              <td>Update dan Validasi Data PBB P2 PT. Buyung Putra Pangan</td>
-                              <td>RINA OKTAVIANA - Analis Pajak Daerah (Kelas 7)</td>
-                              <td><span class="badge badge-success tx-white">3 setuju</span></td>
-                              <td><span class="badge badge-success tx-white">1 setuju</span></td>
-                              <td><span class="badge badge-success tx-white">sudah</span></td>
-                            </tr>
-
-                          </tbody>
-                        </table>
-                      </div><!-- table-responsive -->
-                    </div>
-                    <div class="modal-footer">
-                      <nav aria-label="Page navigation">
-                        <ul class="pagination mg-b-0">
-                          <li class="page-item active bg-indigo"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item"><a class="page-link" href="#">4</a></li>
-                          <li class="page-item"><a class="page-link" href="#">5</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <i class="fa fa-angle-right"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                </div><!-- modal-dialog -->
-              </div><!-- modal -->
-
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratKeluar" class="card card-status bg-delicate modal-effect" data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>32,604</h1>
-                      <p>Total downloads</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratKeluar" class="card card-status bg-delicate modal-effect" data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>17,583</h1>
-                      <p>Total bookmarks</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratKeluar" class="card card-status bg-delicate modal-effect" data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>61,119</h1>
-                      <p>Total uploads</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-
-              <div class="col-12 col-md-6 mb-3">
-                <a href="#modalSuratKeluar" class="card card-status bg-delicate modal-effect" data-toggle="modal">
-                  <div class="media">
-                    <i class="icon ion-ios-bookmarks-outline tx-teal"></i>
-                    <div class="media-body">
-                      <h1>2,942</h1>
-                      <p>Total analytics</p>
-                    </div><!-- media-body -->
-                  </div><!-- media -->
-                </a><!-- card -->
-              </div>
-              <!-- Tambahkan surat keluar lainnya di sini -->
-            </div>
+            <div id="suratMasuk"></div>
+            <div id="suratKeluar"></div>
           </div>
 
 
@@ -623,6 +272,18 @@
         </div><!-- col-4 -->
 
         <div class="col-12 col-md-3">
+          <div class="card card-sales">
+            <h6 class="slim-card-title tx-primary mb-3">Pencarian Internet</h6>
+            <form action="https://google.com" data-parsley-validate>
+              <div class="d-sm-flex wd-sm-300">
+                <div class="form-group mg-b-0">
+                  <input type="text" name="google" class="form-control wd-150 wd-xs-250" placeholder="Cari di google"
+                    required>
+                </div><!-- form-group -->
+              </div>
+            </form>
+          </div><!-- card -->
+
           <div class="card card-sales mg-t-10">
             <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Program
             </h6>
@@ -667,7 +328,6 @@
   <script src="assets/lib/Flot/js/jquery.flot.js"></script>
   <script src="assets/lib/Flot/js/jquery.flot.resize.js"></script>
   <script src="assets/lib/peity/js/jquery.peity.js"></script>
-  <script src="assets/lib/moment/js/moment.js"></script>
 
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/ResizeSensor.js"></script>
@@ -1030,68 +690,6 @@
       }
     });
   </script>
-
-
-  <script>
-    // Ambil elemen dropdown dan daftar surat
-    document.getElementById("suratSelect").addEventListener("change", function (event) {
-      var selectedValue = event.target.value;
-
-      // Tampilkan daftar surat sesuai dengan pilihan
-      if (selectedValue === "SM") {
-        document.getElementById("ListSuratMasuk").style.display = "flex";
-        document.getElementById("ListSuratKeluar").style.display = "none";
-      } else if (selectedValue === "SK") {
-        document.getElementById("ListSuratMasuk").style.display = "none";
-        document.getElementById("ListSuratKeluar").style.display = "flex";
-      } else {
-        // Sembunyikan keduanya jika tidak ada yang dipilih
-        document.getElementById("ListSuratMasuk").style.display = "flex";
-        document.getElementById("ListSuratKeluar").style.display = "none";
-      }
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      // Inisialisasi Datepicker
-      $('.fc-datepicker').datepicker({
-        dateFormat: "mm/dd/yy"
-      });
-
-      // Inisialisasi Select2
-      $('.select2-show-search').select2({
-        width: '100%'
-      });
-
-      // Ketika filter diubah, perbarui daftar surat
-      $('#modalSurat').on('change', 'input.fc-datepicker, .select2-show-search', function () {
-        const startDate = $('.fc-datepicker').eq(0).val(); // Ambil tanggal awal
-        const endDate = $('.fc-datepicker').eq(1).val(); // Ambil tanggal akhir
-        const category = $('.select2-show-search').val(); // Ambil kategori surat
-
-        // Buat permintaan AJAX untuk mendapatkan data surat sesuai filter
-        $.ajax({
-          url: 'url_endpoint_anda', // Ganti dengan URL API atau server untuk mengambil data surat
-          method: 'GET',
-          data: {
-            startDate,
-            endDate,
-            category
-          },
-          success: function (response) {
-            // Perbarui konten modal berdasarkan respons
-            $('#modalSurat .modal-body').html(
-              response); // Ini contoh, sesuaikan berdasarkan struktur respons Anda
-          },
-          error: function () {
-            alert('Gagal memuat data surat.');
-          }
-        });
-      });
-    });
-  </script>
-
 
 </body>
 
