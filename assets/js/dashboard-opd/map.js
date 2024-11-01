@@ -5,28 +5,19 @@ let defaultClass = "tsigourof_ben6oqe";
 let xyOnClick = false;
 
 const data1 = [];
-/****************************
-Leaflet - Initialize map
-***************************/
- 
 
 L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", {
   maxZoom: 18,
   attribution:
     '<a href="https://carto.com/">Carto </a>|   <a href="https://www.openstreetmap.org">OpenStreetMap</a>'
 }).addTo(mymap);
-/****************************
- Leaflet  - EXTENDING THE ICON CLASS- snippet from https://stackoverflow.com/questions/25683871/assign-id-to-marker-in-leaflet
- ****************************/
+
 const MarkerIcon = L.Icon.extend({
   options: {
     customId: ""
   }
 });
-//This is used to create the option customId on the MarkerIcon that will work as unique id for each marker on the map and for each element of the markers object
-/****************************
- Leaflet - Icons - markers
-***************************/
+
 const myDefaultMarker = new MarkerIcon({
   customId: "",
   iconUrl: "https://unpkg.com/leaflet@1.3.1/dist/images/marker-icon-2x.png",
@@ -38,9 +29,6 @@ const myDefaultMarker = new MarkerIcon({
   iconAnchor: [40,40],
   popupAnchor: [-3,-76]
 });
-
-
-// /****************************
 
 function generateMarkers(arr) {
   let id = 0;
@@ -60,17 +48,10 @@ function generateMarkers(arr) {
   });
 }
 generateMarkers(data1);
-/****************************
-Leaflet - map Click Events
-***************************/
 function markerClick(e) {
   console.log(e);
   const customId = this.options.customId;
   const currentClass = markers[customId].udacityForumUserName;
-  // $('#cardImage').attr('src', markers[customId].imgUrl);
-  // $('#cardTitle').html(markers[customId].placeName);
-  // $('#cardText').html(markers[customId].description);
-//   $("#card").removeClass(defaultClass).addClass(currentClass);
   defaultClass = currentClass;
   $(".card-img").attr("src", markers[customId].imgUrl);
   $(".card-title").html(markers[customId].placeName);
@@ -84,8 +65,6 @@ function markerClick(e) {
     $(items[i]).html(markers[customId].cardList[i][1]).prepend(span);
   }
 }
-//Get Coordinates From Map
-//For Now run getLatLong() manually in the console of the browser to use it, latter will add a button
 const popup = L.popup();
 function onMapClick(e) {
   popup
@@ -654,3 +633,5 @@ L.geoJson(stateData, {
   style: style,
   onEachFeature: onEachFeature
 }).addTo(mymap);
+
+
