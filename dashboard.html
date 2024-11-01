@@ -226,10 +226,11 @@
         <div class="col-12 col-md-6">
           <div class="card card-sales">
             <div class="d-flex spacer">
-              <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Surat Masuk/Keluar</h6>
+              <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2" style="font-size: 20px;"></i>Surat
+                Masuk/Keluar</h6>
               <select id="suratSelect" class="col-12 col-md-4 form-control select2-show-search mg-b-30"
-                data-placeholder="Choose one (with searchbox)">
-                <option label="Choose one"></option>
+                data-placeholder="Pilih Surat">
+                <option label="Pilih Surat"></option>
                 <option value="SM">Surat Masuk</option>
                 <option value="SK">Surat Keluar</option>
               </select>
@@ -237,7 +238,7 @@
 
             <!-- List Surat Masuk -->
             <div class="row row-sm" id="ListSuratMasuk">
-              <div class="col-12 mb-3">
+              <div class="col-12">
                 <div class="row row-xs justify-content-between">
                   <h5>Surat Masuk <strong class="tx-dark">Semesta</strong></h3>
                     <a href="noc_detail_surat_masuk.html">Detail Page Surat Masuk</a>
@@ -259,8 +260,7 @@
                     <div class="modal-body pd-25">
                       <div class="row row-sm justify-content-between">
                         <div class="col-12 col-md-4">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Bulan">
                             <option label="Pilih Bulan"></option>
                             <option>Januari</option>
                             <option>Februari</option>
@@ -270,8 +270,7 @@
                           </select>
                         </div>
                         <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Tahun">
                             <option label="Pilih Tahun"></option>
                             <option>2024</option>
                             <option>2023</option>
@@ -281,8 +280,7 @@
                           </select>
                         </div>
                         <div class="col-12 col-lg-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Status">
                             <option label="Pilih Status"></option>
                             <option>Belum Diproses</option>
                             <option>Disposisi</option>
@@ -441,8 +439,7 @@
                     <div class="modal-body pd-25">
                       <div class="row row-sm justify-content-between">
                         <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih">
                             <option label="Pilih Bulan"></option>
                             <option>Januari</option>
                             <option>Februari</option>
@@ -452,8 +449,7 @@
                           </select>
                         </div>
                         <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih">
                             <option label="Pilih Tahun"></option>
                             <option>2024</option>
                             <option>2023</option>
@@ -463,8 +459,7 @@
                           </select>
                         </div>
                         <div class="col-12 col-lg-4">
-                          <select class="form-control select2-show-search mg-b-30"
-                            data-placeholder="Choose one (with searchbox)">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih">
                             <option label="Pilih Perangkat Daerah"></option>
                             <option>Dinas Sosial</option>
                             <option>Dinas Kesehatan</option>
@@ -624,9 +619,8 @@
                     <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
                   </div>
                 </div><!-- wd-200 -->
-                <select class="col-12 col-md-4 form-control select2-show-search mg-b-30"
-                  data-placeholder="Choose one (with searchbox)">
-                  <option label="Choose one"></option>
+                <select class="col-12 col-md-4 form-control select2-show-search mg-b-30" data-placeholder="Pilih">
+                  <option label="Pilih Perangkat Daerah"></option>
                   <option value="Dinas Komunikasi dan Digital">Dinas Komunikasi dan Digital</option>
                   <option value="Dinas Sosial">Dinas Sosial</option>
                   <option value="Dinas Perikanan">Dinas Perikanan</option>
@@ -722,8 +716,6 @@
       $('#datepicker').datepicker();
     });
   </script>
-
-
 
 
   <script>

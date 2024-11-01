@@ -12,16 +12,18 @@ var options = {
     bar: {
       horizontal: false,
       columnWidth: '55%',
-      endingShape: 'rounded'
+      endingShape: 'rounded',
+      distributed: true  
     },
   },
+  colors: ['#1E90FF', '#32CD32', '#FFD700', '#FF6347', '#8A2BE2', '#FF4500', '#DA70D6', '#00FA9A', '#FF69B4', '#FFA500', '#00CED1', '#9ACD32', '#7B68EE', '#FF1493', '#1E90FF', '#32CD32'],
   dataLabels: {
     enabled: true,
     style: {
       colors: ['#333']
     },
     rotate: -90,
-    offsetY: 100, // Mengatur posisi vertikal data labels di atas bar
+    offsetY: 80, // Mengatur posisi vertikal data labels di atas bar
     position: 'top',
   },
   stroke: {
@@ -49,6 +51,7 @@ var options = {
       'PEMERINTAH KECAMATAN INDRALAYA',
     ],
     labels: {
+      show: false,
       rotate: -90, // Mengatur rotasi label menjadi vertikal
       style: {
         fontSize: '10px', // Ukuran font label (opsional)
@@ -62,6 +65,10 @@ var options = {
   },
   fill: {
     opacity: 1
+  },
+  legend: {
+    enabled: false,
+    position: 'bottom'
   },
   tooltip: {
     y: {
@@ -131,9 +138,28 @@ var options = {
       bar: {
         horizontal: false,
         columnWidth: '55%',
-        endingShape: 'rounded'
+        endingShape: 'rounded',
+        distributed: true  
       },
     },
+    colors: [
+      '#333333', 
+      '#969696', 
+      '#FF69B4', 
+      '#FFA500', 
+      '#00CED1', 
+      '#9ACD32', 
+      '#7B68EE', 
+      '#FF1493', 
+      '#1E90FF', 
+      '#32CD32',
+      '#1E90FF', 
+      '#32CD32', 
+      '#FFD700', 
+      '#FF6347', 
+      '#8A2BE2', 
+      '#FF4500', 
+    ],
     dataLabels: {
       enabled: true,
       style: {
@@ -163,9 +189,9 @@ var options = {
         'Pekebun',
         'Pedagang',
         'Peternak',
-
       ],
       labels: {
+        show: false,
         rotate: -90, // Mengatur rotasi label menjadi vertikal
         style: {
           fontSize: '10px', // Ukuran font label (opsional)
@@ -207,9 +233,28 @@ var options = {
       bar: {
         horizontal: false,
         columnWidth: '55%',
-        endingShape: 'rounded'
+        endingShape: 'rounded',
+        distributed: true  
       },
     },
+    colors: [
+      '#969696', 
+      '#FF69B4', 
+      '#FFA500', 
+      '#00CED1', 
+      '#9ACD32', 
+      '#7B68EE', 
+      '#FF1493', 
+      '#1E90FF', 
+      '#32CD32',
+      '#1E90FF', 
+      '#32CD32', 
+      '#FFD700', 
+      '#FF6347', 
+      '#8A2BE2', 
+      '#FF4500', 
+      '#333333',
+    ],
     dataLabels: {
       enabled: true,
       style: {
@@ -244,6 +289,7 @@ var options = {
         "Umur 75+",
     ],
       labels: {
+        show: false,
         rotate: -90, // Mengatur rotasi label menjadi vertikal
         style: {
           fontSize: '10px', // Ukuran font label (opsional)
@@ -318,9 +364,11 @@ var options = {
     bar: {
       horizontal: false,
       columnWidth: '55%',
-      endingShape: 'rounded'
+      endingShape: 'rounded',
+      distributed: true
     },
   },
+  colors: ['#1E90FF', '#32CD32', '#FFD700', '#FF6347', '#8A2BE2', '#FF4500', '#DA70D6', '#00FA9A', '#FF69B4', '#FFA500', '#00CED1', '#9ACD32', '#7B68EE', '#FF1493', '#1E90FF', '#32CD32'],
   dataLabels: {
     enabled: true,
     style: {
@@ -339,6 +387,7 @@ var options = {
     categories: 
     ['Kec. Indralaya', 'Kec. Indralaya Selatan', 'Kec. Indralaya Utara', 'Kec. Pemulutan', 'Kec. Pemulutan Barat', 'Kec. Pemulutan Selatan', 'Kec. Rantau Alai', 'Kec. Tanjung Raja', 'Kec. Tanjung Batu'],
     labels: {
+      show: false,
       rotate: -90, // Mengatur rotasi label menjadi vertikal
       style: {
         fontSize: '10px', // Ukuran font label (opsional)
