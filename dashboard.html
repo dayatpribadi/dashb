@@ -602,21 +602,40 @@
                 <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Kondisi Pegawai (Jumlah
                   Masuk/Izin/Tk)
                 </h6>
-                <div class="dropdown spacer-x mg-b-10">
-                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Filter
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Hari Ini</a>
-                    <a class="dropdown-item" href="#">Minggu Ini</a>
-                    <a class="dropdown-item" href="#">Bulan Ini</a>
-                  </div><!-- dropdown-menu -->
-                </div><!-- dropdown -->
               </div>
-
+              <div class="row row-sm justify-content-center">
+                <div class="col-12 col-md-4 mg-b-30">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+                  </div>
+                </div><!-- wd-200 -->
+                <div class="col-12 col-md-4 mg-b-30">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+                  </div>
+                </div><!-- wd-200 -->
+                <select class="col-12 col-md-4 form-control select2-show-search mg-b-30"
+                  data-placeholder="Choose one (with searchbox)">
+                  <option label="Choose one"></option>
+                  <option value="Dinas Komunikasi dan Digital">Dinas Komunikasi dan Digital</option>
+                  <option value="Dinas Sosial">Dinas Sosial</option>
+                  <option value="Dinas Perikanan">Dinas Perikanan</option>
+                  <option value="Bapenda">Bapenda</option>
+                  <option value="Bappeda">Bappeda</option>
+                </select>
+              </div>
               <div class="bd pd-t-30 pd-b-20 pd-x-20">
-                <canvas id="kondisiPegawai" height="150"></canvas>
+                <div id="chartPresensiSemestaDb"></div>
               </div>
             </div>
           </div>
@@ -631,6 +650,18 @@
         </div><!-- col-4 -->
 
         <div class="col-12 col-md-3">
+          <div class="card card-sales">
+            <h6 class="slim-card-title tx-primary mb-3">Pencarian Internet</h6>
+            <form action="https://google.com" data-parsley-validate>
+              <div class="d-sm-flex wd-sm-300">
+                <div class="form-group mg-b-0">
+                  <input type="text" name="google" class="form-control wd-150 wd-xs-250" placeholder="Cari di google"
+                    required>
+                </div><!-- form-group -->
+              </div>
+            </form>
+          </div><!-- card -->
+
           <div class="card card-sales mg-t-10">
             <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Program
             </h6>
@@ -682,6 +713,8 @@
   <script src="assets/lib/chart.js/js/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="assets/js/dashboard-opd/sicaram.js"></script>
+  <script src="assets/js/dashboard-opd/dashboard.js"></script>
+
   <script>
     $(function () {
       'use strict'
@@ -690,56 +723,7 @@
     });
   </script>
 
-  <script>
-    navigator.mediaDevices
-      .getUserMedia({
-        video: true,
-        audio: true
-      })
-      .then((localMediaStream) => {
-        const video = document.querySelector("video");
-        video.srcObject = localMediaStream;
-      })
-      .catch((error) => {
-        console.log("Rejected!", error);
-      });
-  </script>
 
-  <script>
-    var tw = new Date();
-    if (tw.getTimezoneOffset() == 0)(a = tw.getTime() + (7 * 60 * 60 * 1000))
-    else(a = tw.getTime());
-    tw.setTime(a);
-    var tahun = tw.getFullYear();
-    var hari = tw.getDay();
-    var bulan = tw.getMonth();
-    var tanggal = tw.getDate();
-    var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
-    var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
-      "Oktober", "Nopember", "Desember");
-    document.getElementById("waktuAja").innerHTML = " Pukul : " + ((tw.getHours() < 10) ? "0" : "") + tw.getHours() +
-      ":" +
-      ((tw.getMinutes() <
-          10) ? "0" :
-        "") + tw.getMinutes() + (" WIB");
-  </script>
-
-
-  <script>
-    var tw = new Date();
-    if (tw.getTimezoneOffset() == 0)(a = tw.getTime() + (7 * 60 * 60 * 1000))
-    else(a = tw.getTime());
-    tw.setTime(a);
-    var tahun = tw.getFullYear();
-    var hari = tw.getDay();
-    var bulan = tw.getMonth();
-    var tanggal = tw.getDate();
-    var hariarray = new Array("Minggu,", "Senin,", "Selasa,", "Rabu,", "Kamis,", "Jum'at,", "Sabtu,");
-    var bulanarray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
-      "Oktober", "Nopember", "Desember");
-    document.getElementById("tanggalwaktu").innerHTML = hariarray[hari] + " " + tanggal + " " + bulanarray[bulan] +
-      " " + tahun;
-  </script>
 
 
   <script>
@@ -1011,32 +995,6 @@
         }
       }
     };
-
-    // Inisialisasi chart untuk Surat Masuk dan Surat Keluar
-    var chartSuratMasuk = new ApexCharts(document.querySelector("#suratMasuk"), optionsSuratMasuk);
-    var chartSuratKeluar = new ApexCharts(document.querySelector("#suratKeluar"), optionsSuratKeluar);
-
-    chartSuratMasuk.render();
-    chartSuratKeluar.render();
-
-    // Sembunyikan chart Surat Keluar pada awal pemuatan
-    document.getElementById("suratKeluar").style.display = "none";
-
-    // Event listener untuk dropdown
-    document.getElementById("suratSelect").addEventListener("change", function (event) {
-      var selectedValue = event.target.value;
-      if (selectedValue === "SM") {
-        document.getElementById("suratMasuk").style.display = "block";
-        document.getElementById("suratKeluar").style.display = "none";
-      } else if (selectedValue === "SK") {
-        document.getElementById("suratMasuk").style.display = "none";
-        document.getElementById("suratKeluar").style.display = "block";
-      } else {
-        // Pilihan default, misalnya jika tidak ada opsi yang dipilih
-        document.getElementById("suratMasuk").style.display = "block";
-        document.getElementById("suratKeluar").style.display = "none";
-      }
-    });
   </script>
 
 
@@ -1057,46 +1015,6 @@
         document.getElementById("ListSuratMasuk").style.display = "flex";
         document.getElementById("ListSuratKeluar").style.display = "none";
       }
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      // Inisialisasi Datepicker
-      $('.fc-datepicker').datepicker({
-        dateFormat: "mm/dd/yy"
-      });
-
-      // Inisialisasi Select2
-      $('.select2-show-search').select2({
-        width: '100%'
-      });
-
-      // Ketika filter diubah, perbarui daftar surat
-      $('#modalSurat').on('change', 'input.fc-datepicker, .select2-show-search', function () {
-        const startDate = $('.fc-datepicker').eq(0).val(); // Ambil tanggal awal
-        const endDate = $('.fc-datepicker').eq(1).val(); // Ambil tanggal akhir
-        const category = $('.select2-show-search').val(); // Ambil kategori surat
-
-        // Buat permintaan AJAX untuk mendapatkan data surat sesuai filter
-        $.ajax({
-          url: 'url_endpoint_anda', // Ganti dengan URL API atau server untuk mengambil data surat
-          method: 'GET',
-          data: {
-            startDate,
-            endDate,
-            category
-          },
-          success: function (response) {
-            // Perbarui konten modal berdasarkan respons
-            $('#modalSurat .modal-body').html(
-              response); // Ini contoh, sesuaikan berdasarkan struktur respons Anda
-          },
-          error: function () {
-            alert('Gagal memuat data surat.');
-          }
-        });
-      });
     });
   </script>
 
