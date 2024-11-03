@@ -532,6 +532,14 @@ h6,
   font-size: 1rem !important;
 }
 
+.fs-8 {
+  font-size: 0.875rem !important;
+}
+
+.fs-6 {
+  font-size: 0.75rem !important;
+}
+
 .fs-32 {
   font-size: 2rem !important;
 }
@@ -5463,6 +5471,12 @@ input[type="button"].btn-block {
 .alert-info {
   color: #2f4c6e;
   background-color: #dee9f6;
+  border-color: #d1e1f3;
+}
+
+.alert-custom {
+  color: #dee9f6;
+  background-color: #862ab8;
   border-color: #d1e1f3;
 }
 
