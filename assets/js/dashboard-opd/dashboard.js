@@ -12,7 +12,7 @@ var options = {
       breakpoint: 480,
       options: {
         chart: {
-          width: 200
+          width: 200,
         },
         legend: {
           position: 'bottom'
@@ -110,3 +110,288 @@ $(document).ready(function () {
       });
     });
   });
+
+
+  // CHART PRESENSI
+var options = {
+  series: [44, 55],
+  chart: {
+    type: 'donut',
+    height: 250,
+  },
+  labels: ['Sudah Realisasi', 'Belum Realisasi',],
+  responsive: [{
+    breakpoint: 480,
+    options: {
+      chart: {
+        width: 200
+      },
+      legend: {
+        position: 'bottom'
+      },
+    }
+  }, ],
+  title: {
+    text: 'Dinas Komunikasi Informatika Statistik dan Persandian',
+    align: 'left'
+  },
+  legend: {
+    position: 'bottom'
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: function (val, opts) {
+      return opts.w.config.series[opts.seriesIndex]; // Menggunakan nilai asli data
+    }
+  }
+};
+
+var chart = new ApexCharts(document.querySelector("#realisasiProgram"), options);
+chart.render();
+
+
+  // CHART PRESENSI
+  var options = {
+    series: [44, 55],
+    chart: {
+      type: 'donut',
+      height: 250,
+    },
+    labels: ['Sudah Realisasi', 'Belum Realisasi',],
+    colors: ['#FF1493', '#1E90FF',],
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 200
+        },
+        legend: {
+          position: 'bottom'
+        },
+      }
+    }, ],
+    title: {
+      text: 'Dinas Komunikasi Informatika Statistik dan Persandian',
+      align: 'left'
+    },
+    legend: {
+      position: 'bottom'
+    },
+    dataLabels: {
+      enabled: true,
+      formatter: function (val, opts) {
+        return opts.w.config.series[opts.seriesIndex]; // Menggunakan nilai asli data
+      }
+    }
+  };
+  
+  var chart = new ApexCharts(document.querySelector("#realisasiKegiatan"), options);
+  chart.render();
+
+    // Realisasi Pendapatan
+    var options = {
+      series: [44, 55],
+      chart: {
+        type: 'donut',
+        height: 250,
+      },
+      labels: ['Sudah Realisasi', 'Belum Realisasi',],
+      colors: ['#00FA9A', '#DA70D6',],
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200
+          },
+          legend: {
+            position: 'bottom'
+          },
+        }
+      }, ],
+      title: {
+        text: 'Dinas Komunikasi Informatika Statistik dan Persandian',
+        align: 'left'
+      },
+      legend: {
+        position: 'bottom'
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val, opts) {
+          return opts.w.config.series[opts.seriesIndex]; // Menggunakan nilai asli data
+        }
+      }
+    };
+    
+    var chart = new ApexCharts(document.querySelector("#realisasiPendapatan"), options);
+    chart.render();
+
+
+        // Realisasi Belanja
+        var options = {
+          series: [44, 55],
+          chart: {
+            type: 'donut',
+            height: 250,
+          },
+          labels: ['Sudah Realisasi', 'Belum Realisasi',],
+          colors: ['#FFA500', '#00CED1',],
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              },
+            }
+          }, ],
+          title: {
+            text: 'Dinas Komunikasi Informatika Statistik dan Persandian',
+            align: 'left'
+          },
+          legend: {
+            position: 'bottom'
+          },
+          dataLabels: {
+            enabled: true,
+            formatter: function (val, opts) {
+              return opts.w.config.series[opts.seriesIndex]; // Menggunakan nilai asli data
+            }
+          }
+        };
+        
+        var chart = new ApexCharts(document.querySelector("#realisasiBelanja"), options);
+        chart.render();
+
+
+        // Chart Line
+        var options = {
+          series: [{
+            name: 'Presensi',
+            data: [44, 55, 41, 17, 15] // Replace with appropriate y-axis data
+          }],
+          chart: {
+            type: 'line',
+            height: 375,
+          },
+          xaxis: {
+            categories: ['Hadir', 'DL', 'KL', 'TAP', 'Sakit', 'Izin', 'TK'] // Labels for x-axis
+          },
+          title: {
+            text: 'Dinas Komunikasi Informatika Statistik dan Persandian',
+            align: 'left'
+          },
+          legend: {
+            position: 'bottom'
+          },
+          dataLabels: {
+            enabled: true,
+            formatter: function (val, opts) {
+              return opts.w.config.series[0].data[opts.dataPointIndex]; // Display actual data values
+            }
+          },
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200,
+              },
+              legend: {
+                position: 'bottom'
+              },
+            }
+          }]
+        };
+        
+        var chart = new ApexCharts(document.querySelector("#chartPresensiSemestaDbLine"), options);
+        chart.render();
+        
+        // Realisasi Belanja
+        var options = {
+          series: [94, 55],
+          chart: {
+            type: 'donut',
+            height: 215,
+          },
+          labels: ['PNS', 'PPPK',],
+          colors: ['#00CED1', '#FFA500',],
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              },
+            }
+          }, ],
+          title: {
+            text: 'Jumlah PNS dan PPPK Semesta',
+            align: 'top'
+          },
+          legend: {
+            position: 'bottom'
+          },
+          dataLabels: {
+            enabled: true,
+            formatter: function (val, opts) {
+              return opts.w.config.series[opts.seriesIndex]; // Menggunakan nilai asli data
+            }
+          }
+        };
+        
+        var chart = new ApexCharts(document.querySelector("#jumlahAsnSemesta"), options);
+        chart.render();
+
+
+
+        // Kondisi NON ASN
+        var options = {
+          series: [{
+            name: 'Jumlah',
+            data: [44, 122] // Data values for each category
+          }],
+          chart: {
+            type: 'bar',
+            height: 215,
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              distributed: true // Distribute colors for each bar
+            }
+          },
+          colors: ['#1E90FF', '#FF6347'], // Set individual colors for each bar
+          xaxis: {
+            categories: ['Laki-laki', 'Perempuan'] // Labels for each bar
+          },
+          legend: {
+            position: 'bottom'
+          },
+          dataLabels: {
+            enabled: true,
+            formatter: function (val, opts) {
+              return opts.w.config.series[0].data[opts.dataPointIndex]; // Display actual data values
+            }
+          },
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              },
+            }
+          }]
+        };
+        
+        var chart = new ApexCharts(document.querySelector("#kondisiNonAsn"), options);
+        chart.render();
+        
+        
+        

@@ -148,7 +148,24 @@
                   <div class="card-header tx-medium bd-0 tx-white bg-mantle">
                     Agenda Hari Ini
                   </div><!-- card-header -->
-                  <div class="container-agenda" style="max-height: 560px; overflow-y: scroll;">
+                  <div class="container-agenda" style="max-height: 630px; overflow-y: scroll;">
+                    <div class="card-body item-agenda bd bd-t-0 bg-custom">
+                      <div class="d-flex justify-content-between mg-b-2">
+                        <div class="tx-14">
+                          <a href="" class="tx-gray-500"><i class="icon ion-star"></i></a>
+                          <a href="" class="tx-gray-500 mg-l-5"><i class="icon ion-android-attach"></i></a>
+                        </div>
+                        <span class="tx-12">Rabu, 26 Nov 2024 | 09:30:00 WB</span>
+                      </div><!-- d-flex -->
+                      <h6 class="tx-14 mg-t-10"><a href="" class="tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
+                          Agenda Kegiatan</a></h6>
+                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                          Diskominfo</a></h6>
+                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                          Rapat
+                          Utama
+                          Bupati</a></h6>
+                    </div><!-- card-body -->
                     <div class="card-body item-agenda bd bd-t-0 bg-custom">
                       <div class="d-flex justify-content-between mg-b-2">
                         <div class="tx-14">
@@ -218,13 +235,17 @@
                           Bupati</a></h6>
                     </div><!-- card-body -->
                   </div>
+
+                  <div class="card-footer">
+                    <span class="ref">Sumber Data : Aplikasi Jadwalinbae</span>
+                  </div>
                 </div><!-- card -->
               </div>
             </div>
           </div>
         </div><!-- col-4 -->
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-5">
           <div class="card card-sales">
             <div class="d-flex spacer">
               <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2" style="font-size: 20px;"></i>Surat
@@ -484,6 +505,7 @@
                   </div><!-- media -->
                 </a><!-- card -->
               </div>
+
               <div class="col-12 col-md-6 mb-3">
                 <a href="#modalSuratKeluar" class="card card-status bg-blue modal-effect" data-toggle="modal">
                   <div class="media">
@@ -541,13 +563,16 @@
                 </div>
               </div>
               <div class="bd pd-t-30 pd-b-20 pd-x-20">
-                <div id="chartPresensiSemestaDb"></div>
+                <div id="chartPresensiSemestaDbLine"></div>
+              </div>
+              <div class="card-footer">
+                <span class="ref">Sumber Data : Aplikasi Semesta</span>
               </div>
             </div>
           </div>
         </div><!-- col-4 -->
 
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-4">
           <div class="card card-sales">
             <h6 class="slim-card-title tx-primary mb-3">Pencarian Internet</h6>
             <form action="https://google.com" data-parsley-validate>
@@ -561,28 +586,82 @@
           </div><!-- card -->
 
           <div class="card card-sales mg-t-10">
+            <h4 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2 fs-18"></i>Kondisi ASN Semesta
+            </h4>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="jumlahAsnSemesta"></div>
+            </div>
+            <div class="card-footer">
+              <span class="ref">Sumber Data : Aplikasi Sinona</span>
+            </div>
+          </div>
+          <div class="card card-sales mg-t-10">
+            <h4 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2 fs-18"></i>Kondisi Tenaga Honorer
+            </h4>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="kondisiNonAsn"></div>
+            </div>
+            <div class="card-footer">
+              <span class="ref">Sumber Data : Aplikasi Sinona</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <div class="card card-sales mg-t-10">
             <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Program
             </h6>
-            <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiProgram" height="150"></canvas></div>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="realisasiProgram"></div>
+            </div>
+            <div class="card-footer">
+              <span class="ref">Sumber Data : Aplikasi Sicaram</span>
+            </div>
           </div>
-
+        </div>
+        <div class="col-12 col-md-3">
           <div class="card card-sales mg-t-10">
             <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Kegiatan</h6>
-            <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiKegiatan" height="150"></canvas></div>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="realisasiKegiatan"></div>
+            </div>
+            <div class="card-footer">
+              <span class="ref">Sumber Data : Aplikasi Sicaram</span>
+            </div>
           </div>
+        </div>
 
+        <div class="col-12 col-md-3">
           <div class="card card-sales mg-t-10">
             <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Pendapatan</h6>
-            <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiPendapatan" height="150"></canvas></div>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="realisasiPendapatan"></div>
+            </div>
+            <div class="card-footer">
+              <span class="ref">Sumber Data : Aplikasi Sicaram</span>
+            </div>
           </div>
+        </div>
 
+        <div class="col-12 col-md-3">
           <div class="card card-sales mg-t-10">
             <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Target Realisasi Belanja</h6>
-            <div class="bd pd-t-30 pd-b-20 pd-x-20"><canvas id="realisasiBelanja" height="150"></canvas></div>
+            <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="realisasiBelanja"></div>
+            </div>
+            <div class="card-footer">
+              <span class="ref">Sumber Data : Aplikasi Sicaram</span>
+            </div>
           </div>
-        </div><!-- col-4 -->
-      </div><!-- row -->
-    </div><!-- container -->
+        </div>
+      </div>
+
+    </div><!-- col-4 -->
+  </div><!-- row -->
+  </div><!-- container -->
   </div><!-- slim-mainpanel -->
 
 
@@ -611,7 +690,6 @@
   <script src="assets/js/ResizeSensor.js"></script>
   <script src="assets/lib/chart.js/js/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script src="assets/js/dashboard-opd/sicaram.js"></script>
   <script src="assets/js/dashboard-opd/dashboard.js"></script>
 
   <script>
