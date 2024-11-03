@@ -6588,6 +6588,14 @@ button.close {
   background-color: #F5F6F7 !important;
 }
 
+.bg-blue {
+  background-color: #008FFB !important;
+}
+
+.bg-green {
+  background-color: #00E396 !important;
+}
+
 a.bg-primary:hover,
 a.bg-primary:focus,
 button.bg-primary:hover,
