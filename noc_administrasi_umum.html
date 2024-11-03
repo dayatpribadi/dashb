@@ -196,7 +196,7 @@
                           <span>Periode : Tanggal, Bulan & Tahun</span>
                         </div>
                         <div class="row row-sm justify-content-center">
-                          <div class="col-12 col-md-4 mg-b-30">
+                          <div class="col-12 col-md-3 mg-b-30">
                             <div class="input-group">
                               <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -206,7 +206,7 @@
                               <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
                             </div>
                           </div><!-- wd-200 -->
-                          <div class="col-12 col-md-4 mg-b-30">
+                          <div class="col-12 col-md-3 mg-b-30">
                             <div class="input-group">
                               <div class="input-group-prepend">
                                 <div class="input-group-text">
@@ -216,7 +216,7 @@
                               <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
                             </div>
                           </div><!-- wd-200 -->
-                          <select class="col-12 col-md-4 form-control select2-show-search mg-b-30"
+                          <select class="col-12 col-md-3 form-control select2-show-search mg-b-30"
                             data-placeholder="Pilih">
                             <option label="Pilih"></option>
                             <option value="Dinas Komunikasi dan Digital">Dinas Komunikasi dan Digital</option>
@@ -237,7 +237,7 @@
                         <h4><strong>Statistik</strong> Data Laporan Kinerja Harian</h4>
                       </div><!-- alert -->
                       <div class="row row-sm justify-content-center">
-                        <div class="col-12 col-md-4 mg-b-30">
+                        <div class="col-12 col-md-3 mg-b-30">
                           <div class="input-group">
                             <div class="input-group-prepend">
                               <div class="input-group-text">
@@ -247,7 +247,7 @@
                             <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
                           </div>
                         </div><!-- wd-200 -->
-                        <div class="col-12 col-md-4 mg-b-30">
+                        <div class="col-12 col-md-3 mg-b-30">
                           <div class="input-group">
                             <div class="input-group-prepend">
                               <div class="input-group-text">
@@ -257,7 +257,7 @@
                             <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
                           </div>
                         </div><!-- wd-200 -->
-                        <select class="col-12 col-md-4 form-control select2-show-search mg-b-30"
+                        <select class="col-12 col-md-3 form-control select2-show-search mg-b-30"
                           data-placeholder="Pilih">
                           <option label="Pilih"></option>
                           <option value="Dinas Komunikasi dan Digital">Dinas Komunikasi dan Digital</option>
@@ -340,7 +340,7 @@
                         <h4><strong>Statistik</strong> Data TPP</h4>
                       </div><!-- alert -->
                       <div class="row row-sm justify-content-center">
-                        <div class="col-12 col-md-4 mg-b-30">
+                        <div class="col-12 col-md-3 mg-b-30">
                           <div class="input-group">
                             <div class="input-group-prepend">
                               <div class="input-group-text">
@@ -350,7 +350,7 @@
                             <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
                           </div>
                         </div><!-- wd-200 -->
-                        <div class="col-12 col-md-4 mg-b-30">
+                        <div class="col-12 col-md-3 mg-b-30">
                           <div class="input-group">
                             <div class="input-group-prepend">
                               <div class="input-group-text">
@@ -360,7 +360,7 @@
                             <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
                           </div>
                         </div><!-- wd-200 -->
-                        <select class="col-12 col-md-4 form-control select2-show-search mg-b-30"
+                        <select class="col-12 col-md-3 form-control select2-show-search mg-b-30"
                           data-placeholder="Pilih">
                           <option label="Pilih"></option>
                           <option value="Dinas Komunikasi dan Digital">Dinas Komunikasi dan Digital</option>
@@ -1315,6 +1315,16 @@
       <script src="assets/js/dashboard-opd/sinona.js"></script>
 
       <script src="assets/js/jquery.vmap.sampledata.js"></script>
+      <script>
+        $(document).ready(function () {
+          $('.select2-show-search').select2({
+            placeholder: function () {
+              $(this).data('placeholder');
+            },
+            allowClear: true
+          });
+        });
+      </script>
       <script>
         $(function () {
           'use strict'
