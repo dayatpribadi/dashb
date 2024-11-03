@@ -528,6 +528,14 @@ h6,
   font-size: 0.875rem;
 }
 
+.fs-16 {
+  font-size: 1rem !important;
+}
+
+.fs-32 {
+  font-size: 2rem !important;
+}
+
 .lead {
   font-size: 1.09375rem;
   font-weight: 300;

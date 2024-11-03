@@ -142,24 +142,7 @@ var options = {
         distributed: true  
       },
     },
-    colors: [
-      '#333333', 
-      '#969696', 
-      '#FF69B4', 
-      '#FFA500', 
-      '#00CED1', 
-      '#9ACD32', 
-      '#7B68EE', 
-      '#FF1493', 
-      '#1E90FF', 
-      '#32CD32',
-      '#1E90FF', 
-      '#32CD32', 
-      '#FFD700', 
-      '#FF6347', 
-      '#8A2BE2', 
-      '#FF4500', 
-    ],
+    colors: ['#1E90FF', '#32CD32', '#FFD700', '#FF6347', '#8A2BE2', '#FF4500', '#DA70D6', '#00FA9A', '#FF69B4', '#FFA500', '#00CED1', '#9ACD32', '#7B68EE', '#FF1493', '#1E90FF', '#32CD32'],
     dataLabels: {
       enabled: true,
       style: {
@@ -184,11 +167,12 @@ var options = {
         'Dosen',
         'Sopir/Masisnis',
         'Pilot',
-        'Nelayan',
         'Petani',
         'Pekebun',
-        'Pedagang',
         'Peternak',
+        'Nelayan',
+        'Pedagang',
+
       ],
       labels: {
         show: false,
@@ -223,7 +207,7 @@ var options = {
 var options = {
     series: [{
       name: 'Jumlah Penduduk PerKecamatan',
-      data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57, 56, 80, 65, 77]
+      data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 44, 55, 57, 56, 50, 65, 57]
     }],
     chart: {
       type: 'bar',
@@ -238,22 +222,22 @@ var options = {
       },
     },
     colors: [
-      '#969696', 
-      '#FF69B4', 
-      '#FFA500', 
-      '#00CED1', 
-      '#9ACD32', 
-      '#7B68EE', 
-      '#FF1493', 
-      '#1E90FF', 
-      '#32CD32',
-      '#1E90FF', 
-      '#32CD32', 
-      '#FFD700', 
-      '#FF6347', 
-      '#8A2BE2', 
-      '#FF4500', 
-      '#333333',
+      '#c3e3f9', 
+      '#afdaf7', 
+      '#9bd1f5', 
+      '#86c7f3', 
+      '#72bef1', 
+      '#5eb5ef', 
+      '#4aabed', 
+      '#36a2eb', 
+      '#36a2eb',
+      '#3192d4', 
+      '#2b82bc', 
+      '#2671a5', 
+      '#20618d', 
+      '#1b5176', 
+      '#16415e', 
+      '#103146',
     ],
     dataLabels: {
       enabled: true,
@@ -261,7 +245,7 @@ var options = {
         colors: ['#333']
       },
       rotate: -90,
-      offsetY: 100, // Mengatur posisi vertikal data labels di atas bar
+      offsetY: 120, // Mengatur posisi vertikal data labels di atas bar
       position: 'top',
     },
     stroke: {
