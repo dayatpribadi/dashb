@@ -538,6 +538,11 @@ h6,
   font-size: 1rem !important;
 }
 
+.fs-18 {
+  font-size: 1.3rem !important;
+  font-weight: 500;
+}
+
 .fs-8 {
   font-size: 0.875rem !important;
 }
