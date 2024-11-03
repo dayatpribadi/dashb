@@ -329,7 +329,7 @@ chart.render();
             }
           }, ],
           title: {
-            text: 'Jumlah PNS dan PPPK Semesta',
+            text: 'Jumlah PNS dan PPPK',
             align: 'top'
           },
           legend: {
