@@ -248,6 +248,16 @@
 
   <script src="assets/js/jquery.vmap.sampledata.js"></script>
   <script>
+    $(document).ready(function () {
+      $('.select2-show-search').select2({
+        placeholder: function () {
+          $(this).data('placeholder');
+        },
+        allowClear: true
+      });
+    });
+  </script>
+  <script>
     $(function () {
       'use strict'
 
