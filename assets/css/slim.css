@@ -68273,3 +68273,16 @@ a.hover-white-8:focus {
 td {
   font-size: 1em !important;
 }
+
+.select2-container .select2-selection--single {
+  text-align: left;
+}
+
+.select2-container .select2-dropdown .select2-results__option {
+  text-align: left;
+}
+
+#modalSuratMasuk .select2-container,
+#modalSuratKeluar .select2-container {
+  width: 100% !important;
+}
