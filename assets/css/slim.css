@@ -148,6 +148,7 @@
   box-sizing: border-box;
 }
 
+body,
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -155,7 +156,56 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../img/bg_lanjutkerja.webp') no-repeat center center fixed;
+  background-size: cover;
 }
+
+/* Centered login form container */
+
+@media (max-width: 768px) {
+  .signin-box {
+    background: rgba(248, 248, 248, 0.9) !important;
+    /* Slightly transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    max-width: 95%;
+    z-index: 2;
+    /* Ensure it appears above the background */
+  }
+}
+
+@media (min-width: 769px) {
+  .signin-box {
+    background: rgba(248, 248, 248, 0.9) !important;
+    /* Slightly transparent background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    width: 500px !important;
+    z-index: 2;
+    /* Ensure it appears above the background */
+  }
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 
 @-ms-viewport {
   width: device-width;
@@ -22931,8 +22981,9 @@ textarea.parsley-success:focus {
 }
 
 .signin-title-secondary {
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: 50px;
+  font-size: 16px;
 }
 
 .btn-signin {
