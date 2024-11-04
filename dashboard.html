@@ -143,6 +143,101 @@
             <div class="card-body">
               <h6 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2"></i>Agenda Kegiatan(semesta)
               </h6>
+
+              <!-- MODAL EFFECTS -->
+              <div id="modalAgenda" class="modal fade">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content bd-0 tx-14">
+                    <div class="modal-header pd-y-20 pd-x-25">
+                      <div class="d-flex justify-content-between">
+                        <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">Daftar Agenda</h6>
+                      </div>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body pd-25" style="max-height: 400px; overflow: scroll;">
+
+                      <div class="row row-sm row-timeline">
+                        <div class="col-12">
+
+                          <div class="card pd-30">
+                            <div class="timeline-group">
+                              <div class="timeline-item timeline-day">
+                                <div class="timeline-time">&nbsp;</div>
+                                <div class="timeline-body">
+                                  <p class="timeline-date">Agenda Terjadwal : Senin, 4 November 2024</p>
+                                </div><!-- timeline-body -->
+                              </div><!-- timeline-item -->
+                              <div class="timeline-item">
+                                <div class="timeline-time">08:30pm</div>
+                                <div class="timeline-body">
+                                  <p class="timeline-title"><a href="">Rapat Pembahasan Anggaran Daerah</a></p>
+                                  <p class="timeline-author"><a href="">Leading Sector</a> Sekretariat Daerah Bidang.
+                                    Perencanaan</p>
+                                  <p class="timeline-text">Dihadiri oleh : Bupati atau yang mewakili</p>
+                                  <p class="tx-12 mg-b-0"><a href="">Lokasi : Ruang Rapat Utama</a> &nbsp;&nbsp; <a
+                                      href="">Pakaian : Pakaian yang berlaku hari itu</a></p>
+                                </div><!-- timeline-body -->
+                              </div><!-- timeline-item -->
+                              <div class="timeline-item">
+                                <div class="timeline-time">09:00pm</div>
+                                <div class="timeline-body">
+                                  <p class="timeline-title"><a href="">Rapat Pembahasan Anggaran Daerah</a></p>
+                                  <p class="timeline-author"><a href="">Leading Sector</a> Sekretariat Daerah Bidang.
+                                    Perencanaan</p>
+                                  <p class="timeline-text">Dihadiri oleh : Bupati atau yang mewakili</p>
+                                  <p class="tx-12 mg-b-0"><a href="">Lokasi : Ruang Rapat Utama</a> &nbsp;&nbsp; <a
+                                      href="">Pakaian : Pakaian yang berlaku hari itu</a></p>
+                                </div><!-- timeline-body -->
+                              </div><!-- timeline-item -->
+                              <div class="timeline-item">
+                                <div class="timeline-time">09:30pm</div>
+                                <div class="timeline-body">
+                                  <p class="timeline-title"><a href="">Rapat Pembahasan Anggaran Daerah</a></p>
+                                  <p class="timeline-author"><a href="">Leading Sector</a> Sekretariat Daerah Bidang.
+                                    Perencanaan</p>
+                                  <p class="timeline-text">Dihadiri oleh : Bupati atau yang mewakili</p>
+                                  <p class="tx-12 mg-b-0"><a href="">Lokasi : Ruang Rapat Utama</a> &nbsp;&nbsp; <a
+                                      href="">Pakaian : Pakaian yang berlaku hari itu</a></p>
+                                </div><!-- timeline-body -->
+                              </div><!-- timeline-item -->
+                              <div class="timeline-item">
+                                <div class="timeline-time">10:30pm</div>
+                                <div class="timeline-body">
+                                  <p class="timeline-title"><a href="">Rapat Pembahasan Anggaran Daerah</a></p>
+                                  <p class="timeline-author"><a href="">Leading Sector</a> Sekretariat Daerah Bidang.
+                                    Perencanaan</p>
+                                  <p class="timeline-text">Dihadiri oleh : Bupati atau yang mewakili</p>
+                                  <p class="tx-12 mg-b-0"><a href="">Lokasi : Ruang Rapat Utama</a> &nbsp;&nbsp; <a
+                                      href="">Pakaian : Pakaian yang berlaku hari itu</a></p>
+                                </div><!-- timeline-body -->
+                              </div><!-- timeline-item -->
+                              <div class="timeline-item">
+                                <div class="timeline-time">11:30pm</div>
+                                <div class="timeline-body">
+                                  <p class="timeline-title"><a href="">Rapat Pembahasan Anggaran Daerah</a></p>
+                                  <p class="timeline-author"><a href="">Leading Sector</a> Sekretariat Daerah Bidang.
+                                    Perencanaan</p>
+                                  <p class="timeline-text">Dihadiri oleh : Bupati atau yang mewakili</p>
+                                  <p class="tx-12 mg-b-0"><a href="">Lokasi : Ruang Rapat Utama</a> &nbsp;&nbsp; <a
+                                      href="">Pakaian : Pakaian yang berlaku hari itu</a></p>
+                                </div><!-- timeline-body -->
+                              </div><!-- timeline-item -->
+
+                            </div><!-- timeline-group -->
+                          </div><!-- card -->
+
+                        </div><!-- col-9 -->
+                      </div><!-- row -->
+
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                  </div>
+                </div><!-- modal-dialog -->
+              </div><!-- modal -->
+
               <div class="agenda">
                 <div class="card bd-0">
                   <div class="card-header tx-medium bd-0 tx-white bg-mantle">
@@ -157,7 +252,8 @@
                         </div>
                         <span class="tx-12">Rabu, 26 Nov 2024 | 09:30:00 WB</span>
                       </div><!-- d-flex -->
-                      <h6 class="tx-14 mg-t-10"><a href="" class="tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
+                      <h6 class="tx-14 mg-t-10"><a href="#modalAgenda" data-toggle="modal"
+                          class="modal-effect tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
                           Agenda Kegiatan</a></h6>
                       <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
                           Diskominfo</a></h6>
@@ -521,8 +617,6 @@
             </div>
 
           </div>
-
-
           <div class="card mg-t-10">
             <div class="card-body">
               <div class="d-flex spacer">
