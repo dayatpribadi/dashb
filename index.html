@@ -6,75 +6,103 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Twitter -->
-  <meta name="twitter:site" content="@themepixels">
-  <meta name="twitter:creator" content="@themepixels">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Slim">
-  <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
-  <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
-
-  <!-- Facebook -->
-  <meta property="og:url" content="http://themepixels.me/slim">
-  <meta property="og:title" content="Slim">
-  <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
-
-  <meta property="og:image" content="http://themepixels.me/slim/img/slim-social.png">
-  <meta property="og:image:secure_url" content="http://themepixels.me/slim/img/slim-social.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="600">
-
-  <!-- Meta -->
+  <!-- Meta and Title -->
   <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
   <meta name="author" content="ThemePixels">
-
   <title>Slim Responsive Bootstrap 4 Admin Template</title>
 
-  <!-- Vendor css -->
+  <!-- Vendor CSS -->
   <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
   <link href="assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
-
-  <!-- Slim CSS -->
   <link rel="stylesheet" href="assets/css/slim.css">
 
 </head>
 
 <body>
-
   <div class="d-md-flex flex-row-reverse">
     <div class="signin-right">
-
       <div class="signin-box">
         <img class="mg-b-30" src="assets/img/logo-oi.png" width="70" alt="">
         <h2 class="signin-title-primary">Selamat Datang!</h2>
         <h3 class="signin-title-secondary">Aplikasi Dashboard Pimpinan</h3>
 
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Masukan Nama Pengguna">
-        </div><!-- form-group -->
-        <div class="form-group mg-b-50">
-          <input type="password" class="form-control" placeholder="Kata Sandi">
-        </div><!-- form-group -->
-        <a href="dashboard.html" class="btn btn-primary btn-block btn-signin">Masuk</a>
-      </div>
+        <!-- Login Form -->
+        <form onsubmit="return validateCaptcha()">
+          <div class="form-group">
+            <input type="text" class="form-control" name="username" placeholder="Masukan Nama Pengguna" required>
+          </div>
+          <div class="form-group mg-b-15 password-container">
+            <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Kata Sandi"
+              required>
+            <i class="fa fa-eye toggle-password" id="togglePassword"></i>
+          </div>
+          <!-- Custom CAPTCHA: Display Random 4-Digit Number -->
+          <div class="form-group rechaptcha_custom">
+            <label for="captcha">Isikan kode keamanan berikut : <span id="captchaDisplay"></span></label>
+            <input type="text" class="form-control" id="captchaInput" name="captcha"
+              placeholder="Masukkan angka di atas" required>
+          </div>
 
-    </div><!-- signin-right -->
+          <div class="form-group mg-t-20">
+            <button type="submit" class="btn btn-primary btn-block btn-signin">Masuk</button>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+
+    <!-- Left Side Image -->
     <div class="signin-left">
       <div class="signin-box">
         <div class="logo-login">
           <img class="img-bupati" src="assets/img/lanjutkerja.png" width="500" alt="">
         </div>
       </div>
-    </div><!-- signin-left -->
-  </div><!-- d-flex -->
+    </div>
+  </div>
 
+  <!-- JS Libraries -->
   <script src="assets/lib/jquery/js/jquery.js"></script>
   <script src="assets/lib/popper.js/js/popper.js"></script>
   <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
-
   <script src="assets/js/slim.js"></script>
 
+
+  <script>
+    // Generate and display random 4-digit captcha on page load
+    function generateCaptcha() {
+      const captcha = Math.floor(1000 + Math.random() * 9000); // Generates a random 4-digit number
+      document.getElementById("captchaDisplay").textContent = captcha;
+      return captcha;
+    }
+
+    // Store the generated captcha value for validation
+    const generatedCaptcha = generateCaptcha();
+
+    // Validate captcha input on form submission
+    function validateCaptcha() {
+      const userCaptcha = document.getElementById("captchaInput").value;
+      if (userCaptcha != generatedCaptcha) {
+        alert("Captcha salah. Silakan coba lagi.");
+        return false; // Prevent form submission if captcha is incorrect
+      }
+
+      // Redirect to dashboard.html if captcha is correct
+      window.location.href = "dashboard.html";
+      return false; // Prevent default form submission
+    }
+
+    // Toggle password visibility
+    document.getElementById("togglePassword").addEventListener("click", function () {
+      const passwordInput = document.getElementById("passwordInput");
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+
+      // Toggle the eye icon
+      this.classList.toggle("fa-eye-slash");
+    });
+  </script>
 </body>
 
 </html>

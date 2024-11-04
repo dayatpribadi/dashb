@@ -68294,3 +68294,30 @@ td {
 #modalSuratKeluar .select2-container {
   width: 100% !important;
 }
+
+.rechaptcha_custom {
+  background-color: rgb(226, 226, 226);
+  color: black;
+  padding: 10px;
+}
+
+.rechaptcha_custom span {
+  font-size: 28px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(#00E396, #008FFB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: end !important;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
