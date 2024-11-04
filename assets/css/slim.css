@@ -22951,6 +22951,7 @@ textarea.parsley-success:focus {
 
 .signin-left,
 .signin-right {
+  background-color: #FFF;
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -68034,16 +68035,6 @@ a.hover-white-8:focus {
   float: right;
 }
 
-.melayang {
-  position: absolute;
-  z-index: 1;
-  top: -90px;
-}
-
-.melayang .img-bupati {
-  height: 200px;
-}
-
 .bg-body-custom-ungu {
   background-image: linear-gradient(120deg, #FDFBEF 0%, #EEF7FF 100%);
 }
@@ -68322,4 +68313,15 @@ td {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+
+.melayang {
+  position: absolute;
+  z-index: 1;
+  top: -90px;
+}
+
+.melayang .img-bupati {
+  height: 200px;
 }
