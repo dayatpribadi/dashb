@@ -22936,15 +22936,17 @@ textarea.parsley-success:focus {
 }
 
 .btn-signin {
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 40px;
   border: 0;
   min-height: 40px;
-  background-image: linear-gradient(to right, #1b84e7 0%, #6f42c1 100%);
+  /* background-image: linear-gradient(to right, #1b84e7 0%, #6f42c1 100%); */
   background-repeat: repeat-x;
+  background-image: linear-gradient(to right, #437EBC 0%, #59B4EC 55%, #EDC83B 100%);
+  color: #FFF !important;
 }
 
 .signin-left,
