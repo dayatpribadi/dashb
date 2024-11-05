@@ -147,7 +147,7 @@
 
               <!-- MODAL EFFECTS -->
               <div id="modalAgenda" class="modal fade">
-                <div class="modal-dialog modal-xl">
+                <div class="modal-dialog">
                   <div class="modal-content bd-0 tx-14">
                     <div class="modal-header pd-y-20 pd-x-25">
                       <div class="d-flex justify-content-between">
@@ -161,16 +161,22 @@
 
                       <div class="row row-sm row-timeline">
                         <div class="col-12">
-                          <div class="card-contact">
-                            <div class="tx-center">
-                              <i class="icon ion-ios-calendar-outline" style="font-size: 40px;"></i>
-                              <h5 class="mg-t-10 mg-b-5"><a href="" class="contact-name">Judul Agenda Lorem ipsum dolor
-                                  sit amet,
-                                  consectetur adipisicing elit. Corporis vel itaque, beatae id aspernatur reprehenderit
-                                  similique, et natus consequuntur neque quos, voluptate quis ipsum iusto nam! Dolores
-                                  aliquid harum sapiente.</a></h5>
+                          <div class="card-contact justify-content-center">
+                            <div class="tx-center d-flex justify-content-center align-items-center"
+                              style="flex-direction: column;">
+                              <script
+                                src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                                type="module"></script>
+                              <dotlottie-player
+                                src="https://lottie.host/55ad3897-76a0-425d-8897-183f4d3d9814/rJcE8AeeSd.json"
+                                background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay>
+                              </dotlottie-player>
+                              <h5 class="mg-t-10 mg-b-5">
+                                <a href="" class="contact-name">Judul Agenda Lorem ipsum dolor sit amet...</a>
+                              </h5>
                               <p>Leading Sector : Dinas Komunikasi Informatika Statistik dan Persandian</p>
-                            </div><!-- tx-center -->
+                            </div>
+
 
                             <p class="contact-item">
                               <span>Hari:</span>
@@ -209,6 +215,14 @@
                                 </li>
                               </ul>
                             </p><!-- contact-item -->
+                            <p class="contact-item">
+                              <span>Tambahkan Item Lainnya:</span>
+                              <a href="">Lorem ipsum dolor sit amet.</a>
+                            </p><!-- contact-item -->
+                            <p class="contact-item">
+                              <span>Tambahkan Item Lainnya:</span>
+                              <a href="">Lorem ipsum dolor sit amet.</a>
+                            </p><!-- contact-item -->
                           </div><!-- card -->
                         </div><!-- col-9 -->
                       </div><!-- row -->
@@ -225,7 +239,7 @@
                   <div class="card-header tx-medium bd-0 tx-white bg-mantle">
                     Agenda Hari Ini
                   </div><!-- card-header -->
-                  <div class="container-agenda" style="max-height: 630px; overflow-y: scroll;">
+                  <div class="container-agenda" style="max-height: 600px; overflow-y: scroll;">
                     <div class="card-body item-agenda bd bd-t-0 bg-custom">
                       <div class="d-flex justify-content-between mg-b-2">
                         <div class="tx-14">
@@ -237,11 +251,17 @@
                       <h6 class="tx-14 mg-t-10"><a href="#modalAgenda" data-toggle="modal"
                           class="modal-effect tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
                           Agenda Kegiatan</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-user mr-2"></i>Leading
+                          Sector :
                           Diskominfo</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-university mr-2"></i>Lokasi :
                           Rapat
                           Utama
+                          Bupati</a></h6>
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-users mr-2"></i>Dihadiri Oleh :
                           Bupati</a></h6>
                     </div><!-- card-body -->
                     <div class="card-body item-agenda bd bd-t-0 bg-custom">
@@ -255,11 +275,17 @@
                       <h6 class="tx-14 mg-t-10"><a href="#modalAgenda" data-toggle="modal"
                           class="modal-effect tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
                           Agenda Kegiatan</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-user mr-2"></i>Leading
+                          Sector :
                           Diskominfo</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-university mr-2"></i>Lokasi :
                           Rapat
                           Utama
+                          Bupati</a></h6>
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-users mr-2"></i>Dihadiri Oleh :
                           Bupati</a></h6>
                     </div><!-- card-body -->
                     <div class="card-body item-agenda bd bd-t-0 bg-custom">
@@ -273,11 +299,17 @@
                       <h6 class="tx-14 mg-t-10"><a href="#modalAgenda" data-toggle="modal"
                           class="modal-effect tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
                           Agenda Kegiatan</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-user mr-2"></i>Leading
+                          Sector :
                           Diskominfo</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-university mr-2"></i>Lokasi :
                           Rapat
                           Utama
+                          Bupati</a></h6>
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-users mr-2"></i>Dihadiri Oleh :
                           Bupati</a></h6>
                     </div><!-- card-body -->
                     <div class="card-body item-agenda bd bd-t-0 bg-custom">
@@ -291,11 +323,17 @@
                       <h6 class="tx-14 mg-t-10"><a href="#modalAgenda" data-toggle="modal"
                           class="modal-effect tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
                           Agenda Kegiatan</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-user mr-2"></i>Leading
+                          Sector :
                           Diskominfo</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-university mr-2"></i>Lokasi :
                           Rapat
                           Utama
+                          Bupati</a></h6>
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-users mr-2"></i>Dihadiri Oleh :
                           Bupati</a></h6>
                     </div><!-- card-body -->
                     <div class="card-body item-agenda bd bd-t-0 bg-custom">
@@ -309,13 +347,20 @@
                       <h6 class="tx-14 mg-t-10"><a href="#modalAgenda" data-toggle="modal"
                           class="modal-effect tx-inverse"><i class="fa fa-bookmark mr-2"></i>Judul
                           Agenda Kegiatan</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-user mr-2"></i>Leading Sector :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-user mr-2"></i>Leading
+                          Sector :
                           Diskominfo</a></h6>
-                      <h6 class="tx-14"><a href="" class="tx-inverse"><i class="fa fa-university mr-2"></i>Lokasi :
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-university mr-2"></i>Lokasi :
                           Rapat
                           Utama
                           Bupati</a></h6>
+                      <h6 class="tx-14"><a href="#modalAgenda" data-toggle="modal" class="modal-effect tx-inverse"><i
+                            class="fa fa-users mr-2"></i>Dihadiri Oleh :
+                          Bupati</a></h6>
                     </div><!-- card-body -->
+
                   </div>
 
                   <div class="card-footer">
@@ -670,9 +715,28 @@
           <div class="card card-sales mg-t-10">
             <h4 class="slim-card-title mb-3"><i class="fa fa-universal-access mr-2 fs-18"></i>Kondisi Jumlah ASN
             </h4>
-            <div class="bd pd-t-30 pd-b-20 pd-x-20">
-              <div id="jumlahAsnSemesta"></div>
+            <div class="row row-xs justify-content-center">
+              <div class="lottie-img">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                  type="module">
+                </script>
+
+                <dotlottie-player src="https://lottie.host/8963b586-a34e-4917-adc4-cd0dbc4619fa/tOO5gAq5A9.json"
+                  background="transparent" speed="1" style="width: 300px; height: 200px;" loop autoplay>
+                </dotlottie-player>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="alert alert-solid alert-info">
+                  PNS : <span class="fs-18">3.876</span>
+                </div>
+                <div class="alert alert-solid alert-warning">
+                  PPPK : <span class="fs-18">3.876</span>
+                </div>
+              </div>
             </div>
+            <!-- <div class="bd pd-t-30 pd-b-20 pd-x-20">
+              <div id="jumlahAsnSemesta"></div>
+            </div> -->
             <a href="noc_administrasi_umum.html" class="card-footer">
               <span class="ref">Sumber Data : Aplikasi Semesta</span>
             </a>
