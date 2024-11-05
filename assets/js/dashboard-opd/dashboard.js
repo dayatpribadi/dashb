@@ -112,11 +112,6 @@ $(document).ready(function () {
   });
 
 
-  Nama : FERDY MEIROFA EKA SAPUTRA
-  NIP : 198305242006041005
-  Jabatan : Kepala Bidang Aplikasi Informatika
-
-
   // CHART PRESENSI
 var options = {
   series: [44, 55],
