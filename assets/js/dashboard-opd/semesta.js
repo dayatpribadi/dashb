@@ -1,7 +1,7 @@
 var options = {
     series: [44, 55, 41, 17, 15],
     chart: {
-    type: 'donut',
+    type: 'pie',
     height: 393,
   },
   labels: ['Presensi Hadir', 'Presensi DL', 'Presensi KL', 'Presensi TAP', 'Presensi Sakit', 'Presensi Izin', 'Presensi TK'],
@@ -229,10 +229,6 @@ var options = {
         {
             name: "Realisasi",
             data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-        },
-        {
-            name: "Penghematan",
-            data: [102, 95, 19, 159, 69, 82, 99, 191, 228]
         },
     ],
     chart: {

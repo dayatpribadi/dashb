@@ -5,9 +5,7 @@ var options = {
       type: 'donut',
       height: 393,
     },
-    labels: ['Presensi Hadir', 'Presensi DL', 'Presensi KL', 'Presensi TAP', 'Presensi Sakit', 'Presensi Izin',
-      'Presensi TK'
-    ],
+    labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember',],
     responsive: [{
       breakpoint: 480,
       options: {
@@ -154,7 +152,7 @@ chart.render();
   var options = {
     series: [44, 55],
     chart: {
-      type: 'donut',
+      type: 'pie',
       height: 250,
     },
     labels: ['Sudah Realisasi', 'Belum Realisasi',],
@@ -192,7 +190,7 @@ chart.render();
     var options = {
       series: [44, 55],
       chart: {
-        type: 'donut',
+        type: 'pie',
         height: 250,
       },
       labels: ['Sudah Realisasi', 'Belum Realisasi',],
@@ -231,7 +229,7 @@ chart.render();
         var options = {
           series: [44, 55],
           chart: {
-            type: 'donut',
+            type: 'pie',
             height: 250,
           },
           labels: ['Sudah Realisasi', 'Belum Realisasi',],
@@ -256,7 +254,7 @@ chart.render();
           },
           dataLabels: {
             enabled: true,
-            formatter: function (val, opts) {
+            formatter: function (label, opts) {
               return opts.w.config.series[opts.seriesIndex]; // Menggunakan nilai asli data
             }
           }
@@ -270,14 +268,14 @@ chart.render();
         var options = {
           series: [{
             name: 'Presensi',
-            data: [44, 55, 41, 17, 15] // Replace with appropriate y-axis data
+            data: [44, 55, 41, 17, 15, 44, 55, 41, 17, 15, 44, 55,] // Replace with appropriate y-axis data
           }],
           chart: {
             type: 'line',
             height: 375,
           },
           xaxis: {
-            categories: ['Hadir', 'DL', 'KL', 'TAP', 'Sakit', 'Izin', 'TK'] // Labels for x-axis
+            categories: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember',],// Labels for x-axis
           },
           title: {
             text: 'Dinas Komunikasi Informatika Statistik dan Persandian',
@@ -338,7 +336,7 @@ chart.render();
           dataLabels: {
             enabled: true,
             formatter: function (val, opts) {
-              return opts.w.config.series[opts.seriesIndex]; // Menggunakan nilai asli data
+              return opts.w.config.series[opts.seriesIndex] +  val  + "Orang"; // Menggunakan nilai asli data
             }
           }
         };

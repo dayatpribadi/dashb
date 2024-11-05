@@ -274,7 +274,7 @@
                   </div>
 
                   <div class="row row-xs mg-t-30">
-                    <div class="col-12 col-md-6 col-lg-2">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="alert alert-solid alert-custom">
                         <div class="d-flex justify-content-between">
                           <span>Total SKPD</span>
@@ -283,7 +283,7 @@
                       </div><!-- alert -->
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-2">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="alert alert-solid alert-info">
                         <div class="d-flex justify-content-between">
                           <span>Total LKH</span>
@@ -292,7 +292,7 @@
                       </div><!-- alert -->
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-2">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="alert alert-solid alert-success">
                         <div class="d-flex justify-content-between">
                           <span>Total LKH Sudah Diverifikasi</span>
@@ -301,28 +301,10 @@
                       </div><!-- alert -->
                     </div>
 
-                    <div class="col-12 col-md-6 col-lg-2">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="alert alert-solid alert-warning">
                         <div class="d-flex justify-content-between">
                           <span>Total LKH Belum Diverifikasi</span>
-                          <strong style="font-size: 32px;">27</strong>
-                        </div>
-                      </div><!-- alert -->
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-2">
-                      <div class="alert alert-solid alert-danger">
-                        <div class="d-flex justify-content-between">
-                          <span>Total LKH Ditolak</span>
-                          <strong style="font-size: 32px;">27</strong>
-                        </div>
-                      </div><!-- alert -->
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-2">
-                      <div class="alert alert-solid alert-success">
-                        <div class="d-flex justify-content-between">
-                          <span>Rata-Rata LKH</span>
                           <strong style="font-size: 32px;">27</strong>
                         </div>
                       </div><!-- alert -->
@@ -344,27 +326,28 @@
                       </div><!-- alert -->
                       <div class="row row-sm justify-content-center">
                         <div class="col-12 col-md-3 mg-b-30">
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
-                              </div>
-                            </div>
-                            <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
-                          </div>
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Bulan">
+                            <option label="Pilih Bulan"></option>
+                            <option>Januari</option>
+                            <option>Februari</option>
+                            <option>Maret</option>
+                            <option>April</option>
+                            <option>Mei</option>
+                          </select>
                         </div><!-- wd-200 -->
                         <div class="col-12 col-md-3 mg-b-30">
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <div class="input-group-text">
-                                <i class="icon ion-calendar tx-16 lh-0 op-6"></i>
-                              </div>
-                            </div>
-                            <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
-                          </div>
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Tahun">
+                            <option label="Pilih Tahun"></option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                          </select>
                         </div><!-- wd-200 -->
                         <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih">
+                          <select class="form-control select2-show-search mg-b-30"
+                            data-placeholder="Pilih Perangkat Daerah">
                             <option label="Pilih"></option>
                             <option value="Dinas Komunikasi dan Digital">Dinas Komunikasi dan Digital</option>
                             <option value="Dinas Sosial">Dinas Sosial</option>
@@ -409,7 +392,7 @@
                         <div class="col-12">
                           <div class="alert alert-solid alert-info">
                             <div class="d-flex justify-content-between">
-                              <span>Total SILPA</span>
+                              <span>Total Penghematan</span>
                               <strong>Rp. 790.000.927</strong>
                             </div>
                           </div><!-- alert -->
