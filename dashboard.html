@@ -402,7 +402,7 @@
                     </div>
                     <div class="modal-body pd-25">
                       <div class="row row-sm justify-content-between">
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-md-2">
                           <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Bulan">
                             <option label="Pilih Bulan"></option>
                             <option>Januari</option>
@@ -412,7 +412,7 @@
                             <option>Desember</option>
                           </select>
                         </div>
-                        <div class="col-12 col-md-3">
+                        <div class="col-12 col-md-2">
                           <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Tahun">
                             <option label="Pilih Tahun"></option>
                             <option>2024</option>
@@ -422,12 +422,23 @@
                             <option>2020</option>
                           </select>
                         </div>
-                        <div class="col-12 col-lg-3">
+                        <div class="col-12 col-lg-2">
                           <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Status">
                             <option label="Pilih Status"></option>
                             <option>Belum Diproses</option>
                             <option>Disposisi</option>
                             <option>Selesai</option>
+                          </select>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                          <select class="form-control select2-show-search mg-b-30"
+                            data-placeholder="Pilih Perangkat Daerah">
+                            <option label="Pilih Perangkat Daerah"></option>
+                            <option>Dinas Sosial</option>
+                            <option>Dinas Kesehatan</option>
+                            <option>Dinas Pendidikan</option>
+                            <option>Bappeda</option>
+                            <option>Bapenda</option>
                           </select>
                         </div>
                         <div class="col-12 col-lg-2">
@@ -520,8 +531,8 @@
                     </div>
                     <div class="modal-body pd-25">
                       <div class="row row-sm justify-content-between">
-                        <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih">
+                        <div class="col-12 col-md-2">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Bulan">
                             <option label="Pilih Bulan"></option>
                             <option>Januari</option>
                             <option>Februari</option>
@@ -530,8 +541,8 @@
                             <option>Desember</option>
                           </select>
                         </div>
-                        <div class="col-12 col-md-3">
-                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih">
+                        <div class="col-12 col-md-2">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Tahun">
                             <option label="Pilih Tahun"></option>
                             <option>2024</option>
                             <option>2023</option>
@@ -540,8 +551,16 @@
                             <option>2020</option>
                           </select>
                         </div>
-                        <div class="col-12 col-lg-4">
-                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih">
+                        <div class="col-12 col-lg-2">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih Status">
+                            <option label="Pilih Status">Seluruh surat keluar</option>
+                            <option>Proses Verifikasi</option>
+                            <option>Menunggu Ditandatangani</option>
+                            <option>Sudah Ditandatangani</option>
+                          </select>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                          <select class="form-control select2-show-search mg-b-30" data-placeholder="Pilih SKPD">
                             <option label="Pilih Perangkat Daerah"></option>
                             <option>Dinas Sosial</option>
                             <option>Dinas Kesehatan</option>
@@ -566,7 +585,6 @@
                               <th class="wd-35p">Asal Surat</th>
                               <th class="wd-20p">Status Verifikator</th>
                               <th class="wd-20p">Status Penandatangan</th>
-                              <th class="wd-20p">Status Kirim</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -582,7 +600,6 @@
                               <td>LENI MARLINA - Kepala Bidang Politik</td>
                               <td><span class="badge badge-warning tx-white">1 belum</span></td>
                               <td><span class="badge badge-warning tx-white">1 belum</span></td>
-                              <td><span class="badge badge-danger tx-white">belum</span></td>
                             </tr>
                             <tr>
                               <th scope="row">1</th>
@@ -594,9 +611,7 @@
                               <td>RINA OKTAVIANA - Analis Pajak Daerah (Kelas 7)</td>
                               <td><span class="badge badge-success tx-white">3 setuju</span></td>
                               <td><span class="badge badge-success tx-white">1 setuju</span></td>
-                              <td><span class="badge badge-success tx-white">sudah</span></td>
                             </tr>
-
                           </tbody>
                         </table>
                       </div><!-- table-responsive -->
@@ -624,10 +639,10 @@
               <div class="col-12 col-md-6 mb-3">
                 <a href="#modalSuratMasuk" class="card card-status bg-green modal-effect" data-toggle="modal">
                   <div class="media">
-                    <i class="icon ion-ios-paper-outline tx-white"></i>
+                    <i class="fa fa-folder-open fs-32 tx-dark"></i>
                     <div class="media-body">
                       <h1>32,604</h1>
-                      <p class="tx-white">Total Surat Masuk</p>
+                      <p class="tx-dark">Total Surat Masuk</p>
                     </div><!-- media-body -->
                   </div><!-- media -->
                 </a><!-- card -->
@@ -636,10 +651,10 @@
               <div class="col-12 col-md-6 mb-3">
                 <a href="#modalSuratKeluar" class="card card-status bg-blue modal-effect" data-toggle="modal">
                   <div class="media">
-                    <i class="icon ion-ios-paper-outline tx-white"></i>
+                    <i class="fa fa-folder-open tx-dark fs-32"></i>
                     <div class="media-body">
                       <h1>32,604</h1>
-                      <p class="tx-white">Total Surat Keluar</p>
+                      <p class="tx-dark">Total Surat Keluar</p>
                     </div><!-- media-body -->
                   </div><!-- media -->
                 </a><!-- card -->
@@ -703,12 +718,9 @@
           <div class="card card-sales">
             <h6 class="slim-card-title tx-primary mb-3">Pencarian Internet</h6>
             <form action="https://google.com" data-parsley-validate>
-              <div class="d-sm-flex wd-sm-300">
-                <div class="form-group mg-b-0">
-                  <input type="text" name="google" class="form-control wd-150 wd-xs-250" placeholder="Cari di google"
-                    required>
-                </div><!-- form-group -->
-              </div>
+              <div class="form-group mg-b-0">
+                <input type="text" name="google" class="form-control" placeholder="Cari di google" required>
+              </div><!-- form-group -->
             </form>
           </div><!-- card -->
 
