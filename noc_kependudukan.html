@@ -129,19 +129,18 @@
         <div class="col-12">
           <div class="ht-md-60 pd-x-20 bg-primary d-flex align-items-center justify-content-center">
             <ul class="nav nav-underline-dark align-items-center flex-column flex-md-row" role="tablist">
-              <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#kependudukan"
+              <li class="nav-item"><a class="nav-link active " data-toggle="tab" href="#kependudukan"
                   role="tab">Kependudukan</a>
               </li>
               <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#bantuan" role="tab">Bantuan</a>
               </li>
-              <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#kebencanaan"
-                  role="tab">Kebencanaan</a>
+              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kebencanaan" role="tab">Kebencanaan</a>
               </li>
             </ul>
           </div><!-- pd-10 -->
           <div class="card-body bd bd-t-0">
             <div class="tab-content">
-              <div class="tab-pane" id="kependudukan">
+              <div class="tab-pane active" id="kependudukan">
                 <div class="row row-xs mg-b-20">
                   <div class="col-sm-6 col-lg-4 mg-t-10">
                     <div class="card card-status bg-body-custom-ungu">
@@ -278,7 +277,9 @@
               <div class="tab-pane" id="bantuan">
                 <div class="row">
                   <div class="col-12 col-lg-4">
-                    <div id="petaIdl"></div>
+                    <div id="mapContainer">
+                      <div id="petaIdl"></div>
+                    </div>
                   </div>
                   <div class="col-lg-8">
                     <div id="card" class="card mb-4 tsigourof_ben6oqe">
@@ -309,7 +310,7 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane active" id="kebencanaan">
+              <div class="tab-pane" id="kebencanaan">
                 <div class="row row-xs mg-b-20">
                   <div class="col-12 col-md-4">
                     <div class="card bg-warning">
@@ -480,6 +481,72 @@
 
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/dashboard-opd/penduduk.js"></script>
+  <script>
+    $(document).ready(function () {
+      let kependudukanMap, bantuanMap, kebencanaanMap;
+
+      // Fungsi untuk memuat peta Kependudukan
+      function loadKependudukanData() {
+        console.log("Memuat data Kependudukan...");
+
+        if (!kependudukanMap) {
+          kependudukanMap = L.map('mapKependudukan').setView([-6.200000, 106.816666],
+          10); // Ganti dengan koordinat yang diinginkan
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+          }).addTo(kependudukanMap);
+        } else {
+          kependudukanMap.invalidateSize(); // Menyesuaikan ukuran saat tab dibuka
+        }
+      }
+
+      // Fungsi untuk memuat peta Bantuan
+      function loadBantuanData() {
+        console.log("Memuat data Bantuan...");
+
+        if (!bantuanMap) {
+          bantuanMap = L.map('mapBantuan').setView([-6.200000, 106.816666],
+          10); // Ganti dengan koordinat yang diinginkan
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+          }).addTo(bantuanMap);
+        } else {
+          bantuanMap.invalidateSize();
+        }
+      }
+
+      // Fungsi untuk memuat peta Kebencanaan
+      function loadKebencanaanData() {
+        console.log("Memuat data Kebencanaan...");
+
+        if (!kebencanaanMap) {
+          kebencanaanMap = L.map('mapKebencanaan').setView([-6.200000, 106.816666],
+          10); // Ganti dengan koordinat yang diinginkan
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+          }).addTo(kebencanaanMap);
+        } else {
+          kebencanaanMap.invalidateSize();
+        }
+      }
+
+      // Panggil fungsi load peta untuk tab pertama kali dimuat
+      loadKependudukanData();
+
+      // Ketika tab diubah, deteksi tab yang diaktifkan dan tampilkan peta yang sesuai
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var activeTab = $(e.target).attr('href'); // ID tab aktif
+
+        if (activeTab === "#kependudukan") {
+          loadKependudukanData();
+        } else if (activeTab === "#bantuan") {
+          loadBantuanData();
+        } else if (activeTab === "#kebencanaan") {
+          loadKebencanaanData();
+        }
+      });
+    });
+  </script>
   <script>
     var info = L.control();
     var kobar = {
