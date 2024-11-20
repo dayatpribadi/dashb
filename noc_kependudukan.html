@@ -451,7 +451,7 @@
                     </div><!-- card -->
                   </div><!-- col-4 -->
                 </div>
-                <div class="row row-xs mg-b-20">
+                <div id="tripId" class="row row-xs mg-b-20">
                   <div id="map"></div>
                 </div>
               </div>
@@ -481,72 +481,7 @@
 
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/dashboard-opd/penduduk.js"></script>
-  <script>
-    $(document).ready(function () {
-      let kependudukanMap, bantuanMap, kebencanaanMap;
 
-      // Fungsi untuk memuat peta Kependudukan
-      function loadKependudukanData() {
-        console.log("Memuat data Kependudukan...");
-
-        if (!kependudukanMap) {
-          kependudukanMap = L.map('mapKependudukan').setView([-6.200000, 106.816666],
-          10); // Ganti dengan koordinat yang diinginkan
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-          }).addTo(kependudukanMap);
-        } else {
-          kependudukanMap.invalidateSize(); // Menyesuaikan ukuran saat tab dibuka
-        }
-      }
-
-      // Fungsi untuk memuat peta Bantuan
-      function loadBantuanData() {
-        console.log("Memuat data Bantuan...");
-
-        if (!bantuanMap) {
-          bantuanMap = L.map('mapBantuan').setView([-6.200000, 106.816666],
-          10); // Ganti dengan koordinat yang diinginkan
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-          }).addTo(bantuanMap);
-        } else {
-          bantuanMap.invalidateSize();
-        }
-      }
-
-      // Fungsi untuk memuat peta Kebencanaan
-      function loadKebencanaanData() {
-        console.log("Memuat data Kebencanaan...");
-
-        if (!kebencanaanMap) {
-          kebencanaanMap = L.map('mapKebencanaan').setView([-6.200000, 106.816666],
-          10); // Ganti dengan koordinat yang diinginkan
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-          }).addTo(kebencanaanMap);
-        } else {
-          kebencanaanMap.invalidateSize();
-        }
-      }
-
-      // Panggil fungsi load peta untuk tab pertama kali dimuat
-      loadKependudukanData();
-
-      // Ketika tab diubah, deteksi tab yang diaktifkan dan tampilkan peta yang sesuai
-      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        var activeTab = $(e.target).attr('href'); // ID tab aktif
-
-        if (activeTab === "#kependudukan") {
-          loadKependudukanData();
-        } else if (activeTab === "#bantuan") {
-          loadBantuanData();
-        } else if (activeTab === "#kebencanaan") {
-          loadKebencanaanData();
-        }
-      });
-    });
-  </script>
   <script>
     var info = L.control();
     var kobar = {
@@ -670,6 +605,25 @@
     }).addTo(kobar_map);
 
     marker.bindPopup('<p>Location: <br> Latitude: -3.2360136236357704 <br> Longitude: 104.66542011707496</p>');
+    $(document).on('show.tab', 'a[data-toggle="tab"]', function (e) {
+      var target = $(e.target).attr('href');
+      var petaIdl = target.split('_')[2];
+      var tripId = target.split('_')[3];
+
+      var map = window[mapId];
+      if (map) {
+        map.setView([-3.247523, 104.661723], 14.5);
+        map.invalidateSize();
+      } else {
+        var mapElement = $(target).find('div[id^="map"]');
+        if (mapElement.length) {
+          mapElement = mapElement[0];
+          map = window[mapElement.id];
+          map.setView([-3.247523, 104.661723], 14.5);
+          map.invalidateSize();
+        }
+      }
+    })
   </script>
 
   <script>
