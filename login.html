@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Meta and Title -->
+  <meta name="description" content="Dashboard Pimpinan Kabuapten Ogan Ilir">
+  <meta name="author" content="Diskominfo Ogan Ilir">
+  <title>Selamat Datang di Dashboard Pimpinan Kabuapten Ogan Ilir</title>
+
+  <!-- Vendor CSS -->
+  <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/slim.css">
+
+  <!-- Custom CSS for Background and Centered Form -->
+</head>
+
+<body class="bg-utama">
+  <div class="signin-box">
+    <img class="mg-b-20 mx-auto text-center" src="assets/img/logo-oi.png" width="70" alt="">
+    <h2 class="signin-title-primary text-center">Selamat Datang!</h2>
+    <h3 class="signin-title-secondary text-center">Aplikasi Dashboard Pimpinan</h3>
+    <code>example login : username dan password sembarang</code>
+
+    <!-- Login Form -->
+    <form onsubmit="return validateCaptcha()">
+      <div class="form-group">
+        <input type="text" class="form-control" name="username" placeholder="Masukan Nama Pengguna" required>
+      </div>
+      <div class="form-group mg-b-15 password-container">
+        <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Kata Sandi"
+          required>
+        <i class="fa fa-eye toggle-password" id="togglePassword"></i>
+      </div>
+      <!-- Custom CAPTCHA: Display Random 4-Digit Number -->
+      <div class="form-group rechaptcha_custom text-start">
+        <label for="captcha">Isikan kode keamanan berikut : <span id="captchaDisplay"></span></label>
+        <input type="text" class="form-control" id="captchaInput" name="captcha" placeholder="Masukkan angka di atas"
+          required>
+      </div>
+
+      <div class="form-group mg-t-20">
+        <button type="submit" class="btn btn-primary btn-block btn-signin">Masuk</button>
+      </div>
+
+      <div class="footers">
+        <div class="row">
+          <div class="col-12 tx-center">
+            &copy; Copyright 2024 | Pemerintahan Daerah Kabupaten Ogan Ilir <br> Design by <a href="#">Dinas Komunikasi
+              Informatika
+              Statistik dan Persandian</a>
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- JS Libraries -->
+  <script src="assets/lib/jquery/js/jquery.js"></script>
+  <script src="assets/lib/popper.js/js/popper.js"></script>
+  <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
+  <script src="assets/js/slim.js"></script>
+
+  <script>
+    // Generate and display random 4-digit captcha on page load
+    function generateCaptcha() {
+      const captcha = Math.floor(1000 + Math.random() * 9000); // Generates a random 4-digit number
+      document.getElementById("captchaDisplay").textContent = captcha;
+      return captcha;
+    }
+
+    // Store the generated captcha value for validation
+    const generatedCaptcha = generateCaptcha();
+
+    // Validate captcha input on form submission
+    function validateCaptcha() {
+      const userCaptcha = document.getElementById("captchaInput").value;
+      if (userCaptcha != generatedCaptcha) {
+        alert("Captcha salah. Silakan coba lagi.");
+        return false; // Prevent form submission if captcha is incorrect
+      }
+
+      // Redirect to dashboard.html if captcha is correct
+      window.location.href = "dashboard.html";
+      return false; // Prevent default form submission
+    }
+
+    // Toggle password visibility
+    document.getElementById("togglePassword").addEventListener("click", function () {
+      const passwordInput = document.getElementById("passwordInput");
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+
+      // Toggle the eye icon
+      this.classList.toggle("fa-eye-slash");
+    });
+  </script>
+</body>
+
+</html>

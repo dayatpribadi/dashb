@@ -68381,3 +68381,66 @@ td {
 .melayang .img-bupati {
   height: 200px;
 }
+
+
+/* Weather */
+
+.widget {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.location {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+}
+
+.weather-icon {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.temperature {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.details {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.day {
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.bg-body {
+  background-color: #000046;
+}
+
+/* End Weather */
+
+/* Berita */
+
+
+/* End Berita */

@@ -1,106 +1,977 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Meta and Title -->
-  <meta name="description" content="Dashboard Pimpinan Kabuapten Ogan Ilir">
-  <meta name="author" content="Diskominfo Ogan Ilir">
-  <title>Selamat Datang di Dashboard Pimpinan Kabuapten Ogan Ilir</title>
-
-  <!-- Vendor CSS -->
-  <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-  <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/lib/Ionicons/css/ionicons.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/slim.css">
-
-  <!-- Custom CSS for Background and Centered Form -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dash - OI</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.png">
+    <!-- NewsViral CSS  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rest.css">
+    <link rel="stylesheet" href="assets/css/widgets.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
-<body class="bg-utama">
-  <div class="signin-box">
-    <img class="mg-b-20 mx-auto text-center" src="assets/img/logo-oi.png" width="70" alt="">
-    <h2 class="signin-title-primary text-center">Selamat Datang!</h2>
-    <h3 class="signin-title-secondary text-center">Aplikasi Dashboard Pimpinan</h3>
-    <code>example login : username dan password sembarang</code>
+<body>
 
-    <!-- Login Form -->
-    <form onsubmit="return validateCaptcha()">
-      <div class="form-group">
-        <input type="text" class="form-control" name="username" placeholder="Masukan Nama Pengguna" required>
-      </div>
-      <div class="form-group mg-b-15 password-container">
-        <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Kata Sandi"
-          required>
-        <i class="fa fa-eye toggle-password" id="togglePassword"></i>
-      </div>
-      <!-- Custom CAPTCHA: Display Random 4-Digit Number -->
-      <div class="form-group rechaptcha_custom text-start">
-        <label for="captcha">Isikan kode keamanan berikut : <span id="captchaDisplay"></span></label>
-        <input type="text" class="form-control" id="captchaInput" name="captcha" placeholder="Masukkan angka di atas"
-          required>
-      </div>
-
-      <div class="form-group mg-t-20">
-        <button type="submit" class="btn btn-primary btn-block btn-signin">Masuk</button>
-      </div>
-
-      <div class="footers">
-        <div class="row">
-          <div class="col-12 tx-center">
-            &copy; Copyright 2024 | Pemerintahan Daerah Kabupaten Ogan Ilir <br> Design by <a href="#">Dinas Komunikasi
-              Informatika
-              Statistik dan Persandian</a>
-            <img src="" alt="">
-          </div>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img class="jump mb-50" src="assets/imgs/loading.svg" alt="">
+                    <h6>Now Loading</h6>
+                    <div class="loader">
+                        <div class="bar bar1"></div>
+                        <div class="bar bar2"></div>
+                        <div class="bar bar3"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </form>
-  </div>
+    </div>
 
-  <!-- JS Libraries -->
-  <script src="assets/lib/jquery/js/jquery.js"></script>
-  <script src="assets/lib/popper.js/js/popper.js"></script>
-  <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
-  <script src="assets/js/slim.js"></script>
+    <div class="main-wrap">
+        <!--Offcanvas sidebar-->
+        <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar position-right">
+            <button class="off-canvas-close"><i class="ti-close"></i></button>
+            <div class="sidebar-inner">
+                <!--Search-->
+                <div class="siderbar-widget mb-50 mt-30">
+                    <form action="#" method="get" class="search-form position-relative">
+                        <input type="text" class="search_field" placeholder="Search" value="" name="s">
+                        <span class="search-icon"><i class="ti-search mr-5"></i></span>
+                    </form>
+                </div>
+                <!--lastest post-->
+                <div class="sidebar-widget mb-50">
+                    <div class="widget-header mb-30">
+                        <h5 class="widget-title">Top <span>Trending</span></h5>
+                    </div>
+                    <div class="post-aside-style-2">
+                        <ul class="list-post">
+                            <li class="mb-30 wow fadeIn animated">
+                                <div class="d-flex">
+                                    <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale">
+                                        <a class="color-white" href="single.html">
+                                            <img src="assets/imgs/thumbnail-2.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body">
+                                        <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">Vancouver
+                                                woman finds pictures and videos of herself online</a></h6>
+                                        <div
+                                            class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase">
+                                            <span class="post-by">By <a href="author.html">K. Marry</a></span>
+                                            <span class="post-on">4m ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-30 wow fadeIn animated">
+                                <div class="d-flex">
+                                    <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale">
+                                        <a class="color-white" href="single.html">
+                                            <img src="assets/imgs/thumbnail-3.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body">
+                                        <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">4 Things
+                                                Emotionally Intelligent People Don’t Do</a></h6>
+                                        <div
+                                            class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase">
+                                            <span class="post-by">By <a href="author.html">Mr. John</a></span>
+                                            <span class="post-on">3h ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-30 wow fadeIn animated">
+                                <div class="d-flex">
+                                    <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale">
+                                        <a class="color-white" href="single.html">
+                                            <img src="assets/imgs/thumbnail-5.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body">
+                                        <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">Reflections
+                                                from a Token Black Friend</a></h6>
+                                        <div
+                                            class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase">
+                                            <span class="post-by">By <a href="author.html">Kenedy</a></span>
+                                            <span class="post-on">4h ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mb-30 wow fadeIn animated">
+                                <div class="d-flex">
+                                    <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale">
+                                        <a class="color-white" href="single.html">
+                                            <img src="assets/imgs/thumbnail-7.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body">
+                                        <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">How to
+                                                Identify a Smart Person in 3 Minutes</a></h6>
+                                        <div
+                                            class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase">
+                                            <span class="post-by">By <a href="author.html">Steven</a></span>
+                                            <span class="post-on">5h ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="wow fadeIn animated">
+                                <div class="d-flex">
+                                    <div class="post-thumb d-flex mr-15 border-radius-5 img-hover-scale">
+                                        <a class="color-white" href="single.html">
+                                            <img src="assets/imgs/thumbnail-8.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body">
+                                        <h6 class="post-title mb-10 text-limit-2-row"><a href="single.html">Blackface
+                                                Minstrel Songs Don’t Belong in Children’s Music Class</a></h6>
+                                        <div
+                                            class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase">
+                                            <span class="post-by">By <a href="author.html">J.Smith</a></span>
+                                            <span class="post-on">5h30 ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Categories-->
+                <div class="sidebar-widget widget_tag_cloud mb-50">
+                    <div class="widget-header tags-close mb-20">
+                        <h5 class="widget-title mt-5">Tags Cloud</h5>
+                    </div>
+                    <div class="tagcloud">
+                        <a href="#">Beauty</a>
+                        <a href="#">Book</a>
+                        <a href="#">Design</a>
+                        <a href="#">Fashion</a>
+                        <a href="#">Lifestyle</a>
+                        <a href="#">Travel</a>
+                        <a href="#">Science</a>
+                        <a href="#">Health</a>
+                        <a href="#">Sports</a>
+                        <a href="#">Arts</a>
+                        <a href="#">Books</a>
+                        <a href="#">Style</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
 
-  <script>
-    // Generate and display random 4-digit captcha on page load
-    function generateCaptcha() {
-      const captcha = Math.floor(1000 + Math.random() * 9000); // Generates a random 4-digit number
-      document.getElementById("captchaDisplay").textContent = captcha;
-      return captcha;
-    }
+        <!-- Main Header -->
+        <header class="main-header header-style-2 mb-40">
+            <div class="header-bottom header-sticky text-center">
+                <div class="scroll-progress gradient-bg-1"></div>
+                <!-- <div class="mobile_menu d-lg-none d-block"></div> -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3">
+                            <div class="header-logo d-none d-lg-block">
+                                <a href="index.html">
+                                    <img class="logo-img d-inline" src="assets/imgs/dashblack.png" width="150" alt="">
+                                </a>
+                            </div>
+                            <div class="logo-tablet d-md-inline d-lg-none d-none">
+                                <a href="index.html">
+                                    <img class="logo-img d-inline" src="assets/imgs/dashblack.png" width="150" alt="">
+                                </a>
+                            </div>
+                            <div class="logo-mobile d-block d-md-none">
+                                <a href="index.html">
+                                    <img class="logo-img d-inline" src="assets/imgs/dashblack.png" width="150" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-9 main-header-navigation">
+                            <!-- Main-menu -->
+                            <div class="main-nav text-left float-lg-left float-md-right">
+                                <ul class="mobi-menu d-none menu-3-columns" id="navigation">
+                                    <li class="cat-item cat-item-2"><a href="#">Global Economy</a></li>
+                                    <li class="cat-item cat-item-3"><a href="#">Environment</a></li>
+                                    <li class="cat-item cat-item-4"><a href="#">Religion</a></li>
+                                    <li class="cat-item cat-item-5"><a href="#">Fashion</a></li>
+                                    <li class="cat-item cat-item-6"><a href="#">Terrorism</a></li>
+                                    <li class="cat-item cat-item-7"><a href="#">Conflicts</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Scandals</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Executive</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Foreign policy</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Healthy Living</a></li>
+                                    <li class="cat-item cat-item-3"><a href="#">Medical Research</a></li>
+                                    <li class="cat-item cat-item-4"><a href="#">Children’s Health</a></li>
+                                    <li class="cat-item cat-item-5"><a href="#">Around the World</a></li>
+                                    <li class="cat-item cat-item-6"><a href="#">Ad Choices</a></li>
+                                    <li class="cat-item cat-item-7"><a href="#">Mental Health</a></li>
+                                    <li class="cat-item cat-item-2"><a href="#">Media Relations</a></li>
+                                </ul>
 
-    // Store the generated captcha value for validation
-    const generatedCaptcha = generateCaptcha();
+                            </div>
 
-    // Validate captcha input on form submission
-    function validateCaptcha() {
-      const userCaptcha = document.getElementById("captchaInput").value;
-      if (userCaptcha != generatedCaptcha) {
-        alert("Captcha salah. Silakan coba lagi.");
-        return false; // Prevent form submission if captcha is incorrect
-      }
+                            <!-- Off canvas -->
+                            <div class="off-canvas-toggle-cover">
+                                <a href="login.html" class="off-canvas-toggle hidden d-inline-block ml-15">
+                                    <ion-icon name="person-circle-outline" class="text-dark"></ion-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Wrap Start -->
 
-      // Redirect to dashboard.html if captcha is correct
-      window.location.href = "dashboard.html";
-      return false; // Prevent default form submission
-    }
+        <main>
+            <div class="background-overlay"></div>
 
-    // Toggle password visibility
-    document.getElementById("togglePassword").addEventListener("click", function () {
-      const passwordInput = document.getElementById("passwordInput");
-      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-      passwordInput.setAttribute("type", type);
+            <div class="background-nav">
+                <button class="nav-btn hidden" id="prev-bg" aria-label="Previous image">
+                    <span>&#10094;</span>
+                </button>
+                <button class="nav-btn hidden" id="next-bg" aria-label="Next image">
+                    <span>&#10095;</span>
+                </button>
+            </div>
 
-      // Toggle the eye icon
-      this.classList.toggle("fa-eye-slash");
-    });
-  </script>
+            <div class="main-content">
+                <div class="container">
+                    <div class="row area-sticky">
+                        <div class="col-12">
+                            <div id="search-area">
+                                <input type="text" id="search-box" placeholder="Cari sesuatu...">
+                                <button id="search-button">
+                                    <img src="./assets/imgs/favicon.png" width="20" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container content-utama">
+                        <div class="row" style="margin-bottom: 150px;">
+                            <div class="col-12">
+                                <div class="background-info">
+                                    <div class="info-text">
+                                        <p id="background-desc">Gambar latar belakang</p>
+                                        <p class="credit">&copy; Sumber Gambar</p>
+                                    </div>
+                                    <div class="info-buttons">
+                                        <button id="btn-info" class="icon-btn" aria-label="Previous image">
+                                            <span>info</span>
+                                        </button>
+                                        <!-- <button id="info-btn">Info</button> -->
+                                        <div class="nav-buttons">
+                                            <button id="prev-bg-icon" class="icon-btn" aria-label="Previous image">
+                                                <span>&#10094;</span>
+                                            </button>
+                                            <button id="next-bg-icon" class="icon-btn" aria-label="Next image">
+                                                <span>&#10095;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Featured Grid-->
+                        <div class="row bg-white-opacity pt-20" style="border-radius: 12px !important;">
+                            <!-- sidebar-left -->
+                            <div
+                                class="col-lg-3 col-md-3 primary-sidebar sticky-sidebar sidebar-left order-2 order-md-1">
+                                <!-- Widget Weather -->
+                                <div class="sidebar-widget widget-weather bg-cloud border-radius-10 mb-30">
+                                    <div class="text-white">
+                                        <div class="weather-widget">
+                                            <div class="weather-header">
+                                                <span class="location" id="city">Memuat lokasi...</span>
+                                                <br>
+                                                <span class="temp-main" id="weather__temperature">⛅ --°C</span>
+                                                <br>
+                                                <span class="weather-desc" id="weather__forecast">💧 Memuat
+                                                    cuaca...</span>
+                                            </div>
+                                            <div class="weather-forecast">
+                                                <div class="forecast-day">
+                                                    <p>Hari Ini</p>
+                                                    <div id="weather__icon">
+                                                        <img src="https://img.icons8.com/ios-filled/50/000000/partly-cloudy-day.png"
+                                                            alt="Cuaca">
+                                                    </div>
+                                                    <p id="weather__minmax">--° / --°</p>
+                                                </div>
+                                            </div>
+                                            <div class="weather-footer">
+                                                <p>RealFeel: <span id="weather__realfeel">--</span></p>
+                                                <p>Humidity: <span id="weather__humidity">--</span></p>
+                                                <p>Wind: <span id="weather__wind">--</span></p>
+                                                <p>Pressure: <span id="weather__pressure">--</span></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Widget Categories -->
+                                <div class="sidebar-widget widget_categories_2 border-radius-10 bg-white mb-30">
+                                    <ul class="font-small text-muted">
+                                        <li class="cat-item cat-item-2 active"><a href="#"><span class="mr-10">
+                                                    <ion-icon name="People-Outline"></ion-icon>
+                                                </span>Layanan Publik</a></li>
+                                        <li class="cat-item cat-item-3"><a href="#"><span class="mr-10">
+                                                    <ion-icon name="business-outline"></ion-icon>
+                                                </span>Pemerintahan</a></li>
+                                        <li class="cat-item cat-item-4"><a href="#"><span class="mr-10">
+                                                    <ion-icon name="airplane-outline"></ion-icon>
+                                                </span>Pariwisata</a></li>
+                                        <li class="cat-item cat-item-5"><a href="#"><span class="mr-10">
+                                                    <ion-icon name="cart-outline"></ion-icon>
+                                                </span>Ekonomi</a></li>
+                                        <li class="cat-item cat-item-6"><a href="#"><span class="mr-10">
+                                                    <ion-icon name="fitness-outline"></ion-icon>
+                                                </span>Kesehatan</a></li>
+                                        <li class="cat-item cat-item-2"><a href="#"><span class="mr-10">
+                                                    <ion-icon name="flower-outline"></ion-icon>
+                                                </span>Kebudayaan</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Widget Categories -->
+                                <div class="sidebar-widget widget_categories border-radius-10 bg-white mb-30">
+                                    <div class="widget-header position-relative mb-15">
+                                        <h5 class="widget-title"><strong>Categories</strong></h5>
+                                    </div>
+                                    <ul class="font-small text-muted">
+                                        <li class="cat-item cat-item-2"><a href="#">Ekonomi</a></li>
+                                        <li class="cat-item cat-item-3"><a href="#">Politik</a></li>
+                                        <li class="cat-item cat-item-4"><a href="#">Agama</a></li>
+                                        <li class="cat-item cat-item-5"><a href="#">Hukum</a></li>
+                                        <li class="cat-item cat-item-6"><a href="#">Budaya</a></li>
+                                        <li class="cat-item cat-item-7"><a href="#">Pendidikan</a></li>
+                                        <li class="cat-item cat-item-2"><a href="#">Kependudukan</a></li>
+                                        <li class="cat-item cat-item-2"><a href="#">Transportasi</a></li>
+                                        <li class="cat-item cat-item-2"><a href="#">Rekreasi</a></li>
+                                        <li class="cat-item cat-item-2"><a href="#">Layanan Publik</a></li>
+                                        <li class="cat-item cat-item-3"><a href="#">Transmigrasi</a></li>
+                                        <li class="cat-item cat-item-4"><a href="#">Pertanian</a></li>
+                                        <li class="cat-item cat-item-5"><a href="#">Kesehatan</a></li>
+                                        <li class="cat-item cat-item-6"><a href="#">Bisnis</a></li>
+                                        <li class="cat-item cat-item-7"><a href="#">Daerah</a></li>
+                                        <li class="cat-item cat-item-2"><a href="#">Media</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- main content -->
+                            <div class="col-lg-9 col-md-9 order-1 order-md-2">
+                                <div class="row post-module-1 mb-50">
+                                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-1.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Worl</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-5.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Worl</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-2.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span class="post-cat bg-success color-white">US
+                                                                News</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-3.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Healthy</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-6 col-md-6 col-sm-12 mb-30">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/news-20.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Cook</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-16.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Sport</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-6.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Sport</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-8.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Government</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-11.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Government</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-7.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Demonstrate</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-lg-3 col-md-6 col-sm-12">
+                                        <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                style="background-image: url(assets/imgs/thumbnail-9.jpg)">
+                                                <a class="img-link" href="single.html"></a>
+                                                <div class="post-content-overlay">
+                                                    <div class="entry-meta meta-0 font-small mb-15">
+                                                        <a href="#"><span
+                                                                class="post-cat bg-success color-white">Army</span></a>
+                                                    </div>
+                                                    <h5 class="post-title">
+                                                        <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                                            New
+                                                            Way
+                                                            To Wire Its Cars, Report Says</a>
+                                                    </h5>
+                                                    <div
+                                                        class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                        <span><span class="mr-5"><i class="fa fa-eye"
+                                                                    aria-hidden="true"></i></span>5.8k</span>
+                                                        <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                    class="fa fa-comment"
+                                                                    aria-hidden="true"></i></span>2.5k</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="row mb-50 mt-15">
+                                    <div class="col-md-12">
+                                        <div class="widget-header position-relative mb-30">
+                                            <h4 class="widget-title text-dark mb-0">From <span>Blog</span></h4>
+                                        </div>
+                                        <div class="post-carausel-2 post-module-1 row">
+                                            <div class="col">
+                                                <div class="post-thumb position-relative">
+                                                    <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                        style="background-image: url(assets/imgs/thumbnail-7.jpg)">
+                                                        <a class="img-link" href="single.html"></a>
+                                                        <div class="post-content-overlay">
+                                                            <div class="entry-meta meta-0 font-small mb-15">
+                                                                <a href="#"><span
+                                                                        class="post-cat bg-success color-white">Travel</span></a>
+                                                            </div>
+                                                            <h5 class="post-title">
+                                                                <a class="color-white" href="single.html">Tesla’s
+                                                                    Cooking Up
+                                                                    A
+                                                                    New Way To Wire Its Cars, Report Says</a>
+                                                            </h5>
+                                                            <div
+                                                                class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                                <span><span class="mr-5"><i class="fa fa-eye"
+                                                                            aria-hidden="true"></i></span>5.8k</span>
+                                                                <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                            class="fa fa-comment"
+                                                                            aria-hidden="true"></i></span>2.5k</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="post-thumb position-relative">
+                                                    <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                        style="background-image: url(assets/imgs/thumbnail-8.jpg)">
+                                                        <a class="img-link" href="single.html"></a>
+                                                        <div class="post-content-overlay">
+                                                            <div class="entry-meta meta-0 font-small mb-15">
+                                                                <a href="#"><span
+                                                                        class="post-cat bg-info color-white">Beauty</span></a>
+                                                            </div>
+                                                            <h5 class="post-title">
+                                                                <a class="color-white" href="single.html">Ratcliffe to
+                                                                    be
+                                                                    Director of nation talent Trump ignored</a>
+                                                            </h5>
+                                                            <div
+                                                                class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                                <span><span class="mr-5"><i class="fa fa-eye"
+                                                                            aria-hidden="true"></i></span>5.8k</span>
+                                                                <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                            class="fa fa-comment"
+                                                                            aria-hidden="true"></i></span>2.5k</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="post-thumb position-relative">
+                                                    <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                        style="background-image: url(assets/imgs/thumbnail-10.jpg)">
+                                                        <a class="img-link" href="single.html"></a>
+                                                        <div class="post-content-overlay">
+                                                            <div class="entry-meta meta-0 font-small mb-15">
+                                                                <a href="#"><span
+                                                                        class="post-cat bg-danger color-white">Art</span></a>
+                                                            </div>
+                                                            <h5 class="post-title">
+                                                                <a class="color-white" href="single.html">Countries seek
+                                                                    ‘new
+                                                                    history’ as figures are re-examined</a>
+                                                            </h5>
+                                                            <div
+                                                                class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                                <span><span class="mr-5"><i class="fa fa-eye"
+                                                                            aria-hidden="true"></i></span>5.8k</span>
+                                                                <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                            class="fa fa-comment"
+                                                                            aria-hidden="true"></i></span>2.5k</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="post-thumb position-relative">
+                                                    <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                        style="background-image: url(assets/imgs/thumbnail-15.jpg)">
+                                                        <a class="img-link" href="single.html"></a>
+                                                        <div class="post-content-overlay">
+                                                            <div class="entry-meta meta-0 font-small mb-10">
+                                                                <a href="#"><span
+                                                                        class="post-cat bg-warning color-white">Gaming</span></a>
+                                                            </div>
+                                                            <h5 class="post-title">
+                                                                <a class="color-white" href="single.html">The secret to
+                                                                    moving
+                                                                    this ancient sphinx screening</a>
+                                                            </h5>
+                                                            <div
+                                                                class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                                <span><span class="mr-5"><i class="fa fa-eye"
+                                                                            aria-hidden="true"></i></span>5.8k</span>
+                                                                <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                            class="fa fa-comment"
+                                                                            aria-hidden="true"></i></span>2.5k</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="post-thumb position-relative">
+                                                    <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                                                        style="background-image: url(assets/imgs/thumbnail-16.jpg)">
+                                                        <a class="img-link" href="single.html"></a>
+                                                        <div class="post-content-overlay">
+                                                            <div class="entry-meta meta-0 font-small mb-10">
+                                                                <a href="#"><span
+                                                                        class="post-cat bg-primary color-white">Garden</span></a>
+                                                            </div>
+                                                            <h5 class="post-title">
+                                                                <a class="color-white" href="single.html">Harbour amid a
+                                                                    Slowen
+                                                                    down in singer city screening</a>
+                                                            </h5>
+                                                            <div
+                                                                class="entry-meta meta-1 font-x-small mt-10 pr-5 pl-5 text-muted">
+                                                                <span><span class="mr-5"><i class="fa fa-eye"
+                                                                            aria-hidden="true"></i></span>5.8k</span>
+                                                                <span class="ml-15"><span class="mr-5 text-muted"><i
+                                                                            class="fa fa-comment"
+                                                                            aria-hidden="true"></i></span>2.5k</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div> <!-- Main Wrap End-->
+    <div class="dark-mark"></div>
+    <!-- Vendor JS-->
+    <script src="./assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/vendor/popper.min.js"></script>
+    <script src="./assets/js/vendor/bootstrap.min.js"></script>
+    <script src="./assets/js/vendor/jquery.slicknav.js"></script>
+    <script src="./assets/js/vendor/owl.carousel.min.js"></script>
+    <script src="./assets/js/vendor/slick.min.js"></script>
+    <script src="./assets/js/vendor/wow.min.js"></script>
+    <script src="./assets/js/vendor/animated.headline.js"></script>
+    <script src="./assets/js/vendor/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/vendor/jquery.ticker.js"></script>
+    <script src="./assets/js/vendor/jquery.vticker-min.js"></script>
+    <script src="./assets/js/vendor/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/vendor/jquery.sticky.js"></script>
+    <script src="./assets/js/vendor/perfect-scrollbar.js"></script>
+    <script src="./assets/js/vendor/waypoints.min.js"></script>
+    <script src="./assets/js/vendor/jquery.counterup.min.js"></script>
+    <script src="./assets/js/vendor/jquery.theia.sticky.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- NewsViral JS -->
+    <script src="./assets/js/main.js"></script>
+
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            var query = document.getElementById('search-box').value;
+            if (query) {
+                window.location.href = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
+            }
+        });
+
+        const backgrounds = [{
+                url: 'https://fisip.unsri.ac.id/labap/wp-content/uploads/2022/04/K1.jpg',
+                desc: 'Kampung Warna Warni - Desa Burai'
+            },
+            {
+                url: 'https://oganilir.disway.id/upload/3bd60d53a2b98402ec911c53ec6c0c9b.jpg',
+                desc: 'Masjid An-Nur - Pemkab Ogan Ilir'
+            },
+            {
+                url: 'https://media.suara.com/pictures/970x544/2025/01/26/58339-taman-pancasila-di-ogan-ilir-sumatera-selatan.jpg',
+                desc: 'Taman Pancasila - Ogan Ilir'
+            }
+        ];
+        let currentBgIndex = Math.floor(Math.random() * backgrounds.length);
+
+        function updateBackground() {
+            document.body.style.backgroundImage = `url(${backgrounds[currentBgIndex].url})`;
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
+            document.body.style.backgroundPosition = 'center center';
+            document.getElementById('background-desc').textContent = backgrounds[currentBgIndex].desc;
+        }
+
+        function prevImage() {
+            currentBgIndex = (currentBgIndex - 1 + backgrounds.length) % backgrounds.length;
+            updateBackground();
+        }
+
+        function nextImage() {
+            currentBgIndex = (currentBgIndex + 1) % backgrounds.length;
+            updateBackground();
+        }
+
+        document.getElementById('next-bg').addEventListener('click', nextImage);
+        document.getElementById('prev-bg').addEventListener('click', prevImage);
+        document.getElementById('prev-bg-icon').addEventListener('click', prevImage);
+        document.getElementById('next-bg-icon').addEventListener('click', nextImage);
+
+        updateBackground();
+
+        const newsList = document.getElementById('news-list');
+        setTimeout(() => {
+            newsList.innerHTML = `
+                <li><a href='#'>Berita 1: Kejadian Terbaru</a></li>
+                <li><a href='#'>Berita 2: Teknologi Terkini</a></li>
+                <li><a href='#'>Berita 3: Ekonomi Global</a></li>
+            `;
+        }, 2000);
+
+        const weatherInfo = document.getElementById('weather-info');
+        setTimeout(() => {
+            weatherInfo.innerHTML = 'Jakarta: 30°C, Cerah';
+        }, 2000);
+
+        // Scroll behavior for opacity
+        window.addEventListener('scroll', function () {
+            const overlay = document.querySelector('.background-overlay');
+            const opacity = Math.min(1, window.scrollY / 300);
+            overlay.style.opacity = opacity;
+        });
+    </script>
+
+    <script>
+        const API_KEY = '071d41ad66618f4407c7fcb2d80bbefd';
+        const currCity = 'Palembang';
+        const units = 'metric';
+
+        function convertCountryCode(code) {
+            const regionNames = new Intl.DisplayNames(['en'], {
+                type: 'region'
+            });
+            return regionNames.of(code);
+        }
+
+        function getWeather() {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currCity}&appid=${API_KEY}&units=${units}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (!data || data.cod !== 200) {
+                        document.getElementById('city').innerHTML = 'Lokasi tidak ditemukan';
+                        return;
+                    }
+                    document.getElementById('city').innerHTML =
+                        `${data.name}, ${convertCountryCode(data.sys.country)}`;
+                    document.getElementById('weather__forecast').innerHTML = `${data.weather[0].description}`;
+                    document.getElementById('weather__temperature').innerHTML =
+                        `${data.main.temp.toFixed()}&#176;C`;
+                    document.getElementById('weather__icon').innerHTML =
+                        `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather Icon"/>`;
+                    document.getElementById('weather__minmax').innerHTML =
+                        `${data.main.temp_max.toFixed()}° / ${data.main.temp_min.toFixed()}°`;
+                    document.getElementById('weather__realfeel').innerHTML = `${data.main.feels_like.toFixed()}°`;
+                    document.getElementById('weather__humidity').innerHTML = `${data.main.humidity}%`;
+                    document.getElementById('weather__wind').innerHTML =
+                        `${data.wind.speed} ${units === "imperial" ? "mph" : "m/s"}`;
+                    document.getElementById('weather__pressure').innerHTML = `${data.main.pressure} hPa`;
+                })
+                .catch(err => {
+                    console.error('Gagal mengambil data cuaca:', err);
+                    document.getElementById('city').innerHTML = '📍 Gagal memuat data';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', getWeather);
+    </script>
+
 </body>
 
 </html>
