@@ -243,8 +243,7 @@ button#search-button {
 .content-utama {
     scroll-behavior: smooth;
     overflow-y: auto;
-    top: 40vh;
-    margin-top: 20vh;
+    margin-top: 75px;
 }
 
 .main-content {
