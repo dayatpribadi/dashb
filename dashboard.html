@@ -1341,6 +1341,7 @@
   <script src="assets/lib/chart.js/js/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="assets/js/dashboard-opd/dashboard.js"></script>
+  <script src="assets/js/dashboard-opd/data-widget.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -1350,186 +1351,37 @@
   <script src="./assets/js/main.js"></script>
 
   <script>
-    $(document).ready(function () {
-      $('.select2-show-search').select2({
-        placeholder: function () {
-          $(this).data('placeholder');
-        },
-        allowClear: true
-      });
-    });
-  </script>
+    let slickInitialized = false;
 
-  <script>
-    $('#modalSuratMasuk, #modalSuratKeluar').on('shown.bs.modal', function () {
-      $('.select2-show-search').select2({
-        dropdownParent: $(this), // Menempatkan dropdown di dalam modal
-        width: '100%' // Mengatur lebar dropdown agar sesuai kolom
-      });
-    });
-  </script>
-
-  <script>
-    $(function () {
-      'use strict'
-
-      $('#datepicker').datepicker();
-    });
-  </script>
-
-  <script>
-    var optionsSuratMasuk = {
-      series: [{
-        name: 'Jumlah Surat Masuk',
-        data: [44, 55, 57, 56]
-      }],
-      chart: {
-        type: 'bar',
-        height: 350
-      },
-      colors: ['#1E90FF', '#00CED1', '#FFD700', '#DC143C'],
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '55%',
-          endingShape: 'rounded'
-        }
-      },
-      dataLabels: {
-        enabled: true,
-        style: {
-          colors: ['#333']
-        },
-        offsetY: 100,
-        position: 'top'
-      },
-      xaxis: {
-        categories: ['Total Surat Masuk', 'Belum Didisposisikan', 'Sudah Didisposisikan', 'Selesai'],
-        labels: {
-          rotate: -90,
-          style: {
-            fontSize: '10px'
-          }
-        }
-      },
-      yaxis: {
-        title: {
-          text: 'Jumlah Surat Masuk'
-        }
-      },
-      fill: {
-        opacity: 1
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return " " + val + " ";
-          }
-        }
-      }
-    };
-
-    var optionsSuratKeluar = {
-      series: [{
-        name: 'Jumlah Surat Keluar',
-        data: [44, 55, 57, 56]
-      }],
-      chart: {
-        type: 'bar',
-        height: 350
-      },
-      colors: ['#FF4500', '#32CD32', '#8A2BE2', '#FFA07A'],
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '55%',
-          endingShape: 'rounded'
-        }
-      },
-      dataLabels: {
-        enabled: true,
-        style: {
-          colors: ['#333']
-        },
-        offsetY: 100,
-        position: 'top'
-      },
-      xaxis: {
-        categories: ['Total Surat Keluar', 'Proses Verifikasi', 'Menunggu Tanda Tangan', 'Sudah Ditandatangani'],
-        labels: {
-          rotate: -90,
-          style: {
-            fontSize: '10px'
-          }
-        }
-      },
-      yaxis: {
-        title: {
-          text: 'Jumlah Surat Keluar'
-        }
-      },
-      fill: {
-        opacity: 1
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return " " + val + " ";
-          }
-        }
-      }
-    };
-
-    // Ambil elemen dropdown dan daftar surat
-    document.getElementById("suratSelect").addEventListener("change", function (event) {
-      var selectedValue = event.target.value;
-
-      // Tampilkan daftar surat sesuai dengan pilihan
-      if (selectedValue === "SM") {
-        document.getElementById("ListSuratMasuk").style.display = "flex";
-        document.getElementById("ListSuratKeluar").style.display = "none";
-      } else if (selectedValue === "SK") {
-        document.getElementById("ListSuratMasuk").style.display = "none";
-        document.getElementById("ListSuratKeluar").style.display = "flex";
-      } else {
-        // Sembunyikan keduanya jika tidak ada yang dipilih
-        document.getElementById("ListSuratMasuk").style.display = "flex";
-        document.getElementById("ListSuratKeluar").style.display = "none";
-      }
-    });
-  </script>
-
-  <script>
     $('#modal_widget').on('shown.bs.modal', function () {
-      const $carousel = $('.post-carausel-2');
+      $('html, body').animate({
+        scrollTop: 0
+      }, 'fast'); // scroll ke atas
 
-      // Hanya inisialisasi jika belum di-initialize
-      if (!$carousel.hasClass('slick-initialized')) {
-        $carousel.slick({
+      if (!slickInitialized) {
+        $('.post-carausel-2').slick({
           dots: true,
           infinite: true,
           speed: 1000,
           arrows: false,
           slidesToShow: 4,
           slidesToScroll: 1,
-          autoplay: false,
+          autoplay: true,
           adaptiveHeight: true,
           cssEase: 'linear',
-          centerMode: false,
-          centerPadding: '50px',
+          centerPadding: '0px',
           responsive: [{
               breakpoint: 1024,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
-                dots: false
+                slidesToScroll: 1
               }
             },
             {
-              breakpoint: 991,
+              breakpoint: 768,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToScroll: 1
               }
             },
             {
@@ -1541,15 +1393,59 @@
             }
           ]
         });
+        slickInitialized = true;
       } else {
-        // Jika sudah di-inisialisasi, update posisi
-        $carousel.slick('setPosition');
+        $('.post-carausel-2').slick('setPosition');
       }
     });
   </script>
 
+  <!-- <script>
+    $('.post-carausel-2').slick({
+      dots: true,
+      infinite: true,
+      speed: 1000,
+      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: false,
+      loop: true,
+      adaptiveHeight: true,
+      cssEase: 'linear',
+      centerPadding: 50,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+  </script> -->
 
   <script>
+    document.getElementById('glass-button').addEventListener('click', function () {
+      var modal = new bootstrap.Modal(document.getElementById('modal_widget'));
+      modal.show();
+    });
+
     const weatherInfo = document.getElementById('weather-info');
     setTimeout(() => {
       weatherInfo.innerHTML = 'Jakarta: 30°C, Cerah';
@@ -1603,73 +1499,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', getWeather);
-  </script>
-
-  <script>
-    document.getElementById('search-button').addEventListener('click', function () {
-      var query = document.getElementById('search-box').value;
-      if (query) {
-        window.location.href = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
-      }
-    });
-
-    const backgrounds = [{
-        url: 'https://fisip.unsri.ac.id/labap/wp-content/uploads/2022/04/K1.jpg',
-        desc: 'Kampung Warna Warni - Desa Burai'
-      },
-      {
-        url: 'https://oganilir.disway.id/upload/3bd60d53a2b98402ec911c53ec6c0c9b.jpg',
-        desc: 'Masjid An-Nur - Pemkab Ogan Ilir'
-      },
-      {
-        url: 'https://media.suara.com/pictures/970x544/2025/01/26/58339-taman-pancasila-di-ogan-ilir-sumatera-selatan.jpg',
-        desc: 'Taman Pancasila - Ogan Ilir'
-      }
-    ];
-    let currentBgIndex = Math.floor(Math.random() * backgrounds.length);
-
-    function updateBackground() {
-      document.body.style.backgroundImage = `url(${backgrounds[currentBgIndex].url})`;
-      document.body.style.backgroundSize = 'cover';
-      document.body.style.backgroundAttachment = 'fixed';
-      document.body.style.backgroundPosition = 'center center';
-
-      const descLink = document.getElementById('background-desc');
-      descLink.textContent = backgrounds[currentBgIndex].desc;
-    }
-
-    function prevImage() {
-      currentBgIndex = (currentBgIndex - 1 + backgrounds.length) % backgrounds.length;
-      updateBackground();
-    }
-
-    function nextImage() {
-      currentBgIndex = (currentBgIndex + 1) % backgrounds.length;
-      updateBackground();
-    }
-
-    document.getElementById('next-bg').addEventListener('click', nextImage);
-    document.getElementById('prev-bg').addEventListener('click', prevImage);
-    document.getElementById('prev-bg-icon').addEventListener('click', prevImage);
-    document.getElementById('next-bg-icon').addEventListener('click', nextImage);
-
-    updateBackground();
-
-    const newsList = document.getElementById('news-list');
-    setTimeout(() => {
-      newsList.innerHTML = `
-            <li><a href='#'>Berita 1: Kejadian Terbaru</a></li>
-            <li><a href='#'>Berita 2: Teknologi Terkini</a></li>
-            <li><a href='#'>Berita 3: Ekonomi Global</a></li>
-        `;
-    }, 2000);
-  </script>
-
-  <script>
-    document.getElementById('glass-button').addEventListener('click', function () {
-      var modal = new bootstrap.Modal(document.getElementById('modal_widget'));
-      modal.show();
-    });
   </script>
 
 </body>

@@ -68440,7 +68440,7 @@ td {
 
 .modal-glass {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -68449,4 +68449,31 @@ td {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   background-size: cover;
   background-position: center;
+}
+
+/* Modal Responsive Fix for Mobile */
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0.5rem auto;
+    max-width: 95%;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+  }
+
+  .modal-body {
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+
+  .post-carausel-2 .slick-slide {
+    margin-right: 10px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
 }
