@@ -6060,7 +6060,7 @@ button.close {
 
 @media (min-width: 1200px) {
   .modal-xl {
-    max-width: 1200px;
+    max-width: 1800px;
   }
 }
 
@@ -68438,9 +68438,15 @@ td {
   background-color: #000046;
 }
 
-/* End Weather */
-
-/* Berita */
-
-
-/* End Berita */
+.modal-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}

@@ -32,6 +32,12 @@
 
   <title>Aplikasi Dashboard Pimpinan</title>
 
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/desktop.css">
+  <link rel="stylesheet" href="assets/css/widgets.css">
+  <link rel="stylesheet" href="assets/css/color.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
   <!-- vendor css -->
   <link href="assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
   <link href="assets/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -139,6 +145,12 @@
               </div>
             </div>
           </div><!-- card -->
+
+          <button id="glass-button">
+            <a>
+              <i class="fa fa-newspaper-o" style="font-size: 50px;"></i>
+            </a>
+          </button>
 
           <div class="card mg-t-10">
             <div class="card-body">
@@ -663,6 +675,7 @@
             </div>
 
           </div>
+
           <div class="card mg-t-10">
             <div class="card-body">
               <div class="d-flex spacer">
@@ -822,10 +835,486 @@
 
     </div><!-- col-4 -->
   </div><!-- row -->
-  </div><!-- container -->
-  </div><!-- slim-mainpanel -->
 
+  <!-- MODAL EFFECTS -->
+  <div id="modal_widget" class="modal fade">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bd-0 tx-14 modal-glass">
+        <div class="modal-body pd-25">
+          <div class="main-content">
+            <div class="container content-utama">
+              <!--Featured Grid-->
+              <div class="row bg-white-opacity pt-20" style="border-radius: 12px !important;">
+                <!-- sidebar-left -->
+                <div class="col-12 col-lg-3 primary-sidebar sticky-sidebar sidebar-left">
+                  <!-- Widget Weather -->
+                  <div class="sidebar-widget widget-weather bg-cloud border-radius-10 mb-30">
+                    <div class="text-white">
+                      <div class="weather-widget">
+                        <div class="weather-header">
+                          <span class="location" id="city">Memuat lokasi...</span>
+                          <br>
+                          <span class="temp-main" id="weather__temperature">⛅ --°C</span>
+                          <br>
+                          <span class="weather-desc" id="weather__forecast">💧 Memuat
+                            cuaca...</span>
+                        </div>
+                        <div class="weather-forecast">
+                          <div class="forecast-day">
+                            <p>Hari Ini</p>
+                            <div id="weather__icon">
+                              <img src="https://img.icons8.com/ios-filled/50/000000/partly-cloudy-day.png" alt="Cuaca">
+                            </div>
+                            <p id="weather__minmax">--° / --°</p>
+                          </div>
+                        </div>
+                        <div class="weather-footer">
+                          <p>RealFeel: <span id="weather__realfeel">--</span></p>
+                          <p>Humidity: <span id="weather__humidity">--</span></p>
+                          <p>Wind: <span id="weather__wind">--</span></p>
+                          <p>Pressure: <span id="weather__pressure">--</span></p>
+                        </div>
+                      </div>
 
+                    </div>
+                  </div>
+                  <!-- Widget Categories -->
+                  <div class="sidebar-widget widget_categories_2 border-radius-10 bg-white mb-30">
+                    <ul class="font-small text-muted">
+                      <li class="cat-item cat-item-2 active"><a href="#"><span class="mr-10">
+                            <i class="fa fa-users"></i>
+                          </span>Layanan Publik</a></li>
+                      <li class="cat-item cat-item-3"><a href="#"><span class="mr-10">
+                            <i class="fa fa-building-o"></i>
+                          </span>Pemerintahan</a></li>
+                      <li class="cat-item cat-item-4"><a href="#"><span class="mr-10">
+                            <i class="fa fa-umbrella"></i>
+                          </span>Pariwisata</a></li>
+                      <li class="cat-item cat-item-5"><a href="#"><span class="mr-10">
+                            <i class="fa fa-cart-arrow-down"></i>
+                          </span>Ekonomi</a></li>
+                      <li class="cat-item cat-item-6"><a href="#"><span class="mr-10">
+                            <i class="fa fa-heartbeat"></i>
+                          </span>Kesehatan</a></li>
+                      <li class="cat-item cat-item-2"><a href="#"><span class="mr-10">
+                            <i class="fa fa-paint-brush"></i>
+                          </span>Kebudayaan</a></li>
+                    </ul>
+                  </div>
+                  <!-- Widget Categories -->
+                  <div class="sidebar-widget border-radius-10 bg-white mb-30"
+                    style="height: 600px; overflow-y: scroll;">
+                    <div class="widget-header mb-30">
+                      <h5 class="widget-title text-dark">Agenda <span>Kegiatan</span></h5>
+                    </div>
+                    <div class="post-block-list border-radius-10 post-module-6">
+                      <div class="last-comment mb-20 d-flex p-10">
+                        <span class="item-count vertical-align">
+                          <a class="red-tooltip author-avatar border-radius-50 border" href="#" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="15 April 2025">
+                            <img src="assets/imgs/cal-icon.webp" alt="">
+                          </a>
+                        </span>
+                        <div class="alith_post_title_small">
+                          <p class="font-medium mb-10"><a href="single.html">Meninjau Lokasi
+                              Pembangunan Sekolah Rakyat</a>
+                          </p>
+                          <div class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase mb-10">
+                            <span class="post-by">Tgl <a href="#">15 April
+                                2025</a></span>
+                            <span class="post-on">14:30 WIB</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="last-comment p-10 mb-20 d-flex ">
+                        <span class="item-count vertical-align">
+                          <a class="red-tooltip author-avatar border-radius-50 border" href="#" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="15 April 2025">
+                            <img src="assets/imgs/cal-icon.webp" alt="">
+                          </a>
+                        </span>
+                        <div class="alith_post_title_small">
+                          <p class="font-medium mb-10"><a href="single.html">Judul Jadwalinbae
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                              Adipisci, minus.</a>
+                          </p>
+                          <div class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase mb-10">
+                            <span class="post-by">Tgl <a href="#">15 April
+                                2025</a></span>
+                            <span class="post-on">14:30 WIB</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="last-comment mb-20 p-10 d-flex">
+                        <span class="item-count vertical-align">
+                          <a class="red-tooltip author-avatar border-radius-50 border" href="#" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="15 April 2025">
+                            <img src="assets/imgs/cal-icon.webp" alt="">
+                          </a>
+                        </span>
+                        <div class="alith_post_title_small">
+                          <p class="font-medium mb-10"><a href="single.html">Judul Jadwalinbae
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                              Adipisci, minus.</a>
+                          </p>
+                          <div class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase mb-10">
+                            <span class="post-by">Tgl <a href="#">15 April
+                                2025</a></span>
+                            <span class="post-on">14:30 WIB</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="last-comment mb-20 p-10 d-flex">
+                        <span class="item-count vertical-align">
+                          <a class="red-tooltip author-avatar border-radius-50 border" href="#" data-toggle="tooltip"
+                            data-placement="top" title="" data-original-title="15 April 2025">
+                            <img src="assets/imgs/cal-icon.webp" alt="">
+                          </a>
+                        </span>
+                        <div class="alith_post_title_small">
+                          <p class="font-medium mb-10"><a href="single.html">Judul Jadwalinbae
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                              Adipisci, minus.</a>
+                          </p>
+                          <div class="entry-meta meta-1 font-x-small color-grey float-left text-uppercase mb-10">
+                            <span class="post-by">Tgl <a href="#">15 April
+                                2025</a></span>
+                            <span class="post-on">14:30 WIB</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- main content -->
+                <div class="col-12 col-lg-9">
+                  <div class="row post-module-1 mb-50">
+                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-1.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Worl</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-5.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Worl</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-2.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">US
+                                  News</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-3.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Healthy</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-6 col-md-6 col-sm-12 mb-30">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/news-20.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Cook</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-16.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Sport</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12 mb-30">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-6.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Sport</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-8.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Government</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-11.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Government</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-7.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Demonstrate</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="post-thumb position-relative p-10 bg-white border-radius-10">
+                        <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                          style="background-image: url(assets/imgs/thumbnail-9.jpg)">
+                          <a class="img-link" href="single.html"></a>
+                          <div class="post-content-overlay">
+                            <div class="entry-meta meta-0 font-small mb-15">
+                              <a href="#"><span class="post-cat bg-success color-white">Army</span></a>
+                            </div>
+                            <h5 class="post-title">
+                              <a class="color-white" href="single.html">Tesla’s Cooking Up A
+                                New
+                                Way
+                                To Wire Its Cars, Report Says</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row mb-50 mt-15">
+                    <div class="col-md-12">
+                      <div class="widget-header position-relative mb-30">
+                        <h4 class="widget-title text-dark mb-0">Kabar <span>Daerah</span></h4>
+                      </div>
+
+                      <div class="post-carausel-2 post-module-1 row">
+                        <div class="col">
+                          <div class="post-thumb position-relative">
+                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                              style="background-image: url(assets/imgs/thumbnail-7.jpg)">
+                              <a class="img-link" href="single.html"></a>
+                              <div class="post-content-overlay">
+                                <div class="entry-meta meta-0 font-small mb-15">
+                                  <a href="#"><span class="post-cat bg-success color-white">Travel</span></a>
+                                </div>
+                                <h5 class="post-title">
+                                  <a class="color-white" href="single.html">Tesla’s
+                                    Cooking Up
+                                    A
+                                    New Way To Wire Its Cars, Report Says</a>
+                                </h5>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="post-thumb position-relative">
+                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                              style="background-image: url(assets/imgs/thumbnail-8.jpg)">
+                              <a class="img-link" href="single.html"></a>
+                              <div class="post-content-overlay">
+                                <div class="entry-meta meta-0 font-small mb-15">
+                                  <a href="#"><span class="post-cat bg-info color-white">Beauty</span></a>
+                                </div>
+                                <h5 class="post-title">
+                                  <a class="color-white" href="single.html">Ratcliffe to
+                                    be
+                                    Director of nation talent Trump ignored</a>
+                                </h5>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="post-thumb position-relative">
+                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                              style="background-image: url(assets/imgs/thumbnail-10.jpg)">
+                              <a class="img-link" href="single.html"></a>
+                              <div class="post-content-overlay">
+                                <div class="entry-meta meta-0 font-small mb-15">
+                                  <a href="#"><span class="post-cat bg-danger color-white">Art</span></a>
+                                </div>
+                                <h5 class="post-title">
+                                  <a class="color-white" href="single.html">Countries seek
+                                    ‘new
+                                    history’ as figures are re-examined</a>
+                                </h5>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="post-thumb position-relative">
+                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                              style="background-image: url(assets/imgs/thumbnail-15.jpg)">
+                              <a class="img-link" href="single.html"></a>
+                              <div class="post-content-overlay">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                  <a href="#"><span class="post-cat bg-warning color-white">Gaming</span></a>
+                                </div>
+                                <h5 class="post-title">
+                                  <a class="color-white" href="single.html">The secret to
+                                    moving
+                                    this ancient sphinx screening</a>
+                                </h5>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="post-thumb position-relative">
+                            <div class="thumb-overlay img-hover-slide border-radius-15 position-relative"
+                              style="background-image: url(assets/imgs/thumbnail-16.jpg)">
+                              <a class="img-link" href="single.html"></a>
+                              <div class="post-content-overlay">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                  <a href="#"><span class="post-cat bg-primary color-white">Garden</span></a>
+                                </div>
+                                <h5 class="post-title">
+                                  <a class="color-white" href="single.html">Harbour amid a
+                                    Slowen
+                                    down in singer city screening</a>
+                                </h5>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
 
   <div class="slim-footer">
     <div class="container-fluid">
@@ -839,6 +1328,7 @@
   <script src="assets/lib/select2/js/select2.full.min.js"></script>
   <script src="assets/lib/popper.js/js/popper.js"></script>
   <script src="assets/lib/bootstrap/js/bootstrap.js"></script>
+  <script src="assets/js/vendor/owl.carousel.min.js"></script>
   <script src="assets/lib/jquery.cookie/js/jquery.cookie.js"></script>
   <script src="assets/lib/d3/js/d3.js"></script>
   <script src="assets/lib/rickshaw/js/rickshaw.min.js"></script>
@@ -846,12 +1336,18 @@
   <script src="assets/lib/Flot/js/jquery.flot.resize.js"></script>
   <script src="assets/lib/peity/js/jquery.peity.js"></script>
   <script src="assets/lib/moment/js/moment.js"></script>
-
   <script src="assets/js/slim.js"></script>
   <script src="assets/js/ResizeSensor.js"></script>
   <script src="assets/lib/chart.js/js/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="assets/js/dashboard-opd/dashboard.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+  <!-- NewsViral JS -->
+  <script src="./assets/js/main.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -880,7 +1376,6 @@
       $('#datepicker').datepicker();
     });
   </script>
-
 
   <script>
     var optionsSuratMasuk = {
@@ -984,10 +1479,7 @@
         }
       }
     };
-  </script>
 
-
-  <script>
     // Ambil elemen dropdown dan daftar surat
     document.getElementById("suratSelect").addEventListener("change", function (event) {
       var selectedValue = event.target.value;
@@ -1007,6 +1499,178 @@
     });
   </script>
 
+  <script>
+    $('#modal_widget').on('shown.bs.modal', function () {
+      const $carousel = $('.post-carausel-2');
+
+      // Hanya inisialisasi jika belum di-initialize
+      if (!$carousel.hasClass('slick-initialized')) {
+        $carousel.slick({
+          dots: true,
+          infinite: true,
+          speed: 1000,
+          arrows: false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: false,
+          adaptiveHeight: true,
+          cssEase: 'linear',
+          centerMode: false,
+          centerPadding: '50px',
+          responsive: [{
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 991,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      } else {
+        // Jika sudah di-inisialisasi, update posisi
+        $carousel.slick('setPosition');
+      }
+    });
+  </script>
+
+
+  <script>
+    const weatherInfo = document.getElementById('weather-info');
+    setTimeout(() => {
+      weatherInfo.innerHTML = 'Jakarta: 30°C, Cerah';
+    }, 2000);
+
+    // Scroll behavior for opacity
+    window.addEventListener('scroll', function () {
+      const overlay = document.querySelector('.background-overlay');
+      const opacity = Math.min(1, window.scrollY / 300);
+      overlay.style.opacity = opacity;
+    });
+
+    const API_KEY = '071d41ad66618f4407c7fcb2d80bbefd';
+    const currCity = 'Palembang';
+    const units = 'metric';
+
+    function convertCountryCode(code) {
+      const regionNames = new Intl.DisplayNames(['en'], {
+        type: 'region'
+      });
+      return regionNames.of(code);
+    }
+
+    function getWeather() {
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currCity}&appid=${API_KEY}&units=${units}`)
+        .then(res => res.json())
+        .then(data => {
+          if (!data || data.cod !== 200) {
+            document.getElementById('city').innerHTML = 'Lokasi tidak ditemukan';
+            return;
+          }
+          document.getElementById('city').innerHTML =
+            `${data.name}, ${convertCountryCode(data.sys.country)}`;
+          document.getElementById('weather__forecast').innerHTML = `${data.weather[0].description}`;
+          document.getElementById('weather__temperature').innerHTML =
+            `${data.main.temp.toFixed()}&#176;C`;
+          document.getElementById('weather__icon').innerHTML =
+            `<img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather Icon"/>`;
+          document.getElementById('weather__minmax').innerHTML =
+            `${data.main.temp_max.toFixed()}° / ${data.main.temp_min.toFixed()}°`;
+          document.getElementById('weather__realfeel').innerHTML = `${data.main.feels_like.toFixed()}°`;
+          document.getElementById('weather__humidity').innerHTML = `${data.main.humidity}%`;
+          document.getElementById('weather__wind').innerHTML =
+            `${data.wind.speed} ${units === "imperial" ? "mph" : "m/s"}`;
+          document.getElementById('weather__pressure').innerHTML = `${data.main.pressure} hPa`;
+        })
+        .catch(err => {
+          console.error('Gagal mengambil data cuaca:', err);
+          document.getElementById('city').innerHTML = '📍 Gagal memuat data';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', getWeather);
+  </script>
+
+  <script>
+    document.getElementById('search-button').addEventListener('click', function () {
+      var query = document.getElementById('search-box').value;
+      if (query) {
+        window.location.href = 'https://www.bing.com/search?q=' + encodeURIComponent(query);
+      }
+    });
+
+    const backgrounds = [{
+        url: 'https://fisip.unsri.ac.id/labap/wp-content/uploads/2022/04/K1.jpg',
+        desc: 'Kampung Warna Warni - Desa Burai'
+      },
+      {
+        url: 'https://oganilir.disway.id/upload/3bd60d53a2b98402ec911c53ec6c0c9b.jpg',
+        desc: 'Masjid An-Nur - Pemkab Ogan Ilir'
+      },
+      {
+        url: 'https://media.suara.com/pictures/970x544/2025/01/26/58339-taman-pancasila-di-ogan-ilir-sumatera-selatan.jpg',
+        desc: 'Taman Pancasila - Ogan Ilir'
+      }
+    ];
+    let currentBgIndex = Math.floor(Math.random() * backgrounds.length);
+
+    function updateBackground() {
+      document.body.style.backgroundImage = `url(${backgrounds[currentBgIndex].url})`;
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundAttachment = 'fixed';
+      document.body.style.backgroundPosition = 'center center';
+
+      const descLink = document.getElementById('background-desc');
+      descLink.textContent = backgrounds[currentBgIndex].desc;
+    }
+
+    function prevImage() {
+      currentBgIndex = (currentBgIndex - 1 + backgrounds.length) % backgrounds.length;
+      updateBackground();
+    }
+
+    function nextImage() {
+      currentBgIndex = (currentBgIndex + 1) % backgrounds.length;
+      updateBackground();
+    }
+
+    document.getElementById('next-bg').addEventListener('click', nextImage);
+    document.getElementById('prev-bg').addEventListener('click', prevImage);
+    document.getElementById('prev-bg-icon').addEventListener('click', prevImage);
+    document.getElementById('next-bg-icon').addEventListener('click', nextImage);
+
+    updateBackground();
+
+    const newsList = document.getElementById('news-list');
+    setTimeout(() => {
+      newsList.innerHTML = `
+            <li><a href='#'>Berita 1: Kejadian Terbaru</a></li>
+            <li><a href='#'>Berita 2: Teknologi Terkini</a></li>
+            <li><a href='#'>Berita 3: Ekonomi Global</a></li>
+        `;
+    }, 2000);
+  </script>
+
+  <script>
+    document.getElementById('glass-button').addEventListener('click', function () {
+      var modal = new bootstrap.Modal(document.getElementById('modal_widget'));
+      modal.show();
+    });
+  </script>
 
 </body>
 

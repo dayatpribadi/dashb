@@ -114,7 +114,7 @@ input#search-box {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-button#search-button {
+#search-button {
     padding: 20px;
     font-size: 16px;
     border: none;
@@ -243,7 +243,6 @@ button#search-button {
 .content-utama {
     scroll-behavior: smooth;
     overflow-y: auto;
-    margin-top: 75px;
 }
 
 .main-content {
@@ -252,4 +251,28 @@ button#search-button {
     scroll-behavior: smooth;
     position: relative;
     /* scrollbar-width: thin; */
+}
+
+
+#glass-button {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 12px 12px 0;
+    color: #202326;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#glass-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
 }
